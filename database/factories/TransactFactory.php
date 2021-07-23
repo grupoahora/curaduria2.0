@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Transact;
+use App\Models\User;
 
 class TransactFactory extends Factory
 {
@@ -23,10 +24,12 @@ class TransactFactory extends Factory
     public function definition()
     {
         return [
-            'name_product' => $this->faker->name(),
-
-
+            'name_products' => $this->faker->name(),
+            
             'category_id' => Category::all()->random()->id,
+            'user_id' => User::all()->random()->id,
+            
+            
         ];
     }
 }

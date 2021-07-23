@@ -9,19 +9,19 @@ class Transact extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name_product', 'category_id' 
-    ];
+    protected  $fillable = [
+        'name_products', 'category_id',
+    ]; 
 
+    // relacion uno a uno
 
-    // relacion uno a muchos inversa
-
-    public function categories() {
-        return $this->belongsTo('App\Models\category');
+    public function Users(){
+        return $this->belongsTo('App\Models\user');
+        
     }
 
-
-
+    public function Categories(){
+        return $this->belongsTo('App\Models\category');
+        
+    }
 }
-
-

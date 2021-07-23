@@ -9,17 +9,13 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected  $fillable = [
+        'id', 'name', 
+    ]; 
 
-    protected $fillable = [
-        'name', 
-    ];
-
-    // relacion uno a uno
+    // relacion uno a uno inversa
 
     public function Transacts() {
-        return $this->hasMany('App\Models\transact');
+        return $this->hasMany('App\Models\Transact');
     }
-
-
-
 }

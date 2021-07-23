@@ -16,12 +16,17 @@ class CreateTransactsTable extends Migration
         Schema::create('transacts', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name_product');
+            $table->string('name_products');
+
+            $table->unsignedBigInteger('category_id')->unique()->nullable();
+            $table->unsignedBigInteger('user_id')->unique()->nullable();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null')->onUpdate('cascade');
 
 
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
             $table->timestamps();
+
         });
     }
 

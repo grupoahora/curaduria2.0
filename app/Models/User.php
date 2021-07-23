@@ -62,8 +62,8 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function Farms() {
-        return $this->belongsToMany('App\Models\farm');
+    public function Transacts() {
+        return $this->hasMany('App\Models\transact');
     }
     
 }
