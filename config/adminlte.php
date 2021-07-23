@@ -253,12 +253,6 @@ return [
             'can'  => 'admin.home',
         ],
         [
-            'text' => 'Dashboard',
-            'route'  => 'agricultor.home',
-            'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'agricultor.home',
-        ],
-        [
             'text' => 'Usuarios',
             'route'  => 'admin.users.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
@@ -268,13 +262,39 @@ return [
             'text' => 'Roles',
             'route'  => 'admin.roles.index',
             'icon'  => 'fas fa-users-cog fa-fw',
-            'can'  => 'admin.roles.index',
+            'can'  => 'admin.home',
         ],
         [
-            'text' => 'Productos',
+            'text' => 'Clientes',
+            'route'  => 'admin.roles.index',
+            'icon'  => 'fas fa-users-cog fa-fw',
+            'can'  => 'admin.home',
+        ],
+
+
+        [
+/*             'text' => 'Dashboard',
+            'route'  => 'agricultor.home',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            'can'  => 'agricultor.home',
+ */        ],
+        [
+/*             'text' => 'Usuarios',
+            'route'  => 'admin.users.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            'can'  => 'admin.home',
+ */        ],
+        [
+/*             'text' => 'Roles',
+            'route'  => 'admin.roles.index',
+            'icon'  => 'fas fa-users-cog fa-fw',
+            'can'  => 'admin.roles.index',
+ */        ],
+        [
+/*             'text' => 'Productos',
             'route'  => 'admin.users.farms.index',
             'icon'  => 'fas fa-users-cog fa-fw',
-            /* 'can'  => 'admin.roles.index', */
+ */            /* 'can'  => 'admin.roles.index', */
         ],
         
 

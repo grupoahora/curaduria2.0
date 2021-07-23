@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
             'name' => 'jesus david quitero caleño',
             'email' => 'jesusquintero@grupoahora.co',
             'password' => bcrypt('12345678')
-        ])->assignRole('Agricultor');
+        ])->assignRole('Cliente');
 
         User::factory(20)->create();
     }

@@ -3,24 +3,25 @@
 @section('title', 'Curaduría Urbana 2.0')
 
 @section('content_header')
-    
-        <div class="card-header">
-            <h1>Lista de usuarios</h1>
-        </div>
-    
-        
-        
-    
-    
+    <div class="card-header">
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.categorys.create')}}">Nueva Categoría</a>
+        <h1>Lista de Categorías</h1>
+
+    </div>
 @stop
 
+
+
 @section('content')
-        <div class="card-body">
-            @livewire('admin.users-index')
-        </div>
-    
-    
+
+    <div class="card-body">
+        @livewire('admin.user.categorys-index')
+    </div>
+
 @stop
+
+
+
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
@@ -33,7 +34,7 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableUser').DataTable({
+            $('#TableCategory').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]

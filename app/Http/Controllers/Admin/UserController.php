@@ -35,7 +35,7 @@ class UserController extends Controller
 
         $farms = Farm::all();
 
-        Return view('admin.users.editdos', compact('user', 'farms'));
+        Return view('admin.users.edit', compact('user', 'farms'));
     }
 
     public function update(Request $request, User $user)
