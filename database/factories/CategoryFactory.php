@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Formalities;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Category;
 
-class FormalitiesFactory extends Factory
+class CategoryFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Formalities::class;
+    protected $model = Category::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +22,7 @@ class FormalitiesFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
         ];
     }
 }
