@@ -15,6 +15,14 @@ class Transact extends Model
 
     // relacion uno a uno
 
+    public function Specificvars() {
+        return $this->hasMany('App\Models\specificVar');
+    }
+
+    public function Blades() {
+        return $this->hasMany('App\Models\blade');
+    }
+
     public function Users(){
         return $this->belongsTo('App\Models\user');
         

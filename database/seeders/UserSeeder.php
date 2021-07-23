@@ -27,6 +27,6 @@ class UserSeeder extends Seeder
 
         Category::factory(3)->create();
 
-        Transact::factory(3)->create();
+        
     }
 }

@@ -18,8 +18,8 @@ class CreateTransactsTable extends Migration
 
             $table->string('name_products');
 
-            $table->unsignedBigInteger('category_id')->unique()->nullable();
-            $table->unsignedBigInteger('user_id')->unique()->nullable();
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->unsignedBigInteger('user_id')->nullable();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('set null')->onUpdate('cascade');
