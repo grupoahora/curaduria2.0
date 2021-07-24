@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Smart Crop 1.0')
+@section('title', 'Curaduría Urbana 2.0')
 
 @section('content_header')
-    <h1>Smart Crop 1.0</h1>
+    <h1>Curaduría Urbana 2.0</h1>
 @stop
 
 @section('content')

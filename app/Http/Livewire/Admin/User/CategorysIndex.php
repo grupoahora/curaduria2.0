@@ -12,6 +12,6 @@ class CategorysIndex extends Component
     public function render()
     {
         $categorys = Category::all();
-        return view('livewire.admin.user.categorys-index');
+        return view('livewire.admin.user.categorys-index', compact('categorys'));
     }
 }

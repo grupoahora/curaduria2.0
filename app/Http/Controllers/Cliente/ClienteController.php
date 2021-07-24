@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Cliente;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class ClienteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('cliente.index');
+        return view('clientes.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('clientes.transacts.index');
     }
 
     /**

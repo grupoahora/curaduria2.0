@@ -11,7 +11,7 @@ use GuzzleHttp\Middleware;
 Route::get('',[HomeController::class, 'index'])->Middleware('can:admin.home')->name('admin.home');
 
 Route::resource('users', UserController::class)->only(['index', 'edit', 'update', 'show'])->names('admin.users');
-Route::resource('categorys', CategoryController::class)->names('admin.users.categorys');
+Route::resource('categorys', CategoryController::class)->names('admin.categorys');
 Route::resource('roles', RoleController::class)->names('admin.roles');
 
 /* Route::put('users/{user}', [UserController::class, 'updatefarms'])->name('admin.users.updatefarms');

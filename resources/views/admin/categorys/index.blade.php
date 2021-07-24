@@ -4,7 +4,7 @@
 
 @section('content_header')
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.categorys.create')}}">Nueva Categoría</a>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.categorys.create')}}">Nueva Categoría</a>
         <h1>Lista de Categorías</h1>
 
     </div>
@@ -13,6 +13,12 @@
 
 
 @section('content')
+@if (session('info'))
+<div class="alert alert-success">
+    <strong>{{ session('info') }}</strong>
+</div>
+
+@endif
 
     <div class="card-body">
         @livewire('admin.user.categorys-index')
@@ -34,7 +40,7 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableCategory').DataTable({
+            $('#TableCategories').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]

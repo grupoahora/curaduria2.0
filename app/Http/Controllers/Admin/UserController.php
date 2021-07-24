@@ -3,17 +3,21 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
-use App\Models\Farm;
 
 class UserController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function __construct()
     {
         $this->middleware('can:admin.users.index')->only('index');
-        $this->middleware('can:admin.users.edit')->only('edit', 'edit2', 'update', 'update2');
+        $this->middleware('can:admin.users.edit')->only('edit', 'update');
         
     }
 
@@ -24,32 +28,24 @@ class UserController extends Controller
     public function edit(User $user)
     {
 
-        $roles = Role::all();
         
+        $roles = Role::all();
 
         Return view('admin.users.edit', compact('user', 'roles'));
     }
-
-    public function editdos(User $user)
+    public function show(User $user)
     {
 
-        $farms = Farm::all();
 
-        Return view('admin.users.edit', compact('user', 'farms'));
+        Return view('admin.users.show', $user);
     }
 
     public function update(Request $request, User $user)
     {
         $user->roles()->sync($request->roles);
        
+        
 
-        return redirect()->route('admin.users.edit', $user)->with('info', 'se asigno los roles correctamente');
-    }
-    
-    public function updatefarms(Request $request, User $user)
-    {
-        $user->farms()->sync($request->farms);
-
-        return redirect()->route('admin.users.editfarms', $user)->with('info', 'se asigno las fincas correctamente');
+        return redirect()->route('admin.users.edit', $user)->with('info', 'Se asignó el rol correctamente');
     }
 }

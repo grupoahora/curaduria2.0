@@ -270,6 +270,13 @@ return [
             'icon'  => 'fas fa-users-cog fa-fw',
             'can'  => 'admin.home',
         ],
+        [
+            'text' => 'Categorías',
+            'route'  => 'admin.categorys.index',
+            'icon'  => 'fas fa-users-cog fa-fw',
+            'can'  => 'admin.home',
+        ],
+
 
 
         [
