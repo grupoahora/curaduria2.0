@@ -264,13 +264,13 @@ return [
             'icon'  => 'fas fa-users-cog fa-fw',
             'can'  => 'admin.home',
         ],
-        [
+/*         [
             'text' => 'Clientes',
-            'route'  => 'admin.roles.index',
+            'route'  => 'clientes.index',
             'icon'  => 'fas fa-users-cog fa-fw',
             'can'  => 'admin.home',
         ],
-        [
+ */        [
             'text' => 'Categorías',
             'route'  => 'admin.categorys.index',
             'icon'  => 'fas fa-users-cog fa-fw',
@@ -280,11 +280,11 @@ return [
 
 
         [
-/*             'text' => 'Dashboard',
-            'route'  => 'agricultor.home',
+            'text' => 'Trámites',
+            'route'  => 'admin.transacts.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'agricultor.home',
- */        ],
+            'can'  => 'admin.home',
+        ],
         [
 /*             'text' => 'Usuarios',
             'route'  => 'admin.users.index',

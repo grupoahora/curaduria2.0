@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
-
+use App\Http\Controllers\Admin\TransactController;
 use GuzzleHttp\Middleware;
 
 Route::get('',[HomeController::class, 'index'])->Middleware('can:admin.home')->name('admin.home');
@@ -13,7 +13,7 @@ Route::get('',[HomeController::class, 'index'])->Middleware('can:admin.home')->n
 Route::resource('users', UserController::class)->only(['index', 'edit', 'update', 'show'])->names('admin.users');
 Route::resource('categorys', CategoryController::class)->names('admin.categorys');
 Route::resource('roles', RoleController::class)->names('admin.roles');
-
+Route::resource('transacts', TransactController::class)->names('admin.transacts');
 /* Route::put('users/{user}', [UserController::class, 'updatefarms'])->name('admin.users.updatefarms');
 
 Route::get('users/{user}', [UserController::class, 'editdos'])->name('admin.users.editfarms');
