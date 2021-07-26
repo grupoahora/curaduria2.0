@@ -22,6 +22,7 @@ class Transact extends Model
     public function Blades() {
         return $this->hasMany('App\Models\blade');
     }
+    // relacion uno a muchos
 
     public function Users(){
         return $this->belongsTo('App\Models\user');

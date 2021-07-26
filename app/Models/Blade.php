@@ -11,10 +11,11 @@ class Blade extends Model
     protected  $fillable = [
         'name', 'transact_id',
     ];
-
+// relacion muchos a muchos
     public function Gnericvars(){
         return $this->belongsToMany(GenericVar::class);
     }
+// relacion uno a muchos
 
     public function Transacts(){
         return $this->belongsTo('App\Models\Transact');
