@@ -20,6 +20,7 @@ class CreateBladesTable extends Migration
 
             $table->unsignedBigInteger('transact_id')->nullable();
             
+            
 
             
             $table->foreign('transact_id')->references('id')->on('transacts')->onDelete('set null')->onUpdate('cascade');

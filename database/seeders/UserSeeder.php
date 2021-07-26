@@ -25,7 +25,7 @@ class UserSeeder extends Seeder
 
         User::factory(20)->create();
 
-        Category::factory(3)->create();
+        
 
         
     }

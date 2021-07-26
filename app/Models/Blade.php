@@ -12,8 +12,12 @@ class Blade extends Model
         'name', 'transact_id',
     ];
 
+    public function Gnericvars(){
+        return $this->belongsToMany(GenericVar::class);
+    }
+
     public function Transacts(){
-        return $this->belongsTo('App\Models\transact');
+        return $this->belongsTo('App\Models\Transact');
         
     }
 }
