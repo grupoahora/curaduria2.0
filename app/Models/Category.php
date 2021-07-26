@@ -10,7 +10,7 @@ class Category extends Model
     use HasFactory;
 
     protected  $fillable = [
-        'id', 'name', 
+        'id', 'categoryr', 'categoryu', 
     ]; 
 
     // relacion uno a uno inversa

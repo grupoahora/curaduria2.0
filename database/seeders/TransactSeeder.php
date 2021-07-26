@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Blade;
+use App\Models\GenericVar;
 use App\Models\specificVar;
 use App\Models\Transact;
 
@@ -17,12 +18,15 @@ class TransactSeeder extends Seeder
      */
     public function run()
     {
-        $transact = Transact::factory(3)->create();
-        foreach ($transact as $transacts) {
+        Transact::factory(3)->create();
+        specificVar::factory(1)->create();
+        $blades = Blade::factory(1)->create();
+            
+                
+                
+            
 
-            specificVar::factory(1)->create();
-            Blade::factory(1)->create();
 
-        };
+        
     }
 }
