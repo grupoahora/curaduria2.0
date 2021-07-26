@@ -17,7 +17,7 @@ class GenericVar extends Model
         return $this->belongsTo('App\Models\blade');
         
     }*/
-    // relacion mucho a muchos
+    // relacion muchos a muchos
 
     public function Blades(){
         return $this->belongsToMany(Blade::class);
