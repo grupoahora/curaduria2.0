@@ -281,7 +281,7 @@ return [
 
         [
             'text' => 'Trámites',
-            'route'  => 'admin.transacts.index',
+            'route'  => 'admin.users.transacts.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],

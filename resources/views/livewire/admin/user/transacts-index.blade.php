@@ -22,10 +22,10 @@
                     <td>{{$transact->create_at}}</td>
                     <td>{{$transact->update_at}}</td>
                     <td width="10px">
-                        <a href="{{route('admin.transacts.edit', $transact)}}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="{{route('admin.users.transacts.edit', $transact)}}" class="btn btn-primary btn-sm">Editar</a>
                     </td>
                     <td width="10px">
-                        <form action="{{route('admin.transacts.destroy', $transact)}}" method="POST">
+                        <form action="{{route('admin.users.transacts.destroy', $transact)}}" method="POST">
                             @csrf
                             @method('delete')
 

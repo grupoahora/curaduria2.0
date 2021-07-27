@@ -16,7 +16,7 @@
     <div class="card">
         <div class="card-body">
             
-            {!! Form::model(['route' => ['admin.users.transacts.update', compact('transact')], 'method' => 'get']) !!}
+            {!! Form::model($transact, ['route' => ['admin.users.transacts.update', compact('transact')], 'method' => 'get']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">

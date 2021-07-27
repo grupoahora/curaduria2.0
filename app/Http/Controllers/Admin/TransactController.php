@@ -25,7 +25,7 @@ class TransactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Transact $transact)
     {
         return view('admin.users.transacts.create');
     }
@@ -74,11 +74,11 @@ class TransactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Transact $transact, Category $category)
+    public function edit(Transact $transact, Request $request)
     {
-        $transact = Transact::pluck('name_products', 'updated_at');
-        $category = Category::pluck('name',);
-        return view('admin.users.transacts.edit', compact('transact', 'category'));
+
+        
+        return view('admin.users.transacts.edit', compact('transact'));
     }
 
     /**
