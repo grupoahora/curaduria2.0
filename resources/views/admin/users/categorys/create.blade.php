@@ -15,7 +15,7 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route' => 'admin.categorys.store']) !!}
+            {!! Form::open(['route' => 'admin.users.categorys.store']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -23,7 +23,7 @@
                             <h2 class="h5">Datos de la Categoría</h2>
                         </div>
                         <div class="card-body">
-                             @include('admin.categorys.partials.form')
+                             @include('admin.users.categorys.partials.form')
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
 @section('title', 'Smart Crop 1.0')
 
 @section('content_header')
-    <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.roles.create')}}">Nuevo Rol</a>
+    <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.roles.create')}}">Nuevo Rol</a>
     <h1>Lista de Roles</h1>
 @stop
 
@@ -30,10 +30,10 @@
                             <th>{{$role->id}}</th>
                             <th>{{$role->name}}</th>
                             <th width="10px">
-                                <a href="{{route('admin.roles.edit', $role)}}" class="btn btn-sm btn-primary">Editar</a>
+                                <a href="{{route('admin.users.roles.edit', $role)}}" class="btn btn-sm btn-primary">Editar</a>
                             </th>
                             <th width="10px">
-                                <form action="{{route('admin.roles.destroy', $role)}}" method="POST">
+                                <form action="{{route('admin.users.roles.destroy', $role)}}" method="POST">
 
                                     @csrf
                                     @method('delete')

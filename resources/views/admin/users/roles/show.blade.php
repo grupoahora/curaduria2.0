@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Smart Crop 1.0')
+@section('title', 'Curaduría Urbana 2')
 
 @section('content_header')
     <h1>Mostrar Rol</h1>

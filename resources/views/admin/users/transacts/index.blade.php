@@ -3,36 +3,44 @@
 @section('title', 'Curaduría Urbana 2.0')
 
 @section('content_header')
-    <h1>Curaduría Urbana 2.0</h1>
+    <div class="card-header">
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.transacts.create')}}">Nuevo Trámite</a>
+        <h1>Lista de Trámites</h1>
+
+    </div>
 @stop
+
+
 
 @section('content')
+@if (session('info'))
+<div class="alert alert-success">
+    <strong>{{ session('info') }}</strong>
+</div>
 
-    @if (session('info'))
-        <div class="alert alert-success">
-            {{ session('info') }}
-        </div>
-    @endif
+@endif
 
-   @include('admin.categorys.partials.form')
-    
+    <div class="card-body">
+        @livewire('admin.user.transacts-index')
+    </div>
+
 @stop
+
+
 
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 @stop
 
 @section('js')
-@livewireScripts
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    @livewireScripts
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableCategory').DataTable({
+            $('#TableTransacts').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]
