@@ -17,9 +17,9 @@
     <div class="card">
         <div class="card-body">
 
-            {!! Form::model($role, ['route' => ['admin.roles.update', $role], 'method' => 'put']) !!}
+            {!! Form::model($role, ['route' => ['admin.users.roles.update', $role], 'method' => 'put']) !!}
 
-            @include('admin.roles.partials.form')
+            @include('admin.users.roles.partials.form')
                 {!! Form::submit('Editar Rol', ['class' => 'btn btn-primary']) !!}  
             {!! Form::close() !!}
 

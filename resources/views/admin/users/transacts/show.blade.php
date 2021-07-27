@@ -3,7 +3,7 @@
 @section('title', 'Curaduría Urbana 2')
 
 @section('content_header')
-    <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.farms.create')}}">Nuevo Trámite</a>
+    <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.transacts.create')}}">Nuevo Trámite</a>
     <h1>Lista de Trámites</h1>
 @stop
 

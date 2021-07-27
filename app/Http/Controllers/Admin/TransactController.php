@@ -17,7 +17,7 @@ class TransactController extends Controller
      */
     public function index()
     {
-        return view('admin.transacts.index');
+        return view('admin.users.transacts.index');
     }
 
     /**
@@ -27,7 +27,7 @@ class TransactController extends Controller
      */
     public function create()
     {
-        return view('admin.transacts.create');
+        return view('admin.users.transacts.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class TransactController extends Controller
 
         ]);
 
-        return redirect()->route('admin.transacts.edit', $transact)->with('info', 'El trámite se creó con éxito');
+        return redirect()->route('admin.users.transacts.edit', $transact)->with('info', 'El trámite se creó con éxito');
 
 
     }
@@ -78,7 +78,7 @@ class TransactController extends Controller
     {
         $transact = Transact::pluck('name_products', 'updated_at');
         $category = Category::pluck('name',);
-        return view('admin.transacts.edit', compact('transact', 'category'));
+        return view('admin.users.transacts.edit', compact('transact', 'category'));
     }
 
     /**
@@ -99,7 +99,7 @@ class TransactController extends Controller
 
         $transact->update($request->all());
 
-        return redirect()->route('admin.transacts.edit', $transact)->with('info', 'El trámite se actualizó con éxito');
+        return redirect()->route('admin.users.transacts.edit', $transact)->with('info', 'El trámite se actualizó con éxito');
     }
 
     /**
@@ -112,6 +112,6 @@ class TransactController extends Controller
     {
         $transact->delete();
 
-        return redirect()->route('admin.transacts.index', $transact)->with('info', 'El trámite se eliminó con éxito');
+        return redirect()->route('admin.users.transacts.index', $transact)->with('info', 'El trámite se eliminó con éxito');
     }
 }

@@ -16,7 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('admin.categorys.index');
+        return view('admin.users.categorys.index');
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
     public function create()
     {
         
-        return view('admin.categorys.create');
+        return view('admin.users.categorys.create');
     }
 
     /**
@@ -46,7 +46,7 @@ class CategoryController extends Controller
             'name' => $request['name'],
         ]);
         
-        return redirect()->route('admin.categorys.edit', $category)->with('info', 'La categoría se creó con éxito');
+        return redirect()->route('admin.users.categorys.edit', $category)->with('info', 'La categoría se creó con éxito');
 
     }
 
@@ -70,7 +70,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         
-        return view('admin.categorys.index', $category);
+        return view('admin.users.categorys.index', $category);
 
 
     }
@@ -97,7 +97,7 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect()->route('admin.categorys.index', $category)->with('info', 'La categoría se eliminó con éxito');
+        return redirect()->route('admin.users.categorys.index', $category)->with('info', 'La categoría se eliminó con éxito');
 
     }
 }
