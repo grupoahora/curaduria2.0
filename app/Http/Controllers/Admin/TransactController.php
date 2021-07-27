@@ -39,16 +39,16 @@ class TransactController extends Controller
     public function store(Request $request, Transact $transact)
     {
         $request->validate([
-            'user_id' => 'required',
             'name_products' => 'required',
-            'category_id' => 'required',
+            'category_name' => 'required',
+            'update_at' => 'required'
             
         ]);
 
         $transact = Transact::create([
-            'user_id' => $request['user_id'],
             'name_products' => $request['name_products'],
-            'category_id' => $request['category_id'],
+            'category_name' => $request['category_name'],
+            'updated_at' => $request['update_at'],
 
         ]);
 
@@ -74,9 +74,11 @@ class TransactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Transact $transact)
+    public function edit(Transact $transact, Category $category)
     {
-        return view('admin.transacts.index', $transact);
+        $transact = Transact::pluck('name_products', 'updated_at');
+        $category = Category::pluck('name',);
+        return view('admin.transacts.edit', compact('transact', 'category'));
     }
 
     /**
@@ -86,9 +88,18 @@ class TransactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Transact $transact)
     {
-        //
+        $request->validate([
+            'name_products' => 'required',
+            'category_name' => 'required',
+            'updated_at' => 'required'
+            
+        ]);
+
+        $transact->update($request->all());
+
+        return redirect()->route('admin.transacts.edit', $transact)->with('info', 'El trámite se actualizó con éxito');
     }
 
     /**

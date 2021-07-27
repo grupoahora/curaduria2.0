@@ -13,8 +13,30 @@
             {{ session('info') }}
         </div>
     @endif
-
-   @include('admin.categorys.partials.form')
+    <div class="card">
+        <div class="card-body">
+            
+            {!! Form::model(['route' => ['admin.transacts.update', compact('transact')], 'method' => 'get']) !!}
+            <div class="row justify-content-md-top">
+                <div class="col-5  ">
+                    <div class="card">
+                        <div class="card-header">
+                             
+                            <h2 class="h5">Trámite</h2>
+                        </div>
+                        <div class="card-body">
+                            
+                            @include('admin.transacts.partials.form')
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            {!! Form::submit('Editar trámite', ['class' => 'btn btn-primary']) !!}
+            {!! Form::close() !!}
+        </div>
+    </div>
+   
     
 @stop
 
@@ -32,7 +54,7 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableCategory').DataTable({
+            $('#TableTransact').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]
