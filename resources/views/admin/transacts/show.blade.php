@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Smart Crop 1.0')
+@section('title', 'Curaduría Urbana 2')
 
 @section('content_header')
-    <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.farms.create')}}">Nueva Finca</a>
-    <h1>Lista de Fincas</h1>
+    <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.farms.create')}}">Nuevo Trámite</a>
+    <h1>Lista de Trámites</h1>
 @stop
 
 
