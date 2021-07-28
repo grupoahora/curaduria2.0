@@ -272,7 +272,7 @@ return [
         ],
  */        [
             'text' => 'Categorías',
-            'route'  => 'admin.categorys.index',
+            'route'  => 'admin.users.categorys.index',
             'icon'  => 'fas fa-users-cog fa-fw',
             'can'  => 'admin.home',
         ],
@@ -285,6 +285,26 @@ return [
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
+        [
+            'text' => 'Variables Específicas',
+            'route'  => 'admin.users.transacts.specificvars.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            'can'  => 'admin.home',
+        ],
+        [
+            'text' => 'Plantillas',
+            'route'  => 'admin.users.transacts.blades.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            'can'  => 'admin.home',
+        ],
+        [
+            'text' => 'Variables Genéricas',
+            'route'  => 'admin.users.transacts.genericvars.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            'can'  => 'admin.home',
+        ],
+
+
         [
 /*             'text' => 'Usuarios',
             'route'  => 'admin.users.index',

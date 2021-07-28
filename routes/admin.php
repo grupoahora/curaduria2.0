@@ -1,19 +1,26 @@
 <?php
 
+use App\Http\Controllers\Admin\BladeController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\GenericvarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SpecificVarController;
 use App\Http\Controllers\Admin\TransactController;
+use App\Models\GenericVar;
 use GuzzleHttp\Middleware;
 
 Route::get('',[HomeController::class, 'index'])->Middleware('can:admin.home')->name('admin.home');
 
 Route::resource('users', UserController::class)->only(['index', 'edit', 'update', 'show'])->names('admin.users');
-Route::resource('categorys', CategoryController::class)->names('admin.categorys');
+Route::resource('categorys', CategoryController::class)->names('admin.users.categorys');
 Route::resource('roles', RoleController::class)->names('admin.roles');
 Route::resource('transacts', TransactController::class)->names('admin.users.transacts');
+Route::resource('specificvars', SpecificVarController::class)->names('admin.users.transacts.specificvars');
+Route::resource('blades', BladeController::class)->names('admin.users.transacts.blades');
+Route::resource('genericvars', GenericvarController::class)->names('admin.users.transacts.genericvars');
 /* Route::put('users/{user}', [UserController::class, 'updatefarms'])->name('admin.users.updatefarms');
 
 Route::get('users/{user}', [UserController::class, 'editdos'])->name('admin.users.editfarms');
