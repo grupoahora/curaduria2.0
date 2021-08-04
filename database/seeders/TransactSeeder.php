@@ -19,8 +19,7 @@ class TransactSeeder extends Seeder
     public function run()
     {
         Transact::factory(3)->create();
-        specificVar::factory(1)->create();
-        $blades = Blade::factory(1)->create();
+        
             
                 
                 

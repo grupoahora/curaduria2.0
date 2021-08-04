@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBladesTable extends Migration
+class CreateFormsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,13 @@ class CreateBladesTable extends Migration
      */
     public function up()
     {
-        Schema::create('blades', function (Blueprint $table) {
+        Schema::create('forms', function (Blueprint $table) {
             $table->id();
 
+            
             $table->string('name');
+            $table->string('url');
 
-            $table->unsignedBigInteger('transact_id')->nullable();
-            
-            
-
-            
-            $table->foreign('transact_id')->references('id')->on('transacts')->onDelete('set null')->onUpdate('cascade');
-            
             $table->timestamps();
         });
     }
@@ -36,6 +31,6 @@ class CreateBladesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blades');
+        Schema::dropIfExists('forms');
     }
 }

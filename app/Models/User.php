@@ -62,8 +62,13 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
+    /* relaccion uno a muchos */
+
     public function Transacts() {
         return $this->hasMany('App\Models\transact');
+    }
+    public function Documents(){
+        return $this->hasMany('App\Models\document');
     }
     
 }
