@@ -22,15 +22,21 @@ class Transact extends Model
     public function Blades() {
         return $this->hasMany('App\Models\blade');
     }
-    // relacion uno a muchos
+    /* relacion uno a uno inversa */
 
     public function Users(){
         return $this->belongsTo('App\Models\user');
         
     }
+    // relacion uno a muchos
 
     public function Categories(){
         return $this->belongsTo('App\Models\category');
         
+    }
+    //Relacion Muchos a muchos 
+
+    public function Forms() {
+        return $this->belongsToMany('App\Models\form');
     }
 }

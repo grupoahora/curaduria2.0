@@ -3145,8 +3145,8 @@ textarea.form-control-lg {
 
 .btn-light {
   color: #000;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
+  background-color: #a00909;
+  border-color: #0c0101;
 }
 .btn-light:hover {
   color: #000;
@@ -3155,13 +3155,13 @@ textarea.form-control-lg {
 }
 .btn-check:focus + .btn-light, .btn-light:focus {
   color: #000;
-  background-color: #f9fafb;
+  background-color: #fbf9f9;
   border-color: #f9fafb;
   box-shadow: 0 0 0 0.25rem rgba(211, 212, 213, 0.5);
 }
 .btn-check:checked + .btn-light, .btn-check:active + .btn-light, .btn-light:active, .btn-light.active, .show > .btn-light.dropdown-toggle {
   color: #000;
-  background-color: #f9fafb;
+  background-color: #fbf9f9;
   border-color: #f9fafb;
 }
 .btn-check:checked + .btn-light:focus, .btn-check:active + .btn-light:focus, .btn-light:active:focus, .btn-light.active:focus, .show > .btn-light.dropdown-toggle:focus {
@@ -6959,6 +6959,9 @@ textarea.form-control-lg {
 .mt-5 {
   margin-top: 3rem !important;
 }
+.mt-6 {
+  margin-top: 5.5rem !important;
+}
 
 .mt-auto {
   margin-top: auto !important;
@@ -7352,7 +7355,7 @@ textarea.form-control-lg {
 
 /* rtl:end:remove */
 .text-primary {
-  color: #f4623a !important;
+  color: #9c1717 !important;
 }
 
 .text-secondary {
@@ -7400,7 +7403,7 @@ textarea.form-control-lg {
 }
 
 .text-white-50 {
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(12, 1, 1, 0.5) !important;
 }
 
 .text-reset {
@@ -7428,7 +7431,7 @@ textarea.form-control-lg {
 }
 
 .bg-danger {
-  background-color: #dc3545 !important;
+  background-color: #aa0314 ;
 }
 
 .bg-light {
@@ -10883,7 +10886,7 @@ hr.divider {
   height: 0.2rem;
   max-width: 3.25rem;
   margin: 1.5rem auto;
-  background-color: #f4623a;
+  background-color: #8b1b1b;
   opacity: 1;
 }
 
@@ -10912,7 +10915,7 @@ hr.divider-light {
   color: #f4623a;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #f4623a !important;
+  color: #ffffff !important;
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -11003,8 +11006,8 @@ header.masthead h1, header.masthead .h1 {
   bottom: 0;
   text-align: center;
   opacity: 0;
-  color: #fff;
-  background: rgba(244, 98, 58, 0.9);
+  color: rgb(7, 7, 7);
+  background: rgba(158, 14, 14, 0.9);
   transition: opacity 0.25s ease;
   text-align: center;
 }

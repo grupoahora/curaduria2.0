@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Creative - Start Bootstrap Theme</title>
+        <title>@yield('titlehead')</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -22,9 +22,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand text-white" href="#page-top">
-                    <img src="assets/img/Logo.png" height="52" alt="" loading="lazy"/>
-                </a>
+                <a class="navbar-brand text-white" href="#page-top">Start Bootstrap</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
@@ -38,9 +36,9 @@
         </nav>
         <!-- Carousel-->
 
-        <section class="page-section p-0   " heigth="100vh" id="slide">
+        <section class="page-section " id="slide">
 
-            <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide px-lg-5" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -84,13 +82,13 @@
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">At Your Service</h2>
+                <h2 class="text-center mt-0">Nuestros servicios</h2>
                 <hr class="divider" />
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
                             <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">modificacion</h3>
+                            <h3 class="h4 mb-2">Sturdy Themes</h3>
                             <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
                         </div>
                     </div>
