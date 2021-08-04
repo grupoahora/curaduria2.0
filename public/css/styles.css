@@ -5753,7 +5753,8 @@ textarea.form-control-lg {
 }
 
 .carousel {
-  position: relative;
+  position: initial;
+  height: 100vh;
 }
 
 .carousel.pointer-event {
@@ -5764,6 +5765,7 @@ textarea.form-control-lg {
   position: relative;
   width: 100%;
   overflow: hidden;
+  height: 100vh;
 }
 .carousel-inner::after {
   display: block;
@@ -10866,7 +10868,12 @@ body {
 }
 
 .page-section {
-  padding: 8rem 0;
+  padding-top: 4rem;
+  height: -webkit-fill-available;
+}
+.page-section2 {
+  padding-top: 4rem;
+  height: 400px;
 }
 
 .text-white-75 {

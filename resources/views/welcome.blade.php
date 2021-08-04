@@ -21,7 +21,7 @@
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
+            <div class="container-fluid mx-5">
                 <a class="navbar-brand text-white" href="#page-top">
                     <img src="assets/img/Logo.png" height="52" alt="" loading="lazy"/>
                 </a>
@@ -38,7 +38,7 @@
         </nav>
         <!-- Carousel-->
 
-        <section class="page-section p-0   " heigth="100vh" id="slide">
+        <section class="page-section" id="slide">
 
             <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -69,7 +69,7 @@
         </section>
         
         <!-- About-->
-        <section class="page-section bg-danger" id="about">
+        <section class="page-section2 bg-danger" id="about">
             <div class="container px-4 px-lg-5">
                 <article class="row  gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
@@ -82,7 +82,7 @@
             </div>
         </section>
         <!-- Services-->
-        <section class="page-section" id="services">
+        <section class="page-section2" id="services">
             <div class="container px-4 px-lg-5">
                 <h2 class="text-center mt-0">At Your Service</h2>
                 <hr class="divider" />
@@ -180,14 +180,14 @@
             </div>
         </div>
         <!-- Call to action-->
-        <section class="page-section bg-dark text-white">
+        <section class="page-section2 bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
                 <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
             </div>
         </section>
         <!-- Contact-->
-        <section class="page-section" id="contact">
+        <section class="page-section2" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
