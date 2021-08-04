@@ -1,228 +1,62 @@
 <div class="container border border-dark">
-{{-- Página 1 --}}
-    <!-- Formulario único nacional -->
+    <!-- Radicado -->
     <div class="row justify-content-md-top form-group pt-2">
-        <div class="col-8">
-            <div class="border border-dark form-control text-left font-weight-bold">FORMULARIO ÚNICO NACIONAL</div>
+        <div class="col-3">
+            <div class="border border-dark bg-light form-control text-center">Radicado:</div>
         </div>
-        <div class="col-4">
-            <div class="border border-dark form-control text-right font-weight-bold">PÁGINA 1</div>
-        </div>
-    </div>
-    <!-- 0. DATOS GENERALES -->
-    <div class="row justify-content-md-top form-group">
-        <div class="col-12">
-            <div class="border border-dark bg-secondary form-control text-left font-weight-bold">0. DATOS GENERALES</div>
+        <div class="col-9">
+            <input type="text" class="form-control" placeholder="Ingrese el número de radicado">
+            </input>
         </div>
     </div>
-    <!-- USO EXCLUSIVO CURADORES URBANOS . . .  -->
+    <!-- Licencia y Modalidad -->
     <div class="row justify-content-md-top form-group">
-        <div class="col-4">
-            <div class="card border border-dark">
-                <div class="card-body">
-                    USO EXCLUSIVO CURADORES URBANOS -
-                    OFICINA DE PLANEACIÓN O LA QUE HAGA
-                    SUS VECES
-                </div>
-            </div>
+        <div class="col-3">
+            <div class="border border-dark bg-light form-control text-center">Licencia y Modalidad:</div>
         </div>
-        <div class="col-8">
-            <div class="row justify-content-md-top">
-                <div class="col-6">
-                    <div class="border border-dark form-control text-left font-weight-bold">0.1 OFICINA RESPONSABLE</div>
-                </div>
-                <div class="col-6">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-6">
-                    <div class="border border-dark form-control text-left font-weight-bold">0.2 NÚMERO DE RADICACIÓN</div>
-                </div>
-                <div class="col-6">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-6">
-                    <div class="border border-dark form-control text-left font-weight-bold">0.3 DEPARTAMENTO-MUNICIPIO-FECHA</div>
-                </div>
-                <div class="col-6">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
+        <div class="col-9">
+            <input type="text" class="form-control" placeholder="Ingrese el número de licencia y Modalidad">
+            </input>
         </div>
     </div>
-    <!-- Lea cuidadosamente . . . -->
+    <!-- Solicitante -->
     <div class="row justify-content-md-top form-group">
-        <div class="col-12">
-            <div class="card border border-dark text-center font-italic">
-                <div class="card-body">
-                    Lea cuidadosamente este formulario y las instrucciones contenidas en la Guía anexa,
-                    antes de diligenciarlo por medio electrónico o a mano en letra imprenta, sin enmendaduras
-                    y en sistema de número arábigo.
-                </div>
-            </div>
+        <div class="col-3">
+            <div class="border border-dark bg-light form-control text-center">Solicitante:</div>
+        </div>
+        <div class="col-9">
+            <input type="text" class="form-control" placeholder="Ingrese el nombre del solicitante">
+            </input>
         </div>
     </div>
-    <!-- 1. Identificación de la solicitud -->
+    <!-- Cedula -->
     <div class="row justify-content-md-top form-group">
-        <div class="col-12">
-            <div class="border border-dark bg-secondary form-control text-left font-weight-bold">1. IDENTIFICACIÓN DE LA SOLICITUD</div>
+        <div class="col-3">
+            <div class="border border-dark bg-light form-control text-center">Cédula:</div>
+        </div>
+        <div class="col-9">
+            <input type="text" class="form-control" placeholder="Ingrese el número de cédula">
+            </input>
         </div>
     </div>
-    <!-- 1.1 Tipo de trámite 1.2 Objeto del trámite -->
+    <!-- Dirección de obra -->
     <div class="row justify-content-md-top form-group">
-        <div class="col-6">
-            <div class="card border border-dark">
-                <div class="card-header text-center font-weight-bold">
-                    1.1 TIPO DE TRÁMITE
-                </div>
-                <div class="card-body">
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            A. LICENCIA DE URBANIZACIÓN
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            B. LICENCIA DE PARCELACIÓN
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            C. LICENCIA DE SUBDIVISIÓN
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            D. LICENCIA DE CONSTRUCCIÓN
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            E. INTERVENCIÓN Y OCUPACIÓN DEL ESPACIO PÚBLICO
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            F. RECONOCIMIENTO DE LA EXISTENCIA DE UNA EDIFICACIÓN
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            G. OTRAS ACTUACIONES
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-3">
+            <div class="border border-dark bg-light form-control text-center">Dirección de obra:</div>
         </div>
-        <div class="col-6">
-            <div class="card border border-dark">
-                <div class="card-header text-center font-weight-bold">
-                    1.2 OBJETO DEL TRÁMITE
-                </div>
-                <div class="card-body border">
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            INICIAL
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            PRÓRROGA
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            MODIFICACIÓN DE LICENCIA VIGENTE
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-10">
-                            REVALIDACIÓN
-                        </div>
-                        <div class="col-2">
-                            <div class="checkbox justify-content-md">
-                                <label><input type="checkbox" value=""></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body border">
-                    <div class="row justify-content-md-top">
-                        <div class="col-12">
-                            <div class="text-left">
-                                OTRAS ACTUACIONES
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row justify-content-md-top">
-                        <div class="col-2">
-                            <div class="text-left">
-                                ¿Cuál?
-                            </div>
-                        </div>
-                        <div class=col-10>
-                            <input type="text" class="form-control" placeholder="">
-                            </input>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-9">
+            <input type="text" class="form-control" placeholder="Ingrese la dirección de la obra">
+            </input>
+        </div>
+    </div>
+    <!-- Dirección de correspondencia -->
+    <div class="row justify-content-md-top form-group">
+        <div class="col-3">
+            <div class="border border-dark bg-light form-control text-center">Dirección de correspondencia:</div>
+        </div>
+        <div class="col-9">
+            <input type="text" class="form-control" placeholder="Ingrese la dirección de correspondencia">
+            </input>
         </div>
     </div>
     <!-- Identificación predial -->
