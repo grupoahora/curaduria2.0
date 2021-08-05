@@ -9,6 +9,10 @@ class Document extends Model
 {
     use HasFactory;
 
+    public function Sales(){
+        return $this->hasMany('App\Models\sale');
+    }
+
 
 
     //Relacion 1 a muchos inversa

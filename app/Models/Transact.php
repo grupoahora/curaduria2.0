@@ -33,6 +33,10 @@ class Transact extends Model
     public function Categories(){
         return $this->belongsTo('App\Models\category');
         
+        
+    }
+    public function Sales(){
+        return $this->hasMany('App\Models\sale');
     }
     //Relacion Muchos a muchos 
 

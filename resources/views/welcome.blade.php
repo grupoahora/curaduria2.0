@@ -70,10 +70,11 @@
         
         <!-- About-->
         <section class="page-section2 bg-danger" id="about">
-            <div class="container px-4 px-lg-5">
-                <article class="row  gx-4 gx-lg-5 justify-content-center">
+            <div class="container   px-4 px-lg-5">
+                <article class="row  px-4 gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">Compre aqui su carpeta!</h2>
+                        
+                        <h2 class="text-white mt-5">Compre aqui su carpeta!</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">Ahorre tiempo en molestios tramites precesniales, dando clik abajo podras comprar una nueva carpeta!</p>
                         <a class="btn btn-dark btn-xl " href="#services">Get Started!</a>
@@ -122,7 +123,7 @@
         <div id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row g-0">
-                    <div class="col-lg-4 col-sm-6">
+                    <div class="col-lg-4 col-sm-6 ">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
                             <div class="portfolio-box-caption">

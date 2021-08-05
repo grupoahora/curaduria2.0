@@ -70,5 +70,8 @@ class User extends Authenticatable
     public function Documents(){
         return $this->hasMany('App\Models\document');
     }
+    public function Sales(){
+        return $this->hasMany('App\Models\sale');
+    }
     
 }
