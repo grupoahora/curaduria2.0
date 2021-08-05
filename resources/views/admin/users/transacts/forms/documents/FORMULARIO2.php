@@ -794,10 +794,7 @@
          2.1 Dirección o Nomenclatura ACTUAL
                                       ANTERIORES
          2.2 No. Matrícula Inmobiliaria
-         2.3 No. Identificación Catastral
-         2.4 Clasificación del suelo
-         2.5 Planimetría del suelo
-         2.6 Información general -->
+         2.3 No. Identificación Catastral -->
     <div class="row justify-content-md-top form-group">
         <div class="col-12">
             <div class="card">
@@ -869,8 +866,8 @@
                     </div>
                 </div>
                 <div class="card-body p-0">
-                    <div class="row justify-content-md-top form-group p-0 m-0">
-                        <div class="col-6 p-0 m-0" style="width: 8rem;">
+                    <div class="row justify-content-md-top form-group">
+                        <div class="col-6">
                             <div class="card p-0 m-0 border border-dark">
                                 <div class="row justify-content-md-top form-group">
                                     <div class="col-6 pr-0 m-0 border-right border-dark">
@@ -880,6 +877,7 @@
                                             <h5>
                                         </div>
                                         <div class="card-body">
+                                            <div class="card-body">
                                                 <div class="row justify-content-md-top">
                                                     <div class="col-10">
                                                         a. URBANO
@@ -910,6 +908,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-6 p-0 m-0 border-left border-dark">
@@ -965,149 +964,111 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6 p-0 m-0">
-                            <div class="card p-0 m-0 border border-dark">
-                                <div class="card-header p-0 m-0">
-                                    <h5 class="text-left font-weight-bold px-1 mx-1">
-                                        2.6 INFORMACIÓN GENERAL
-                                    <h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-6 pr-0 m-0 border-dark">
-                                            <div class="row text-left font-weight-bold">
-                                                BARRIO O URBANIZACIÓN
-                                            </div>
-                                            <div class="row">
-                                                <div class="checkbox justify-content-md">
-                                                    <input type="text" class="form-control" placeholder="">
-                                                    </input>
-                                                </div>
-                                            </div>
-                                            <div class="row text-left font-weight-bold">
-                                                COMUNA
-                                            </div>
-                                            <div class="row">
-                                                <div class="checkbox justify-content-md">
-                                                    <input type="text" class="form-control" placeholder="">
-                                                    </input>
-                                                </div>
-                                            </div>
-                                            <div class="row text-left font-weight-bold">
-                                                ESTRATO
-                                            </div>
-                                            <div class="row">
-                                                <div class="checkbox justify-content-md">
-                                                    <input type="text" class="form-control" placeholder="">
-                                                    </input>
-                                                </div>
-                                            </div>
-                                            <div class="row text-left font-weight-bold">
-                                                MANZANA No.
-                                            </div>
-                                            <div class="row">
-                                                <div class="checkbox justify-content-md">
-                                                    <input type="text" class="form-control" placeholder="">
-                                                    </input>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 p-0 m-0 border-dark">
-                                            <div class="row text-left font-weight-bold">
-                                                VEREDA
-                                            </div>
-                                            <div class="row">
-                                                <div class="checkbox justify-content-md">
-                                                    <input type="text" class="form-control" placeholder="">
-                                                    </input>
-                                                </div>
-                                            </div>
-                                            <div class="row text-left font-weight-bold">
-                                                SECTOR
-                                            </div>
-                                            <div class="row">
-                                                <div class="checkbox justify-content-md">
-                                                    <input type="text" class="form-control" placeholder="">
-                                                    </input>
-                                                </div>
-                                            </div>
-                                            <div class="row text-left font-weight-bold">
-                                                CORREGIMIENTO
-                                            </div>
-                                            <div class="row">
-                                                <div class="checkbox justify-content-md">
-                                                    <input type="text" class="form-control" placeholder="">
-                                                    </input>
-                                                </div>
-                                            </div>
-                                            <div class="row text-left font-weight-bold">
-                                                LOTE No.
-                                            </div>
-                                            <div class="row">
-                                                <div class="checkbox justify-content-md">
-                                                    <input type="text" class="form-control" placeholder="">
-                                                    </input>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    {{-- ---------------------------------------------------------------------------------- --}}
-    <!-- Formulario único nacional  Página 2 -->
-    <div class="row justify-content-md-top form-group pt-2">
-        <div class="col-8">
-            <div class="border border-dark form-control text-left font-weight-bold">FORMULARIO ÚNICO NACIONAL</div>
+    <!-- Ingeniero civil estructural -->
+    <div class="row justify-content-md-top form-group">
+        <div class="col-3">
+            <div class="border border-dark bg-light form-control text-center">Ingeniero Civil Estructural:</div>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" placeholder="Ingrese el nombre del ingeniero civil estructural">
+            </input>
+        </div>
+        <div class="col-2">
+            <div class="border border-dark bg-light form-control text-center">No. Tarjeta:</div>
+        </div>
+        <div class="col-2">
+            <input type="text" class="form-control" placeholder="Número">
+            </input>
+        </div>
+    </div>
+    <!-- Ingeniero de Geotecnista -->
+    <div class="row justify-content-md-top form-group">
+        <div class="col-3">
+            <div class="border border-dark bg-light form-control text-center">Ingeniero de Geotecnista:</div>
+        </div>
+        <div class="col-5">
+            <input type="text" class="form-control" placeholder="Ingrese el nombre del ingeniero geotecnista">
+            </input>
+        </div>
+        <div class="col-2">
+            <div class="border border-dark bg-light form-control text-center">No. Tarjeta:</div>
+        </div>
+        <div class="col-2">
+            <input type="text" class="form-control" placeholder="Número">
+            </input>
+        </div>
+    </div>
+    <!-- Uso de edificación -->
+    <div class="row justify-content-md-top form-group">
+        <div class="col-3">
+            <div class="border border-dark bg-light form-control text-center">Uso de edificación:</div>
         </div>
         <div class="col-4">
-            <div class="border border-dark form-control text-right font-weight-bold">PÁGINA 2</div>
-        </div>
-    </div>
-    <!-- 3. Información de Vecinos Colindantes -->
-    <div class="row justify-content-md-top form-group">
-        <div class="col-12">
-            <div class="border border-dark bg-secondary form-control text-left font-weight-bold">
-                3. INFORMACIÓN DE VECINOS COLINDANTES
+            <div class="row justify-content-md-top">
+                <div class="col-5">
+                    <div class="border border-dark bg-light form-control text-center">Residencial:</div>
+                </div>
+                <div class="col-2">
+                    <div class="checkbox justify-content-md">
+                        <label><input type="checkbox" value=""></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-top">
+                <div class="col-5">
+                        <div class="border border-dark bg-light form-control text-center">Industrial:</div>
+                    </div>
+                    <div class="col-2">
+                        <label><input type="checkbox" value=""></label>
+                        </input>
+                    </div>
+                <div class="col"></div>
+            </div>
+            <div class="row justify-content-md-top">
+                <div class="col-5">
+                    <div class="border border-dark bg-light form-control text-center">Dotación:</div>
+                </div>
+                <div class="col-2">
+                    <div class="checkbox justify-content-md">
+                        <label><input type="checkbox" value=""></label>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- #1 - #8 (Dirección del predio; Dirección de correspondencia) -->
-    <div class="row justify-content-md-top form-group">
-        <div class="col-12">
-            <div class="card p-0 m-0 border border-dark">
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-1">
-                            <div class="card border border-dark bg-light h-100" style="width: 5rem;">
-                                <div class="text-center my-auto">
-                                    <h5 class="my-auto">
-                                        1
-                                    </h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-11">
-                            <div class="row text-left font-weight-bold">
-                                DIRECCIÓN DEL PREDIO
-                                <div class="checkbox justify-content-md">
-                                    <input type="text" class="form-control" placeholder="">
-                                    </input>
-                                </div>
-                            </div>
-                            <div class="row text-left font-weight-bold">
-                                DIRECCIÓN DE CORRESPONDENCIA
-                                <div class="checkbox justify-content-md">
-                                    <input type="text" class="form-control" placeholder="">
-                                    </input>
-                                </div>
-                            </div>
-                        </div>
+        <div class="col-4">
+            <div class="row justify-content-md-top">
+                <div class="col-5">
+                    <div class="border border-dark bg-light form-control text-center">Comercial:</div>
+                </div>
+                <div class="col-2">
+                    <div class="checkbox justify-content-md">
+                        <label><input type="checkbox" value=""></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-md-top">
+                <div class="col-5">
+                    <div class="border border-dark bg-light form-control text-center">Institucional:</div>
+                </div>
+                <div class="col-2">
+                    <label><input type="checkbox" value=""></input></label>
+                </div>
+                <div class="col">
+
+                </div>
+            </div>
+            <div class="row justify-content-md-top">
+                <div class="col-5">
+                    <div class="border border-dark bg-light form-control text-center">Otros:</div>
+                </div>
+                <div class="col-2">
+                    <div class="checkbox justify-content-md">
+                        <label><input type="checkbox" value=""></label>
                     </div>
                 </div>
             </div>
