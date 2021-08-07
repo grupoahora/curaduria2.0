@@ -1,23 +1,23 @@
-<div class="container-fluid border border-dark">
+<div class="container-fluid border border-dark p-0 m-0">
 
     <!-- Formulario único nacional  Página 1 -->
-    <div class="row justify-content-md-top form-group pt-2">
-        <div class="col-8">
+    <div class="row justify-content-md-top form-group p-0 m-0">
+        <div class="col-8 p-0 m-0">
             <div class="border border-dark form-control text-left font-weight-bold">FORMULARIO ÚNICO NACIONAL</div>
         </div>
-        <div class="col-4">
+        <div class="col-4 p-0 m-0">
             <div class="border border-dark form-control text-right font-weight-bold">PÁGINA 1</div>
         </div>
     </div>
     <!-- 0. DATOS GENERALES -->
-    <div class="row justify-content-md-top form-group">
-        <div class="col-12">
+    <div class="row justify-content-md-top form-group p-0 m-0">
+        <div class="col-12 p-0 m-0">
             <div class="border border-dark bg-secondary form-control text-left font-weight-bold">0. DATOS GENERALES</div>
         </div>
     </div>
     <!-- USO EXCLUSIVO CURADORES URBANOS . . .  -->
-    <div class="row justify-content-md-top form-group">
-        <div class="col-4">
+    <div class="row justify-content-md-top form-group p-0 m-0">
+        <div class="col-4 p-0 m-0">
             <div class="card border border-dark">
                 <div class="card-body">
                     USO EXCLUSIVO CURADORES URBANOS -
@@ -26,30 +26,30 @@
                 </div>
             </div>
         </div>
-        <div class="col-8">
-            <div class="row justify-content-md-top">
-                <div class="col-6">
+        <div class="col-8 p-0 m-0">
+            <div class="row justify-content-md-top p-0 m-0">
+                <div class="col-6 p-0 m-0">
                     <div class="border border-dark form-control text-left font-weight-bold">0.1 OFICINA RESPONSABLE</div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 p-0 m-0">
                     <input type="text" class="form-control" placeholder="">
                     </input>
                 </div>
             </div>
-            <div class="row justify-content-md-top">
-                <div class="col-6">
+            <div class="row justify-content-md-top p-0 m-0">
+                <div class="col-6 p-0 m-0">
                     <div class="border border-dark form-control text-left font-weight-bold">0.2 NÚMERO DE RADICACIÓN</div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 p-0 m-0">
                     <input type="text" class="form-control" placeholder="">
                     </input>
                 </div>
             </div>
-            <div class="row justify-content-md-top">
-                <div class="col-6">
+            <div class="row justify-content-md-top p-0 m-0">
+                <div class="col-6 p-0 m-0">
                     <div class="border border-dark form-control text-left font-weight-bold">0.3 DEPARTAMENTO-MUNICIPIO-FECHA</div>
                 </div>
-                <div class="col-6">
+                <div class="col-6 p-0 m-0">
                     <input type="text" class="form-control" placeholder="">
                     </input>
                 </div>
@@ -57,9 +57,9 @@
         </div>
     </div>
     <!-- Lea cuidadosamente . . . -->
-    <div class="row justify-content-md-top form-group">
-        <div class="col-12">
-            <div class="card border border-dark text-center font-italic">
+    <div class="row justify-content-md-top form-group p-0 m-0">
+        <div class="col-12 p-0 m-0">
+            <div class="card border border-dark text-center font-italic p-0 m-0">
                 <div class="card-body">
                     Lea cuidadosamente este formulario y las instrucciones contenidas en la Guía anexa,
                     antes de diligenciarlo por medio electrónico o a mano en letra imprenta, sin enmendaduras
@@ -69,13 +69,13 @@
         </div>
     </div>
     <!-- 1. Identificación de la solicitud -->
-    <div class="row justify-content-md-top form-group">
+    <div class="row justify-content-md-top form-group p-0 m-0">
         <div class="col-12">
             <div class="border border-dark bg-secondary form-control text-left font-weight-bold">1. IDENTIFICACIÓN DE LA SOLICITUD</div>
         </div>
     </div>
     <!-- 1.1 Tipo de trámite 1.2 Objeto del trámite -->
-    <div class="row justify-content-md-top form-group">
+    <div class="row justify-content-md-top form-group p-0 m-0">
         <div class="col-6">
             <div class="card border border-dark">
                 <div class="card-header text-center font-weight-bold">
@@ -1081,30 +1081,305 @@
     <div class="row justify-content-md-top form-group">
         <div class="col-12">
             <div class="card p-0 m-0 border border-dark">
-                <div class="col-6">
-                    <div class="row">
-                        <div class="col-1">
-                            <div class="card border border-dark bg-light h-100" style="width: 5rem;">
-                                <div class="text-center my-auto">
-                                    <h5 class="my-auto">
-                                        1
-                                    </h5>
+                <div class="row p-0 m-0 border-bottom border-dark">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-1 p-0">
+                                <div class="card h-100 shadow-none border-right border-dark">
+                                    <div class="text-center my-auto">
+                                        <h5 class="my-auto font-weight-bold">
+                                            1
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-11 border-right border-dark m-0">
+                                <div class="row text-left border-bottom border-dark">
+                                    <div class="col">
+                                        Dirección del predio
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row text-left">
+                                    <div class="col">
+                                        Dirección de correspondencia
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
-                        <div class="col-11">
-                            <div class="row text-left font-weight-bold">
-                                DIRECCIÓN DEL PREDIO
-                                <div class="checkbox justify-content-md">
-                                    <input type="text" class="form-control" placeholder="">
-                                    </input>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-1 p-0">
+                                <div class="card h-100 shadow-none border-right border-dark">
+                                    <div class="text-center my-auto">
+                                        <h5 class="my-auto font-weight-bold">
+                                            2
+                                        </h5>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row text-left font-weight-bold">
-                                DIRECCIÓN DE CORRESPONDENCIA
-                                <div class="checkbox justify-content-md">
-                                    <input type="text" class="form-control" placeholder="">
-                                    </input>
+                            <div class="col-11 border-right border-dark m-0">
+                                <div class="row text-left border-bottom border-dark">
+                                    <div class="col">
+                                        Dirección del predio
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row text-left">
+                                    <div class="col">
+                                        Dirección de correspondencia
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-0 m-0 border-top border-bottom border-dark">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-1 p-0">
+                                <div class="card h-100 shadow-none border-right border-dark">
+                                    <div class="text-center my-auto">
+                                        <h5 class="my-auto font-weight-bold">
+                                            3
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-11 border-right border-dark m-0">
+                                <div class="row text-left border-bottom border-dark">
+                                    <div class="col">
+                                        Dirección del predio
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row text-left">
+                                    <div class="col">
+                                        Dirección de correspondencia
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-1 p-0">
+                                <div class="card h-100 shadow-none border-right border-dark">
+                                    <div class="text-center my-auto">
+                                        <h5 class="my-auto font-weight-bold">
+                                            4
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-11 border-right border-dark m-0">
+                                <div class="row text-left border-bottom border-dark">
+                                    <div class="col">
+                                        Dirección del predio
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row text-left">
+                                    <div class="col">
+                                        Dirección de correspondencia
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-0 m-0 border-top border-bottom border-dark">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-1 p-0">
+                                <div class="card h-100 shadow-none border-right border-dark">
+                                    <div class="text-center my-auto">
+                                        <h5 class="my-auto font-weight-bold">
+                                            5
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-11 border-right border-dark m-0">
+                                <div class="row text-left border-bottom border-dark">
+                                    <div class="col">
+                                        Dirección del predio
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row text-left">
+                                    <div class="col">
+                                        Dirección de correspondencia
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-1 p-0">
+                                <div class="card h-100 shadow-none border-right border-dark">
+                                    <div class="text-center my-auto">
+                                        <h5 class="my-auto font-weight-bold">
+                                            6
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-11 border-right border-dark m-0">
+                                <div class="row text-left border-bottom border-dark">
+                                    <div class="col">
+                                        Dirección del predio
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row text-left">
+                                    <div class="col">
+                                        Dirección de correspondencia
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-0 m-0 border-top border-dark">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-1 p-0">
+                                <div class="card h-100 shadow-none border-right border-dark">
+                                    <div class="text-center my-auto">
+                                        <h5 class="my-auto font-weight-bold">
+                                            7
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-11 border-right border-dark m-0">
+                                <div class="row text-left border-bottom border-dark">
+                                    <div class="col">
+                                        Dirección del predio
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row text-left">
+                                    <div class="col">
+                                        Dirección de correspondencia
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-1 p-0">
+                                <div class="card h-100 shadow-none border-right border-dark">
+                                    <div class="text-center my-auto">
+                                        <h5 class="my-auto font-weight-bold">
+                                            8
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-11 border-right border-dark m-0">
+                                <div class="row text-left border-bottom border-dark">
+                                    <div class="col">
+                                        Dirección del predio
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
+                                </div>
+                                <div class="row text-left">
+                                    <div class="col">
+                                        Dirección de correspondencia
+                                    </div>
+                                    <div class="col">
+                                        <div class="checkbox justify-content-md">
+                                            <input type="text" class="form-control" placeholder="">
+                                            </input>
+                                        </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -1113,177 +1388,589 @@
             </div>
         </div>
     </div>
-    <!-- Nomenclatura a asignar -->
+    <!-- 4. Linderos, Dimensiones y Áreas -->
     <div class="row justify-content-md-top form-group">
-        <div class="col-3">
-            <div class="border border-dark bg-light form-control text-center">Nomenclatura a asignar:</div>
-        </div>
-        <div class="col-9">
-            <input type="text" class="form-control" placeholder="Ingrese la nomenclatura">
-            </input>
-        </div>
-    </div>
-    <!-- Descripción del proyecto -->
-    <div class="row justify-content-md-top form-group">
-        <div class="col-3">
-            <div class="border border-dark bg-light form-control text-center">Descripción del proyecto:</div>
-        </div>
-        <div class="col-9">
-            <input type="text" class="form-control" placeholder="Ingrese la descripción del proyecto">
-            </input>
-        </div>
-    </div>
-    <!-- Área del lote -->
-    <div class="row justify-content-md-top form-group">
-        <div class="col-2">
-            <div class="border border-dark bg-light form-control text-center">Área del lote:</div>
-        </div>
-        <div class="col-5">
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Escritura pública:</div>
-                </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
-        </div>
-        <div class="col-5">
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Planos:</div>
-                </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
+        <div class="col-12">
+            <div class="border border-dark bg-secondary form-control text-left font-weight-bold">
+                4. LINDEROS, DIMENSIONES Y ÁREAS
             </div>
         </div>
     </div>
-    <!-- Área total a -->
+    <!-- Tabla de Linderos, Dimensiones y Áreas -->
     <div class="row justify-content-md-top form-group">
-        <div class="col-2">
-            <div class="border border-dark bg-light form-control text-center">Área total a:</div>
-        </div>
-        <div class="col-10">
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Construir:</div>
+        <div class="col-12">
+            <div class="card border border-dark">
+                <div class="card-header border border-dark">
+                    <div class="row">
+                        <div class="col-3 border-right border-dark">
+                            <div class="text-left my-auto">
+                                <h5 class="my-auto font-weight-bold">
+                                    LINDEROS
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="col-3 border-left border-right border-dark">
+                            <div class="text-left my-auto">
+                                <h5 class="my-auto font-weight-bold">
+                                    LONGITUD
+                                </h5>
+                                <h6 class="my-auto">
+                                    (Metros lineales)
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="col-6 border-left border-dark">
+                            <div class="text-left my-auto">
+                                <h5 class="my-auto font-weight-bold">
+                                    COLINDA CON
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
+                <div class="card-body border border-dark">
+                    <div class="row p-0 m-0">
+                        <div class="col-3 border-right border-dark p-0">
+                            <h5 class="my-auto font-weight-bold">
+                                NORTE
+                            </h5>
+                            <textarea class="form-control border-0" placeholder="___________________________________________________________________________" rows="3"></textarea>
+                        </div>
+                        <div class="col-3 border-right border-left border-dark p-0">
+                            <textarea class="form-control border-0" placeholder="____________________________________________________________________________________________________" rows="4"></textarea>
+                        </div>
+                        <div class="col-6 border-left border-dark p-0">
+                            <textarea class="form-control border-0" placeholder="____________________________________________________________________________________________________________________________________________________________________________________________________________________________" rows="4"></textarea>
+                        </div> 
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Subdividir:</div>
+                <div class="card-body border border-dark">
+                    <div class="row p-0 m-0">
+                        <div class="col-3 border-right border-dark p-0">
+                            <h5 class="my-auto font-weight-bold">
+                                SUR
+                            </h5>
+                            <textarea class="form-control border-0" placeholder="___________________________________________________________________________" rows="3"></textarea>
+                        </div>
+                        <div class="col-3 border-right border-left border-dark p-0">
+                            <textarea class="form-control border-0" placeholder="____________________________________________________________________________________________________" rows="4"></textarea>
+                        </div>
+                        <div class="col-6 border-left border-dark p-0">
+                            <textarea class="form-control border-0" placeholder="____________________________________________________________________________________________________________________________________________________________________________________________________________________________" rows="4"></textarea>
+                        </div> 
+                    </div>
                 </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
+                <div class="card-body border border-dark">
+                    <div class="row p-0 m-0">
+                        <div class="col-3 border-right border-dark p-0">
+                            <h5 class="my-auto font-weight-bold">
+                                ORIENTE
+                            </h5>
+                            <textarea class="form-control border-0" placeholder="___________________________________________________________________________" rows="3"></textarea>
+                        </div>
+                        <div class="col-3 border-right border-left border-dark p-0">
+                            <textarea class="form-control border-0" placeholder="____________________________________________________________________________________________________" rows="4"></textarea>
+                        </div>
+                        <div class="col-6 border-left border-dark p-0">
+                            <textarea class="form-control border-0" placeholder="____________________________________________________________________________________________________________________________________________________________________________________________________________________________" rows="4"></textarea>
+                        </div> 
+                    </div>
                 </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Reconocer:</div>
+                <div class="card-body border border-dark">
+                    <div class="row p-0 m-0">
+                        <div class="col-3 border-right border-dark p-0">
+                            <h5 class="my-auto font-weight-bold">
+                                OCCIDENTE
+                            </h5>
+                            <textarea class="form-control border-0" placeholder="___________________________________________________________________________" rows="3"></textarea>
+                        </div>
+                        <div class="col-3 border-right border-left border-dark p-0">
+                            <textarea class="form-control border-0" placeholder="____________________________________________________________________________________________________" rows="4"></textarea>
+                        </div>
+                        <div class="col-6 border-left border-dark p-0">
+                            <textarea class="form-control border-0" placeholder="____________________________________________________________________________________________________________________________________________________________________________________________________________________________" rows="4"></textarea>
+                        </div> 
+                    </div>
                 </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Adecuar:</div>
-                </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Demoler:</div>
-                </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Ampliar:</div>
-                </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Cerrar:</div>
-                </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Modificar:</div>
-                </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
-                </div>
-            </div>
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Urbanizar:</div>
-                </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
+                <div class="card-body border border-dark">
+                    <div class="row m-0">
+                        <div class="col-6 p-0 my-auto font-weight-bold text-center">
+                            ÁREA TOTAL DEL PREDIO(S)
+                        </div>
+                        <div class="col-5 p-0">
+                            <div class="checkbox">
+                                <input type="text" class="form-control d-flex justify-content-end" placeholder="">
+                                </input>
+                            </div>
+                        </div>
+                        <div class="col-1 p-0 my-auto font-weight-bold text-center">
+                            M2
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Número de estacionamientos -->
+    <!-- 5. Titulares y profesionales responsables
+            Los firmantes titutales y profesionales . . . -->
     <div class="row justify-content-md-top form-group">
-        <div class="col-3">
-            <div class="border border-dark bg-light form-control text-center">Número de estacionamientos:</div>
-        </div>
-        <div class="col-9">
-            <input type="text" class="form-control" placeholder="Ingrese el número de estacionamientos">
-            </input>
-        </div>
-    </div>
-    <!-- Índices -->
-    <div class="row justify-content-md-top form-group">
-        <div class="col-2">
-            <div class="border border-dark bg-light form-control text-center">Índices:</div>
-        </div>
-        <div class="col-5">
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Ocupación:</div>
+        <div class="col-12">
+            <div class="card border border-dark">
+                <div class="card-header p-0 border border-dark">
+                    <div class="bg-secondary form-control text-left font-weight-bold">
+                        5. TITULARES Y PROFESIONALES RESPONSABLES
+                    </div>
                 </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
+                <div class="card-body">
+                    <h6 class="small font-italic">
+                        Los firmantes titulares y profesionales responsables declaramos bajo la gravedad
+                        del juramento que nos responsabilizamos totalmente por los estudios y 
+                        documentos presentados con este formulario y por la veracidad de los datos aquí
+                        consignados. Así mismo, declaramos que conocemos las disposiciones vigentes
+                        que rigen la materia y las sanciones establecidas.
+                    </h6>
                 </div>
             </div>
         </div>
-        <div class="col-5">
-            <div class="row justify-content-md-top">
-                <div class="col-5">
-                    <div class="border border-dark bg-light form-control text-center">Construcción:</div>
+    </div>
+    <!-- 5.1 Titular (es) de la licencia -->
+    <div class="row justify-content-md-top form-group">
+        <div class="col-12">
+            <div class="card border border-dark">
+                <div class="card-header border border-dark">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="my-auto">
+                                <h5 class="my-auto font-weight-bold">
+                                    5.1 TITULAR (ES) DE LA LICENCIA
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-7">
-                    <input type="text" class="form-control" placeholder="">
-                    </input>
+                <div class="card-body p-0 m-0">
+                    <div class="row border-top border-right border-left border-dark p-0 m-0">
+                        <div class="col-6 border-right border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    NOMBRE
+                                </div>
+                                <div class="col-9">
+                                    <div class="checkbox">
+                                        <input type="text" class="form-control d-flex justify-content-end" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 border-left border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    FIRMA
+                                </div>
+                                <div class="col">
+                                    <textarea class="form-control border border-dark" placeholder="" rows="1"></textarea> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border border-dark p-0 m-0">
+                        <div class="col-4 border-right border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    C.C. o NIT
+                                </div>
+                                <div class="col-9">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 border-right border-left border-dark">
+                            <div class="row">
+                                <div class="col-6">
+                                    TELÉFONO/CELULAR
+                                </div>
+                                <div class="col-6">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 border-left border-dark">
+                            <div class="row">
+                                <div class="col-5">
+                                    CORREO ELECTRÓNICO
+                                </div>
+                                <div class="col-7">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0 m-0">
+                    <div class="row border-top border-right border-left border-dark p-0 m-0">
+                        <div class="col-6 border-right border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    NOMBRE
+                                </div>
+                                <div class="col-9">
+                                    <div class="checkbox">
+                                        <input type="text" class="form-control d-flex justify-content-end" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 border-left border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    FIRMA
+                                </div>
+                                <div class="col">
+                                    <textarea class="form-control border border-dark" placeholder="" rows="2"></textarea> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border border-dark p-0 m-0">
+                        <div class="col-4 border-right border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    C.C. o NIT
+                                </div>
+                                <div class="col-9">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 border-right border-left border-dark">
+                            <div class="row">
+                                <div class="col-6">
+                                    TELÉFONO/CELULAR
+                                </div>
+                                <div class="col-6">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 border-left border-dark">
+                            <div class="row">
+                                <div class="col-5">
+                                    CORREO ELECTRÓNICO
+                                </div>
+                                <div class="col-7">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0 m-0">
+                    <div class="row border-top border-right border-left border-dark p-0 m-0">
+                        <div class="col-6 border-right border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    NOMBRE
+                                </div>
+                                <div class="col-9">
+                                    <div class="checkbox">
+                                        <input type="text" class="form-control d-flex justify-content-end" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 border-left border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    FIRMA
+                                </div>
+                                <div class="col">
+                                    <textarea class="form-control border border-dark" placeholder="" rows="2"></textarea> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border border-dark p-0 m-0">
+                        <div class="col-4 border-right border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    C.C. o NIT
+                                </div>
+                                <div class="col-9">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 border-right border-left border-dark">
+                            <div class="row">
+                                <div class="col-6">
+                                    TELÉFONO/CELULAR
+                                </div>
+                                <div class="col-6">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 border-left border-dark">
+                            <div class="row">
+                                <div class="col-5">
+                                    CORREO ELECTRÓNICO
+                                </div>
+                                <div class="col-7">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0 m-0">
+                    <div class="row border-top border-right border-left border-dark p-0 m-0">
+                        <div class="col-6 border-right border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    NOMBRE
+                                </div>
+                                <div class="col-9">
+                                    <div class="checkbox">
+                                        <input type="text" class="form-control d-flex justify-content-end" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5 border-left border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    FIRMA
+                                </div>
+                                <div class="col">
+                                    <textarea class="form-control border border-dark" placeholder="" rows="2"></textarea> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row border border-dark p-0 m-0">
+                        <div class="col-4 border-right border-dark">
+                            <div class="row">
+                                <div class="col-3">
+                                    C.C. o NIT
+                                </div>
+                                <div class="col-9">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 border-right border-left border-dark">
+                            <div class="row">
+                                <div class="col-6">
+                                    TELÉFONO/CELULAR
+                                </div>
+                                <div class="col-6">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 border-left border-dark">
+                            <div class="row">
+                                <div class="col-5">
+                                    CORREO ELECTRÓNICO
+                                </div>
+                                <div class="col-7">
+                                    <div class="checkbox justify-content-md">
+                                        <input type="text" class="form-control" placeholder="">
+                                        </input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <!-- Formulario Unico Nacional Página 3 -->
+    <div class="row justify-content-md-top form-group">
+        <div class="col-8">
+            <div class="border border-dark form-control text-left font-weight-bold">FORMULARIO ÚNICO NACIONAL</div>
+        </div>
+        <div class="col-4">
+            <div class="border border-dark form-control text-right font-weight-bold">PÁGINA 3</div>
+        </div>
+    </div>
+    <!-- 5.2 Profesionales Responsables -->
+    <div class="row justify-content-md-top form-group">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header border border-dark text-center font-weight-bold">
+                    5.2 PROFESIONALES RESPONSABLES
+                </div>
+                <div class="card-body border border-dark">
+                    <div class="row">
+                        <div class="col-2">
+                            URBANIZADOR O CONSTRUCTOR RESPONSABLE
+                            <h6 class="small">
+                                (Para constructor responsable experiencia mínima 3 años o posgrado)
+                            </h6>
+                        </div>
+                        <div class="col-10">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="row text-left">
+                                        <div class="col-6">
+                                            NOMBRE
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="checkbox justify-content-md">
+                                                <input type="text" class="form-control" placeholder="">
+                                                </input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="row text-left">
+                                        <div class="col-6">
+                                            FIRMA
+                                        </div>
+                                        <div class="col-6">
+                                            <textarea class="form-control border border-dark" placeholder="" rows="1"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <div class="row text-left">
+                                        <div class="col-6">
+                                            CÉDULA
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="checkbox justify-content-md">
+                                                <input type="text" class="form-control" placeholder="">
+                                                </input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="row text-left">
+                                        <div class="col-6">
+                                            N° MATRICULA PROFESIONAL
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="checkbox justify-content-md">
+                                                <input type="text" class="form-control" placeholder="">
+                                                </input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row text-left">
+                                        <div class="col-6">
+                                            FECHA EXP. MATRICULA
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="checkbox justify-content-md">
+                                                <input type="text" class="form-control" placeholder="">
+                                                </input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body border border-dark">
+                    <div class="row p-1">
+                        <div class="col-2">
+                            ARQUITECTO PROYECTISTA
+                            <h6 class="small">
+                                (Sin requisitos de experiencia mínima)
+                            </h6>
+                        </div>
+                        <div class="col-10">
+                            <div class="row p-0 m-0">
+                                <div class="col-3">
+                                    <div class="row text-left">
+                                        <div class="col-6">
+                                            CÉDULA
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="checkbox justify-content-md">
+                                                <input type="text" class="form-control" placeholder="">
+                                                </input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="row text-left">
+                                        <div class="col-6">
+                                            N° MATRICULA PROFESIONAL
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="checkbox justify-content-md">
+                                                <input type="text" class="form-control" placeholder="">
+                                                </input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="row text-left">
+                                        <div class="col-6">
+                                            FECHA EXP. MATRICULA
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="checkbox justify-content-md">
+                                                <input type="text" class="form-control" placeholder="">
+                                                </input>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
