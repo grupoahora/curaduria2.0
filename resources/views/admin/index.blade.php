@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<button id="btnCrearPdf"> Generar Pdf</button>
+<button id="btnCrearPdf"> Generar Pdfasdas d</button>
     <div class="container border border-dark" id="pdf">
         <!-- Radicado -->
         <div class="row justify-content-md-top form-group pt-2">
