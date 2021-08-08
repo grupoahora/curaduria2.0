@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <p>Bienvenido al nuevo dashboard admin</p>
+    <p>Bienvenido al nuevo pagina admin</p>
 @stop
 
 @section('css')
