@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\BladeController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\DocumentController;
+use App\Http\Controllers\Admin\FormController;
 use App\Http\Controllers\Admin\GenericvarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
@@ -21,6 +23,8 @@ Route::resource('transacts', TransactController::class)->names('admin.users.tran
 Route::resource('specificvars', SpecificVarController::class)->names('admin.users.transacts.specificvars');
 Route::resource('blades', BladeController::class)->names('admin.users.transacts.blades');
 Route::resource('genericvars', GenericvarController::class)->names('admin.users.transacts.genericvars');
+Route::resource('forms', FormController::class)->names('admin.users.transacts.forms');
+Route::resource('documents', DocumentController::class)->names('admin.users.transacts.documents');
 /* Route::put('users/{user}', [UserController::class, 'updatefarms'])->name('admin.users.updatefarms');
 
 Route::get('users/{user}', [UserController::class, 'editdos'])->name('admin.users.editfarms');

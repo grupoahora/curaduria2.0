@@ -303,6 +303,18 @@ return [
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
+        [
+            'text' => 'Formularios',
+            'route'  => 'admin.users.transacts.forms.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            'can'  => 'admin.home',
+        ],
+        [
+            'text' => 'Documentos',
+            'route'  => 'admin.users.transacts.documents.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            'can'  => 'admin.home',
+        ],
 
 
         [
