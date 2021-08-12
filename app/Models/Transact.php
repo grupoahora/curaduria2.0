@@ -19,10 +19,7 @@ class Transact extends Model
         return $this->hasMany('App\Models\specificVar');
     }
 
-    public function Blades() {
-        return $this->hasMany('App\Models\blade');
-    }
-    /* relacion uno a uno inversa */
+    
 
     public function Users(){
         return $this->belongsTo('App\Models\user');
