@@ -15,8 +15,103 @@
     @endif
     <div class="card">
         <div class="card-body">
-            
-            {!! Form::model($transact, ['route' => ['admin.users.transacts.update', compact('transact')], 'method' => 'get']) !!}
+            <!-- Tabs navs -->
+            <ul class="nav nav-tabs nav-justified mb-3" id="ex1" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="ex3-tab-1" data-toggle="tab" href="#ex3-tabs-1" role="tab"
+                        aria-controls="ex3-tabs-1" aria-selected="true">Datos del trámite</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="ex3-tab-2" data-toggle="tab" href="#ex3-tabs-2" role="tab"
+                        aria-controls="ex3-tabs-2" aria-selected="false">Formularios</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="ex3-tab-3" data-toggle="tab" href="#ex3-tabs-3" role="tab"
+                        aria-controls="ex3-tabs-3" aria-selected="false">Documentos</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="ex3-tab-4" data-toggle="tab" href="#ex3-tabs-4" role="tab"
+                        aria-controls="ex3-tabs-4" aria-selected="false">otro tab</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="ex3-tab-5" data-toggle="tab" href="#ex3-tabs-5" role="tab"
+                        aria-controls="ex3-tabs-5" aria-selected="false">otro tab 2</a>
+                </li>
+            </ul>
+            <!-- Tabs navs -->
+
+            <!-- Tabs content -->
+            <div class="tab-content" id="ex2-content">
+                <div class="tab-pane fade active show" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
+                    {!! Form::model($transact, ['route' => ['admin.users.transacts.update', compact('transact')], 'method' => 'get']) !!}
+                    <div class="row justify-content-md-top">
+                        <div class="col-5  ">
+                            <div class="card">
+                                <div class="card-header">
+                                    
+                                    <h2 class="h5">Trámite</h2>
+                                </div>
+                                <div class="card-body">
+                                    @include('admin.users.transacts.partials.form')
+                                    {!! Form::submit('Editar trámite', ['class' => 'btn btn-primary']) !!}
+                                    {!! Form::close() !!}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade active show" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn btn-secondary btn float-right" 
+                                href="{{route('admin.users.transacts.forms.create', compact('transact'))}}">Nuevo Formulario</a>
+                            <h1>Formularios</h1>
+                        </div>
+                        <div class="card-body">
+                            <table id="TableForms" class="table table-responsive table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>URL</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($transact->forms as $forms)
+                                        <tr>
+                                            <td>{{$forms->id}}</td>
+                                            <td>{{$forms->name}}</td>
+                                            <td>{{$forms->url}}</td>
+                                            <td width="10px">
+                                                <a href="{{route('admin.users.transacts.forms.edit', compact('transact'))}}" 
+                                                    class="btn btn-primary btn-sm">Editar</a>
+                                            </td>
+                                            <td width="10px">
+                                                <form action="{{route('admin.users.transacts.forms.destroy', compact('transact'))}}" method="POST">
+                                                    @csrf
+                                                    @method('delete')
+
+                                                    <button type="submit" class="btn btn-danger btn-sm"">Eliminar</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="ex3-tabs-4" role="tabpanel" aria-labelledby="ex3-tab-4">
+                    <div wight="100vh"></div>
+                </div>
+                <div class="tab-pane fade" id="ex3-tabs-5" role="tabpanel" aria-labelledby="ex3-tab-5">
+                    Tab 5 content
+                </div>
+            </div>
+
+            {{-- {!! Form::model($transact, ['route' => ['admin.users.transacts.update', compact('transact')], 'method' => 'get']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -33,7 +128,7 @@
             </div>
             
             {!! Form::submit('Editar trámite', ['class' => 'btn btn-primary']) !!}
-            {!! Form::close() !!}
+            {!! Form::close() !!} --}}
         </div>
     </div>
    

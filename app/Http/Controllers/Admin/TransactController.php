@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Transact;
+use App\Models\Form;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -76,9 +77,9 @@ class TransactController extends Controller
      */
     public function edit(Transact $transact, Request $request)
     {
-
         
-        return view('admin.users.transacts.edit', compact('transact'));
+        $forms = Form::where('id')->where('transact_id', $transact->id)->get();
+        return view('admin.users.transacts.edit', compact('transact', 'forms'));
     }
 
     /**
