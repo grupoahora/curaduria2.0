@@ -4,12 +4,12 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use App\Models\Transact;
+use App\Models\Folder;
 use App\Models\Form;
 use App\Models\User;
 use Illuminate\Http\Request;
 
-class TransactController extends Controller
+class FolderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class TransactController extends Controller
      */
     public function index()
     {
-        return view('admin.users.transacts.index');
+        return view('admin.users.folders.index');
     }
 
     /**
@@ -26,9 +26,9 @@ class TransactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Transact $transact)
+    public function create(Folder $folder)
     {
-        return view('admin.users.transacts.create');
+        return view('admin.users.folders.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class TransactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Transact $transact)
+    public function store(Request $request, Folder $folder)
     {
         $request->validate([
             'name_products' => 'required',
@@ -46,14 +46,14 @@ class TransactController extends Controller
             
         ]);
 
-        $transact = Transact::create([
+        $folder = Folder::create([
             'name_products' => $request['name_products'],
             'category_name' => $request['category_name'],
             'updated_at' => $request['update_at'],
 
         ]);
 
-        return redirect()->route('admin.users.transacts.edit', $transact)->with('info', 'El trámite se creó con éxito');
+        return redirect()->route('admin.users.folders.edit', $folder)->with('info', 'El trámite se creó con éxito');
 
 
     }
@@ -75,11 +75,11 @@ class TransactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Transact $transact, Request $request)
+    public function edit(Folder $folder, Request $request)
     {
         
-        $forms = Form::where('id')->where('transact_id', $transact->id)->get();
-        return view('admin.users.transacts.edit', compact('transact', 'forms'));
+        $forms = Form::where('id')->where('folder_id', $folder->id)->get();
+        return view('admin.users.folders.edit', compact('folder', 'forms'));
     }
 
     /**
@@ -89,7 +89,7 @@ class TransactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Transact $transact)
+    public function update(Request $request, Folder $folder)
     {
         $request->validate([
             'name_products' => 'required',
@@ -98,9 +98,9 @@ class TransactController extends Controller
             
         ]);
 
-        $transact->update($request->all());
+        $folder->update($request->all());
 
-        return redirect()->route('admin.users.transacts.edit', $transact)->with('info', 'El trámite se actualizó con éxito');
+        return redirect()->route('admin.users.folders.edit', $folder)->with('info', 'El trámite se actualizó con éxito');
     }
 
     /**
@@ -109,10 +109,10 @@ class TransactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Transact $transact)
+    public function destroy(Folder $folder)
     {
-        $transact->delete();
+        $folder->delete();
 
-        return redirect()->route('admin.users.transacts.index', $transact)->with('info', 'El trámite se eliminó con éxito');
+        return redirect()->route('admin.users.folders.index', $folder)->with('info', 'El trámite se eliminó con éxito');
     }
 }

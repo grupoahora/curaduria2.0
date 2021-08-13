@@ -1,5 +1,5 @@
 <div>
-    <table id="TableTransacts" class="table table-striped">
+    <table id="Tablefolders" class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -13,19 +13,19 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($transacts as $transact)
+            @foreach ($folders as $folder)
                 <tr>
-                    <td>{{$transact->id}}</td>
-                    <td>{{$transact->name_products}}</td>
-                    <td>{{$transact->category_id}}</td>
-                    <td>{{$transact->user_id}}</td>
-                    <td>{{$transact->create_at}}</td>
-                    <td>{{$transact->update_at}}</td>
+                    <td>{{$folder->id}}</td>
+                    <td>{{$folder->name_products}}</td>
+                    <td>{{$folder->category_id}}</td>
+                    <td>{{$folder->user_id}}</td>
+                    <td>{{$folder->create_at}}</td>
+                    <td>{{$folder->update_at}}</td>
                     <td width="10px">
-                        <a href="{{route('admin.users.transacts.edit', $transact)}}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="{{route('admin.users.folders.edit', $folder)}}" class="btn btn-primary btn-sm">Editar</a>
                     </td>
                     <td width="10px">
-                        <form action="{{route('admin.users.transacts.destroy', $transact)}}" method="POST">
+                        <form action="{{route('admin.users.folders.destroy', $folder)}}" method="POST">
                             @csrf
                             @method('delete')
 

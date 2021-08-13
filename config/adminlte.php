@@ -281,37 +281,37 @@ return [
 
         [
             'text' => 'Trámites',
-            'route'  => 'admin.users.transacts.index',
+            'route'  => 'admin.users.folders.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
         [
             'text' => 'Variables Específicas',
-            'route'  => 'admin.users.transacts.specificvars.index',
+            'route'  => 'admin.users.folders.specificvars.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
         [
             'text' => 'Plantillas',
-            'route'  => 'admin.users.transacts.blades.index',
+            'route'  => 'admin.users.folders.blades.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
         [
             'text' => 'Variables Genéricas',
-            'route'  => 'admin.users.transacts.genericvars.index',
+            'route'  => 'admin.users.folders.genericvars.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
         [
             'text' => 'Formularios',
-            'route'  => 'admin.users.transacts.forms.index',
+            'route'  => 'admin.users.folders.forms.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
         [
             'text' => 'Documentos',
-            'route'  => 'admin.users.transacts.documents.index',
+            'route'  => 'admin.users.folders.documents.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],

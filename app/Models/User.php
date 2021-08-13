@@ -64,8 +64,8 @@ class User extends Authenticatable
 
     /* relaccion uno a muchos */
 
-    public function Transacts() {
-        return $this->hasMany('App\Models\transact');
+    public function Folders() {
+        return $this->hasMany('App\Models\folder');
     }
     public function Documents(){
         return $this->hasMany('App\Models\document');

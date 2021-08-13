@@ -4,7 +4,7 @@
 
 @section('content_header')
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.transacts.create')}}">Nuevo Trámite</a>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.folders.create')}}">Nuevo Trámite</a>
         <h1>Lista de Trámites</h1>
 
     </div>
@@ -21,7 +21,7 @@
 @endif
 
     <div class="card-body">
-        @livewire('admin.user.transacts-index')
+        @livewire('admin.user.folders-index')
     </div>
 
 @stop
@@ -40,7 +40,7 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableTransacts').DataTable({
+            $('#Tablefolders').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]

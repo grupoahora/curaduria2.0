@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-@include('admin.form')
+
 
 @stop
 

@@ -10,21 +10,21 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\SpecificVarController;
-use App\Http\Controllers\Admin\TransactController;
+use App\Http\Controllers\Admin\FolderController;
 use App\Models\GenericVar;
 use GuzzleHttp\Middleware;
 
 Route::get('',[HomeController::class, 'index'])->Middleware('can:admin.home')->name('admin.home');
-Route::get('pdf',[HomeController::class, 'pdf'])->name('admin.pdf');
+
 Route::resource('users', UserController::class)->only(['index', 'edit', 'update', 'show'])->names('admin.users');
 Route::resource('categorys', CategoryController::class)->names('admin.users.categorys');
 Route::resource('roles', RoleController::class)->names('admin.roles');
-Route::resource('transacts', TransactController::class)->names('admin.users.transacts');
-Route::resource('specificvars', SpecificVarController::class)->names('admin.users.transacts.specificvars');
-Route::resource('blades', BladeController::class)->names('admin.users.transacts.blades');
-Route::resource('genericvars', GenericvarController::class)->names('admin.users.transacts.genericvars');
-Route::resource('forms', FormController::class)->names('admin.users.transacts.forms');
-Route::resource('documents', DocumentController::class)->names('admin.users.transacts.documents');
+Route::resource('folders', FolderController::class)->names('admin.users.folders');
+Route::resource('specificvars', SpecificVarController::class)->names('admin.users.folders.specificvars');
+Route::resource('blades', BladeController::class)->names('admin.users.folders.blades');
+Route::resource('genericvars', GenericvarController::class)->names('admin.users.folders.genericvars');
+Route::resource('forms', FormController::class)->names('admin.users.folders.forms');
+Route::resource('documents', DocumentController::class)->names('admin.users.folders.documents');
 /* Route::put('users/{user}', [UserController::class, 'updatefarms'])->name('admin.users.updatefarms');
 
 Route::get('users/{user}', [UserController::class, 'editdos'])->name('admin.users.editfarms');
