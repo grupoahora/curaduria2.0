@@ -18,11 +18,11 @@ class CreateSalesTable extends Migration
 
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('folder_id')->nullable();
-            $table->unsignedBigInteger('docsale_id')->nullable();
+            
             
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null')->onUpdate('cascade');
             $table->foreign('folder_id')->references('id')->on('folders')->onDelete('set null')->onUpdate('cascade');
-            $table->foreign('docsale_id')->references('id')->on('docsales')->onDelete('set null')->onUpdate('cascade');
+           
                         $table->timestamps();
         });
     }

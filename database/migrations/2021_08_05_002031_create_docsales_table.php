@@ -19,11 +19,12 @@ class CreateDocsalesTable extends Migration
             $table->string('name');
             $table->string('url');
 
-            $table->unsignedBigInteger('form_id');
-            $table->unsignedBigInteger('user_id');
-
-            $table->foreign('form_id')->references('id')->on('forms')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('form_id')->nullable();
+            
+            $table->unsignedBigInteger('sale_id')->nullable();
+            $table->foreign('sale_id')->references('id')->on('sales')->onDelete('set null')->onUpdate('cascade');
+            $table->foreign('form_id')->references('id')->on('forms')->onDelete('set null')->onUpdate('cascade');
+           
 
 
             $table->timestamps();
