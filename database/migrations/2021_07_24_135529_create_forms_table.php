@@ -17,7 +17,7 @@ class CreateFormsTable extends Migration
             $table->id();
 
             
-            $table->string('name');
+            $table->string('nameform');
             $table->string('url');
 
             $table->timestamps();

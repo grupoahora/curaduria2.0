@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTransactsTable extends Migration
+class CreateFoldersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTransactsTable extends Migration
      */
     public function up()
     {
-        Schema::create('transacts', function (Blueprint $table) {
+        Schema::create('folders', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name_products');
+            $table->string('namefolder');
 
             $table->unsignedBigInteger('category_id')->nullable();
             $table->unsignedBigInteger('user_id')->nullable();
@@ -37,6 +37,6 @@ class CreateTransactsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transacts');
+        Schema::dropIfExists('folders');
     }
 }
