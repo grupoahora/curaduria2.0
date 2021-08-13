@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFormsTransactsTable extends Migration
+class CreateFolderformTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,26 +13,25 @@ class CreateFormsTransactsTable extends Migration
      */
     public function up()
     {
-        Schema::create('forms_transacts', function (Blueprint $table) {
+      Schema::create('folders_forms', function (Blueprint $table) {
             $table->id();
 
             
+            $table->unsignedBigInteger('folder_id');
             $table->unsignedBigInteger('form_id');
-            $table->unsignedBigInteger('transact_id');
 
+            $table->foreign('folder_id')->references('id')->on('folders')->onDelete('cascade');
             $table->foreign('form_id')->references('id')->on('forms')->onDelete('cascade');
-            $table->foreign('transact_id')->references('id')->on('transacts')->onDelete('cascade');
-            $table->timestamps();
-        });
-    }
+            $table->timestamps();  //
+      });}
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
+    public function down ()
     {
-        Schema::dropIfExists('forms_transacts');
+       Schema::dropIfExists('folders_forms'); //
     }
 }

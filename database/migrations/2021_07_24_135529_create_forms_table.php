@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatesTable extends Migration
+class CreateFormsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,17 @@ class CreateStatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('states', function (Blueprint $table) {
+        Schema::create('blades', function (Blueprint $table) {
             $table->id();
 
-            $table->string('estado');
             
+<<<<<<< HEAD:database/migrations/2021_08_04_135529_create_blades_table.php
+            $table->string('name_blade');
+=======
+            $table->string('nameform');
+>>>>>>> davidcortÃes:database/migrations/2021_07_24_135529_create_forms_table.php
+            $table->string('url');
 
-            
             $table->timestamps();
         });
     }
@@ -31,6 +35,6 @@ class CreateStatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('states');
+        Schema::dropIfExists('blades');
     }
 }
