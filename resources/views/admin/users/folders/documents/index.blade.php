@@ -4,8 +4,8 @@
 
 @section('content_header')
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.categorys.create')}}">Nueva Categoría</a>
-        <h1>Lista de Categorías</h1>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.folders.documents.create')}}">Nuevo Documento</a>
+        <h1>Lista de Documentos</h1>
 
     </div>
 @stop
@@ -21,7 +21,7 @@
 @endif
 
     <div class="card-body">
-        @livewire('admin.user.folder.categorys-index')
+        @livewire('admin.user.folder.blade.documents-index')
     </div>
 
 @stop
@@ -40,7 +40,7 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableCategories').DataTable({
+            $('#TableDocuments').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]
