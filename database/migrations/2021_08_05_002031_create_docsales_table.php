@@ -24,7 +24,7 @@ class CreateDocsalesTable extends Migration
             $table->unsignedBigInteger('sale_id')->nullable();
             $table->foreign('sale_id')->references('id')->on('sales')->onDelete('set null')->onUpdate('cascade');
             $table->foreign('form_id')->references('id')->on('forms')->onDelete('set null')->onUpdate('cascade');
-           
+            
 
 
             $table->timestamps();

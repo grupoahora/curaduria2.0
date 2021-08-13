@@ -13,15 +13,11 @@ class CreateFormsTable extends Migration
      */
     public function up()
     {
-        Schema::create('blades', function (Blueprint $table) {
+        Schema::create('forms', function (Blueprint $table) {
             $table->id();
 
             
-<<<<<<< HEAD:database/migrations/2021_08_04_135529_create_blades_table.php
-            $table->string('name_blade');
-=======
-            $table->string('nameform');
->>>>>>> davidcortÃes:database/migrations/2021_07_24_135529_create_forms_table.php
+            $table->string('name');
             $table->string('url');
 
             $table->timestamps();
