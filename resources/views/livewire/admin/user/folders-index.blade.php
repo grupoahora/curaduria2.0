@@ -1,5 +1,5 @@
 <div>
-    <table id="Tablefolders" class="table table-striped">
+    <table id="TableFolders" class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>
@@ -16,9 +16,9 @@
             @foreach ($folders as $folder)
                 <tr>
                     <td>{{$folder->id}}</td>
-                    <td>{{$folder->name_products}}</td>
+                    <td>{{$folder->namefolder}}</td>
                     <td>{{$folder->category_id}}</td>
-                    <td>{{$folder->user_id}}</td>
+                    <td>{{$folder->user->name}}</td>
                     <td>{{$folder->create_at}}</td>
                     <td>{{$folder->update_at}}</td>
                     <td width="10px">

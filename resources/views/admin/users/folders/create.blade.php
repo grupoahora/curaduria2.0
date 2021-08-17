@@ -15,7 +15,7 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route' => 'admin.users.transacts.store']) !!}
+            {!! Form::open(['route' => 'admin.users.folders.store']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -23,13 +23,14 @@
                             <h2 class="h5">Datos del Trámite</h2>
                         </div>
                         <div class="card-body">
-                             @include('admin.users.transacts.partials.form')
+                            @include('admin.users.folders.partials.form')
+                            {!! Form::submit('Crear Trámite', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>
             </div>
-                {!! Form::submit('Crear Trámite', ['class' => 'btn btn-primary']) !!}
-            {!! Form::close() !!}
+                
         </div>
     </div>
 

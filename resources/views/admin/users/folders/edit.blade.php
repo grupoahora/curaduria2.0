@@ -43,7 +43,7 @@
             <!-- Tabs content -->
             <div class="tab-content" id="ex2-content">
                 <div class="tab-pane fade active show" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
-                    {!! Form::model($transact, ['route' => ['admin.users.transacts.update', compact('transact')], 'method' => 'get']) !!}
+                    {!! Form::model($folder, ['route' => ['admin.users.folders.update', compact('folder')], 'method' => 'get']) !!}
                     <div class="row justify-content-md-top">
                         <div class="col-5  ">
                             <div class="card">
@@ -52,7 +52,7 @@
                                     <h2 class="h5">Trámite</h2>
                                 </div>
                                 <div class="card-body">
-                                    @include('admin.users.transacts.partials.form')
+                                    @include('admin.users.folders.partials.form')
                                     {!! Form::submit('Editar trámite', ['class' => 'btn btn-primary']) !!}
                                     {!! Form::close() !!}
                                 </div>
@@ -60,36 +60,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade active show" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
                     <div class="card">
                         <div class="card-header">
                             <a class="btn btn-secondary btn float-right" 
-                                href="{{route('admin.users.transacts.forms.create', compact('transact'))}}">Nuevo Formulario</a>
-                            <h1>Formularios</h1>
+                                href="{{route('admin.users.folders.forms.create', compact('folder'))}}">Nuevo Formulario</a>
+                            <h2 class="h5 pt-2">Formularios</h2>
                         </div>
                         <div class="card-body">
-                            <table id="TableForms" class="table table-responsive table-striped">
+                            <table id="TableForm" class="table table-striped">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nombre</th>
+                                        <th>Nombre del Formulario</th>
                                         <th>URL</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($transact->forms as $forms)
+                                    @foreach ($folder->forms as $form)
                                         <tr>
-                                            <td>{{$forms->id}}</td>
-                                            <td>{{$forms->name}}</td>
-                                            <td>{{$forms->url}}</td>
+                                            <td>{{$form->id}}</td>
+                                            <td>{{$form->name}}</td>
+                                            <td>{{$form->url}}</td>
                                             <td width="10px">
-                                                <a href="{{route('admin.users.transacts.forms.edit', compact('transact'))}}" 
+                                                <a href="{{route('admin.users.folders.forms.edit', $form)}}" 
                                                     class="btn btn-primary btn-sm">Editar</a>
                                             </td>
                                             <td width="10px">
-                                                <form action="{{route('admin.users.transacts.forms.destroy', compact('transact'))}}" method="POST">
+                                                <form action="{{route('admin.users.folders.forms.destroy', $form)}}" 
+                                                    method="POST">
                                                     @csrf
                                                     @method('delete')
 
@@ -137,19 +138,33 @@
 
 
 @section('css')
+    <link rel="stylesheet" href="/css/styles2.css">
     <link rel="stylesheet" href="/css/admin_custom.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 @stop
 
 @section('js')
-@livewireScripts
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    @livewireScripts
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableTransact').DataTable({
+            $('#TableFolder').DataTable({
+                "lengthMenu": [
+                    [5, 10, 15, -1],
+                    [5, 10, 15, "All"]
+                ]
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#TableForm').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]

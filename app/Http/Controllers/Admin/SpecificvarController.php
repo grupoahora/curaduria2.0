@@ -15,7 +15,7 @@ class SpecificvarController extends Controller
      */
     public function index()
     {
-        return view('admin.users.transacts.specificvars.index');
+        return view('admin.users.folders.specificvars.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class SpecificvarController extends Controller
      */
     public function create()
     {
-        return view('admin.users.transacts.specificvars.create');
+        return view('admin.users.folders.specificvars.create');
     }
 
     /**
@@ -67,7 +67,7 @@ class SpecificvarController extends Controller
             'varc12' => $request['varc12'],
         ]);
         
-        return redirect()->route('admin.users.transacts.specificvars.index', compact('specificvar'))->with('info', 'La variable específica se creó con éxito');
+        return redirect()->route('admin.users.folders.specificvars.index', compact('specificvar'))->with('info', 'La variable específica se creó con éxito');
 
     }
 
@@ -90,7 +90,7 @@ class SpecificvarController extends Controller
      */
     public function edit(specificVar $specificvar, Request $request)
     {
-        return view('admin.users.transacts.specificvars.edit', compact('specificvar'));
+        return view('admin.users.folders.specificvars.edit', compact('specificvar'));
     }
 
     /**
@@ -118,7 +118,7 @@ class SpecificvarController extends Controller
         ]);
 
         $specificvar->update($request->all());
-        return redirect()->route('admin.users.transacts.specificvars.index', $specificvar)->with('info', 'La variable específica se actualizó con éxito');
+        return redirect()->route('admin.users.folders.specificvars.index', $specificvar)->with('info', 'La variable específica se actualizó con éxito');
     }
 
     /**
@@ -130,6 +130,6 @@ class SpecificvarController extends Controller
     public function destroy(specificVar $specificvar)
     {
         $specificvar->delete();
-        return redirect()->route('admin.users.transacts.specificvars.index', $specificvar)->with('info', 'La variable específica se eliminó con éxito');
+        return redirect()->route('admin.users.folders.specificvars.index', $specificvar)->with('info', 'La variable específica se eliminó con éxito');
     }
 }

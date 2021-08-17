@@ -4,7 +4,7 @@
 
 @section('content_header')
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.transacts.specificvars.create')}}">Nueva Variable Específica</a>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.folders.specificvars.create')}}">Nueva Variable Específica</a>
         <h1>Lista de Variables Específicas</h1>
 
     </div>
@@ -21,7 +21,7 @@
 @endif
 
     <div class="card-body">
-        @livewire('admin.user.transact.specific-var-index')
+        @livewire('admin.user.folder.specific-var-index')
     </div>
 
 @stop

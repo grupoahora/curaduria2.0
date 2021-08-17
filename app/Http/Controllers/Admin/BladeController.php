@@ -15,7 +15,7 @@ class BladeController extends Controller
      */
     public function index()
     {
-        return view('admin.users.transacts.blades.index');
+        return view('admin.users.folders.blades.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class BladeController extends Controller
      */
     public function create()
     {
-        return view('admin.users.transacts.blades.create');
+        return view('admin.users.folders.blades.create');
     }
 
     /**
@@ -38,15 +38,15 @@ class BladeController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'transact_id' => 'required'
+            'folder_id' => 'required'
         ]);
 
         $blade = Blade::create([
             'name' => $request['name'],
-            'transact_id' => $request['transact_id']
+            'folder_id' => $request['folder_id']
         ]);
 
-        return redirect()->route('admin.users.transacts.blades.index', compact('blade'))->with('info', 'La plantilla se creó con éxito');
+        return redirect()->route('admin.users.folders.blades.index', compact('blade'))->with('info', 'La plantilla se creó con éxito');
     }
 
     /**
@@ -68,7 +68,7 @@ class BladeController extends Controller
      */
     public function edit(Blade $blade, Request $request)
     {
-        return view('admin.users.transacts.blades.edit', compact('blade'));
+        return view('admin.users.folders.blades.edit', compact('blade'));
 
     }
 
@@ -83,11 +83,11 @@ class BladeController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'transact_id' => 'required'
+            'folder_id' => 'required'
         ]);
 
         $blade->update($request->all());
-        return redirect()->route('admin.users.transacts.blades.index', $blade)->with('info', 'La plantilla se actualizó con éxito');
+        return redirect()->route('admin.users.folders.blades.index', $blade)->with('info', 'La plantilla se actualizó con éxito');
     }
 
     /**
@@ -99,7 +99,7 @@ class BladeController extends Controller
     public function destroy(Blade $blade)
     {
         $blade->delete();
-        return redirect()->route('admin.users.transacts.blades.index', $blade)->with('info', 'La plantilla se eliminó con éxito');
+        return redirect()->route('admin.users.folders.blades.index', $blade)->with('info', 'La plantilla se eliminó con éxito');
 
     }
 }

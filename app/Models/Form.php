@@ -10,7 +10,7 @@ class Form extends Model
     use HasFactory;
 
     protected  $fillable = [
-        'name', 'url',
+        'id', 'name', 'url',
     ]; 
 
     /* relacion uno a muchos */
@@ -20,7 +20,7 @@ class Form extends Model
 
 
     //Relacion Muchos a muchos 
-    public function Transacts() {
-        return $this->belongsToMany('App\Models\transact');
+    public function Folders() {
+        return $this->belongsToMany('App\Models\folder');
     }
 }

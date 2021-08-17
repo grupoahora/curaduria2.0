@@ -17,7 +17,7 @@
 
         <input type="url" name="url" id="url"
             placeholder="https://example.com"
-            pattern="https://.*" size="30"
+            pattern="www." size="30"
             required>
         @error('url')
             <small class="text-danger">

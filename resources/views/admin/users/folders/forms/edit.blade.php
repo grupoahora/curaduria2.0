@@ -16,7 +16,7 @@
     <div class="card">
         <div class="card-body">
             
-            {!! Form::model($form, ['route' => ['admin.users.transacts.forms.update', compact('form')], 'method' => 'get']) !!}
+            {!! Form::model($form, ['route' => ['admin.users.folders.forms.update', compact('form')], 'method' => 'get']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -26,13 +26,13 @@
                         </div>
                         <div class="card-body">
                             
-                            @include('admin.users.transacts.forms.partials.form')
+                            @include('admin.users.folders.forms.partials.form')
                         </div>
                     </div>
                 </div>
             </div>
             
-            {!! Form::submit('Editar trámite', ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit('Editar formulario', ['class' => 'btn btn-primary']) !!}
             {!! Form::close() !!}
         </div>
     </div>
@@ -54,7 +54,7 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableTransact').DataTable({
+            $('#TableForm').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]
