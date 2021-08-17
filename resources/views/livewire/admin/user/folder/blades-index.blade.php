@@ -16,14 +16,14 @@
                 <tr>
                     <td>{{$blade->id}}</td>
                     <td>{{$blade->name}}</td>
-                    <td>{{$blade->transact_id}}</td>
+                    <td>{{$blade->folder_id}}</td>
                     <td>{{$blade->create_at}}</td>
                     <td>{{$blade->update_at}}</td>
                     <td width="10px">
-                        <a href="{{route('admin.users.transacts.blades.edit', $blade)}}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="{{route('admin.users.folders.blades.edit', $blade)}}" class="btn btn-primary btn-sm">Editar</a>
                     </td>
                     <td width="10px">
-                        <form action="{{route('admin.users.transacts.blades.destroy', $blade)}}" method="POST">
+                        <form action="{{route('admin.users.folders.blades.destroy', $blade)}}" method="POST">
                             @csrf
                             @method('delete')
 

@@ -15,7 +15,7 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route' => 'admin.users.transacts.documents.store']) !!}
+            {!! Form::open(['route' => 'admin.users.folders.documents.store']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -23,7 +23,7 @@
                             <h2 class="h5">Datos del nuevo Documento</h2>
                         </div>
                         <div class="card-body">
-                             @include('admin.users.transacts.documents.partials.form')
+                             @include('admin.users.folders.documents.partials.form')
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
 
 @section('content_header')
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.transacts.specificvars.create')}}">Nueva Variable Genérica</a>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.folders.specificvars.create')}}">Nueva Variable Genérica</a>
         <h1>Lista de Variables Genéricas</h1>
 
     </div>
@@ -21,7 +21,7 @@
 @endif
 
     <div class="card-body">
-        @livewire('admin.user.transact.genericvar-index')
+        @livewire('admin.user.folder.genericvar-index')
     </div>
 
 @stop

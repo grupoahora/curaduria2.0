@@ -43,7 +43,7 @@
             <!-- Tabs content -->
             <div class="tab-content" id="ex2-content">
                 <div class="tab-pane fade active show" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
-                    {!! Form::model($transact, ['route' => ['admin.users.transacts.update', compact('transact')], 'method' => 'get']) !!}
+                    {!! Form::model($folder, ['route' => ['admin.users.folders.update', compact('folder')], 'method' => 'get']) !!}
                     <div class="row justify-content-md-top">
                         <div class="col-5  ">
                             <div class="card">
@@ -52,7 +52,7 @@
                                     <h2 class="h5">Trámite</h2>
                                 </div>
                                 <div class="card-body">
-                                    @include('admin.users.transacts.partials.form')
+                                    @include('admin.users.folders.partials.form')
                                     {!! Form::submit('Editar trámite', ['class' => 'btn btn-primary']) !!}
                                     {!! Form::close() !!}
                                 </div>
@@ -64,7 +64,7 @@
                     <div class="card">
                         <div class="card-header">
                             <a class="btn btn-secondary btn float-right" 
-                                href="{{route('admin.users.transacts.forms.create', compact('transact'))}}">Nuevo Formulario</a>
+                                href="{{route('admin.users.folders.forms.create', compact('folder'))}}">Nuevo Formulario</a>
                             <h1>Formularios</h1>
                         </div>
                         <div class="card-body">
@@ -79,17 +79,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($transact->forms as $forms)
+                                    @foreach ($folder->forms as $forms)
                                         <tr>
                                             <td>{{$forms->id}}</td>
                                             <td>{{$forms->name}}</td>
                                             <td>{{$forms->url}}</td>
                                             <td width="10px">
-                                                <a href="{{route('admin.users.transacts.forms.edit', compact('transact'))}}" 
+                                                <a href="{{route('admin.users.folders.forms.edit', compact('folder'))}}" 
                                                     class="btn btn-primary btn-sm">Editar</a>
                                             </td>
                                             <td width="10px">
-                                                <form action="{{route('admin.users.transacts.forms.destroy', compact('transact'))}}" method="POST">
+                                                <form action="{{route('admin.users.folders.forms.destroy', compact('folder'))}}" method="POST">
                                                     @csrf
                                                     @method('delete')
 
@@ -149,7 +149,7 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableTransact').DataTable({
+            $('#TableFolder').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]

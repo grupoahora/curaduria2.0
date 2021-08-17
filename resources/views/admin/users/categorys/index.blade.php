@@ -21,7 +21,7 @@
 @endif
 
     <div class="card-body">
-        @livewire('admin.user.transact.categorys-index')
+        @livewire('admin.user.folder.categorys-index')
     </div>
 
 @stop

@@ -16,7 +16,7 @@
     <div class="card">
         <div class="card-body">
             
-            {!! Form::model($blade, ['route' => ['admin.users.transacts.blades.update', compact('blade')], 'method' => 'put']) !!}
+            {!! Form::model($blade, ['route' => ['admin.users.folders.blades.update', compact('blade')], 'method' => 'put']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -26,7 +26,7 @@
                         </div>
                         <div class="card-body">
                             
-                            @include('admin.users.transacts.blades.partials.form')
+                            @include('admin.users.folders.blades.partials.form')
                             {!! Form::submit('Editar Plantilla', ['class' => 'btn btn-primary']) !!}
                             {!! Form::close() !!}
                         </div>

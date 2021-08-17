@@ -16,10 +16,10 @@
                     <td>{{$form->name}}</td>
                     <td>{{$form->url}}</td>
                     <td width="10px">
-                        <a href="{{route('admin.users.transacts.forms.edit', $form)}}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="{{route('admin.users.folders.forms.edit', $form)}}" class="btn btn-primary btn-sm">Editar</a>
                     </td>
                     <td width="10px">
-                        <form action="{{route('admin.users.transacts.forms.destroy', $form)}}" method="POST">
+                        <form action="{{route('admin.users.folders.forms.destroy', $form)}}" method="POST">
                             @csrf
                             @method('delete')
 

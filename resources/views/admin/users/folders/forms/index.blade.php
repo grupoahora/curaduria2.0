@@ -4,7 +4,7 @@
 
 @section('content_header')
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.transacts.forms.create')}}">Nuevo Formulario</a>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.folders.forms.create')}}">Nuevo Formulario</a>
         <h1>Lista de Formularios</h1>
 
     </div>
@@ -21,7 +21,7 @@
 @endif
 
     <div class="card-body">
-        @livewire('admin.user.transact.blade.forms-index')
+        @livewire('admin.user.folder.blade.forms-index')
     </div>
 
 @stop
