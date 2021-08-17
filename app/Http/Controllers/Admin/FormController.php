@@ -15,7 +15,7 @@ class FormController extends Controller
      */
     public function index()
     {
-        return view('admin.users.transacts.forms.index');
+        return view('admin.users.folders.forms.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class FormController extends Controller
      */
     public function create()
     {
-        return view('admin.users.transacts.forms.create');
+        return view('admin.users.folders.forms.create');
     }
 
     /**
@@ -37,16 +37,18 @@ class FormController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'form_id' => 'required',
             'name' => 'required',
             'url' => 'required'
         ]);
 
         $form = Form::create([
+            'form_id' => $request['form_id'],
             'name' => $request['name'],
             'url' => $request['url']
         ]);
 
-        return redirect()->route('admin.users.transacts.forms.index', compact('form'))->with('info', 'El formulario se creó con éxito');
+        return redirect()->route('admin.users.folders.forms.index', compact('form'))->with('info', 'El formulario se creó con éxito');
     }
 
     /**
@@ -68,7 +70,7 @@ class FormController extends Controller
      */
     public function edit(Form $form, Request $request)
     {
-        return view('admin.users.transacts.forms.edit', compact('form'));
+        return view('admin.users.folders.forms.edit', compact('form'));
     }
 
     /**
@@ -81,12 +83,13 @@ class FormController extends Controller
     public function update(Request $request, Form $form)
     {
         $request->validate([
+            'form_id' => 'required',
             'name' => 'required',
             'url' => 'required'
         ]);
 
         $form->update($request->all());
-        return redirect()->route('admin.users.transacts.forms.index', $form)->with('info', 'El formulario se actualizó con éxito');
+        return redirect()->route('admin.users.folders.forms.index', compact('form'))->with('info', 'El formulario se actualizó con éxito');
     }
 
     /**
@@ -98,6 +101,6 @@ class FormController extends Controller
     public function destroy(Form $form)
     {
         $form->delete();
-        return redirect()->route('admin.users.transacts.forms.index', $form)->with('info', 'El formulario se eliminó con éxito');
+        return redirect()->route('admin.users.folders.forms.index', $form)->with('info', 'El formulario se eliminó con éxito');
     }
 }

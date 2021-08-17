@@ -3,9 +3,9 @@
     <div class="form-group">
         
         
-        {!! Form::label('name_products', 'Nombre') !!}    
-        {!! Form::text('name_products', null , ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre del producto']) !!}
-        @error('name_products')
+        {!! Form::label('namefolder', 'Nombre') !!}    
+        {!! Form::text('namefolder', null , ['class' => 'form-control', 'placeholder' => 'Ingrese el nombre del producto']) !!}
+        @error('namefolder')
             <small class="text-danger">
                 {{$message}}
             </small>

@@ -10,6 +10,6 @@ class FoldersIndex extends Component
     public function render()
     {
         $folders = Folder::all();
-        return view('livewire.admin.user.Folders-index', compact('folders'));
+        return view('livewire.admin.user.folders-index', compact('folders'));
     }
 }

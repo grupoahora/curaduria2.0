@@ -46,7 +46,7 @@ class CategoryController extends Controller
             'name' => $request['name'],
         ]);
         
-        return redirect()->route('admin.users.categorys.edit', $category)->with('info', 'La categoría se creó con éxito');
+        return redirect()->route('admin.users.categorys.index', $category)->with('info', 'La categoría se creó con éxito');
 
     }
 
@@ -70,7 +70,7 @@ class CategoryController extends Controller
     public function edit(Category $category)
     {
         
-        return view('admin.users.categorys.index', $category);
+        return view('admin.users.categorys.edit', $category);
 
 
     }
@@ -82,9 +82,15 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Category $category)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+        ]);
+        
+        $category->update($request->all());
+        return redirect()->route('admin.users.categorys.index', $category)->with('info', 'La categoría se actualizó con éxito');
+
     }
 
     /**

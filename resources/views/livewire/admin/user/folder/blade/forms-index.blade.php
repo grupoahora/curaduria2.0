@@ -1,5 +1,5 @@
 <div>
-    <table id="TableForms" class="table table-responsive table-striped">
+    <table id="TableForms" class="table table-striped">
         <thead>
             <tr>
                 <th>ID</th>

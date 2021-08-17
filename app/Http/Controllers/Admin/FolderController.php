@@ -18,7 +18,7 @@ class FolderController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.users.folders.index');
     }
 
     /**
@@ -30,6 +30,7 @@ class FolderController extends Controller
     {
         return view('admin.users.folders.create');
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -39,21 +40,22 @@ class FolderController extends Controller
      */
     public function store(Request $request, Folder $folder)
     {
+        
         $request->validate([
-            'name_products' => 'required',
-            'category_name' => 'required',
-            'update_at' => 'required'
+            'user_id' => 'required',
+            'namefolder' => 'required',
+            'category_id' => 'required',
             
         ]);
 
         $folder = Folder::create([
-            'name_products' => $request['name_products'],
-            'category_name' => $request['category_name'],
-            'updated_at' => $request['update_at'],
+            'user_id' => $request['user_id'],
+            'namefolder' => $request['namefolder'],
+            'category_id' => $request['category_id'],
 
         ]);
 
-        return redirect()->route('admin.users.folders.edit', $folder)->with('info', 'El trámite se creó con éxito');
+        return redirect()->route('admin.users.folders.index', $folder)->with('info', 'El trámite se creó con éxito');
 
 
     }
@@ -75,11 +77,12 @@ class FolderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Folder $folder, Request $request)
+    
+    public function edit(Folder $folder, Request $request, Form $form)
     {
         
-        $forms = Form::where('id')->where('folder_id', $folder->id)->get();
-        return view('admin.users.folders.edit', compact('folder', 'forms'));
+        /* $forms = Form::where('id')->where('folder_id', $folder->id)->get(); */
+        return view('admin.users.folders.edit', compact('folder', 'form'));
     }
 
     /**
@@ -89,16 +92,16 @@ class FolderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Folder $folder)
+    public function update(Request $request, Folder $folder, Form $form)
     {
         $request->validate([
             'name_products' => 'required',
             'category_name' => 'required',
-            'updated_at' => 'required'
             
         ]);
 
-        $folder->update($request->all());
+        
+        $form->update($request->all());
 
         return redirect()->route('admin.users.folders.edit', $folder)->with('info', 'El trámite se actualizó con éxito');
     }

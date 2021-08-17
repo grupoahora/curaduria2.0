@@ -13,7 +13,7 @@ class CreateFolderformTable extends Migration
      */
     public function up()
     {
-      Schema::create('folders_forms', function (Blueprint $table) {
+      Schema::create('folder_form', function (Blueprint $table) {
             $table->id();
 
             

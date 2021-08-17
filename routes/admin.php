@@ -20,9 +20,6 @@ Route::resource('users', UserController::class)->only(['index', 'edit', 'update'
 Route::resource('categorys', CategoryController::class)->names('admin.users.categorys');
 Route::resource('roles', RoleController::class)->names('admin.roles');
 Route::resource('folders', FolderController::class)->names('admin.users.folders');
-Route::resource('specificvars', SpecificVarController::class)->names('admin.users.folders.specificvars');
-Route::resource('blades', BladeController::class)->names('admin.users.folders.blades');
-Route::resource('genericvars', GenericvarController::class)->names('admin.users.folders.genericvars');
 Route::resource('forms', FormController::class)->names('admin.users.folders.forms');
 Route::resource('documents', DocumentController::class)->names('admin.users.folders.documents');
 /* Route::put('users/{user}', [UserController::class, 'updatefarms'])->name('admin.users.updatefarms');

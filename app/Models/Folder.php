@@ -9,9 +9,7 @@ class Folder extends Model
 {
     use HasFactory;
 
-    protected  $fillable = [
-        'name_products', 'category_id',
-    ]; 
+    protected $guarded = ['id', 'created_at' , 'updated_at']; 
 
     // relacion uno a uno
 
@@ -21,13 +19,13 @@ class Folder extends Model
 
     
 
-    public function Users(){
+    public function User(){
         return $this->belongsTo('App\Models\user');
         
     }
     // relacion uno a muchos
 
-    public function Categories(){
+    public function Category(){
         return $this->belongsTo('App\Models\category');
         
         

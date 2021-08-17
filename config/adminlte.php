@@ -285,36 +285,19 @@ return [
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
-        [
-            'text' => 'Variables Específicas',
-            'route'  => 'admin.users.folders.specificvars.index',
-            'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
-        ],
-        [
-            'text' => 'Plantillas',
-            'route'  => 'admin.users.folders.blades.index',
-            'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
-        ],
-        [
-            'text' => 'Variables Genéricas',
-            'route'  => 'admin.users.folders.genericvars.index',
-            'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
-        ],
+        
         [
             'text' => 'Formularios',
             'route'  => 'admin.users.folders.forms.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
-        [
+        /* [
             'text' => 'Documentos',
             'route'  => 'admin.users.folders.documents.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
-        ],
+        ], */
 
 
         [
