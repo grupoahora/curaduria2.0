@@ -12,9 +12,9 @@
         @enderror
         
         <br>
-        {!! Form::label('transact_id', 'ID Trámite') !!}    
-        {!! Form::text('transact_id', null , ['class' => 'form-control', 'placeholder' => 'Ingrese el id del trámite']) !!}
-        @error('transact_id')
+        {!! Form::label('folder_id', 'ID Trámite') !!}    
+        {!! Form::text('folder_id', null , ['class' => 'form-control', 'placeholder' => 'Ingrese el id del trámite']) !!}
+        @error('folder_id')
             <small class="text-danger">
                 {{$message}}
             </small>

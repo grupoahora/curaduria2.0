@@ -60,10 +60,10 @@
                     <td>{{$genericvar->create_at}}</td>
                     <td>{{$genericvar->update_at}}</td>
                     <td width="10px">
-                        <a href="{{route('admin.users.transacts.genericvars.edit', $genericvar)}}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="{{route('admin.users.folders.genericvars.edit', $genericvar)}}" class="btn btn-primary btn-sm">Editar</a>
                     </td>
                     <td width="10px">
-                        <form action="{{route('admin.users.transacts.genericvars.destroy', $genericvar)}}" method="POST">
+                        <form action="{{route('admin.users.folders.genericvars.destroy', $genericvar)}}" method="POST">
                             @csrf
                             @method('delete')
 

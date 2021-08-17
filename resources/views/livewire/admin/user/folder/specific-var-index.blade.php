@@ -40,14 +40,14 @@
                     <td>{{$specificvar->varc10}}</td>
                     <td>{{$specificvar->varc11}}</td>
                     <td>{{$specificvar->varc12}}</td>
-                    <td>{{$specificvar->transact_id}}</td>
+                    <td>{{$specificvar->folder_id}}</td>
                     <td>{{$specificvar->create_at}}</td>
                     <td>{{$specificvar->update_at}}</td>
                     <td width="10px">
-                        <a href="{{route('admin.users.transacts.specificvars.edit', $specificvar)}}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="{{route('admin.users.folders.specificvars.edit', $specificvar)}}" class="btn btn-primary btn-sm">Editar</a>
                     </td>
                     <td width="10px">
-                        <form action="{{route('admin.users.transacts.specificvars.destroy', $specificvar)}}" method="POST">
+                        <form action="{{route('admin.users.folders.specificvars.destroy', $specificvar)}}" method="POST">
                             @csrf
                             @method('delete')
 

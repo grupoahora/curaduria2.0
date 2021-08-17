@@ -16,7 +16,7 @@
     <div class="card">
         <div class="card-body">
             
-            {!! Form::model($document, ['route' => ['admin.users.transacts.documents.update', compact('document')], 'method' => 'put']) !!}
+            {!! Form::model($document, ['route' => ['admin.users.folders.documents.update', compact('document')], 'method' => 'put']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -26,7 +26,7 @@
                         </div>
                         <div class="card-body">
                             
-                            @include('admin.users.transacts.documents.partials.form')
+                            @include('admin.users.folders.documents.partials.form')
                             {!! Form::submit('Editar Documento', ['class' => 'btn btn-primary']) !!}
                             {!! Form::close() !!}
                         </div>
