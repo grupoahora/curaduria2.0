@@ -104,9 +104,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="ex3-tabs-4" role="tabpanel" aria-labelledby="ex3-tab-4">
-                    <div wight="100vh"></div>
-                </div>
                 <div class="tab-pane fade" id="ex3-tabs-5" role="tabpanel" aria-labelledby="ex3-tab-5">
                     Tab 5 content
                 </div>

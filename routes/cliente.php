@@ -1,9 +1,12 @@
 <?php
 
-use App\Http\Controllers\Cliente\ClienteController;
+use App\Http\Controllers\Client\ClientController;
 use Illuminate\Support\Facades\Route;
 
 
 
 
-Route::get('',[ClienteController::class, 'index'])->Middleware('can:clientes.index')->name('clientes.index');
+Route::get('',[HomeController::class, 'index'])->Middleware('can:cliente.home')->name('cliente.home');
+
+Route::resource('clients', ClientController::class)->only(['index', 'edit', 'update', 'show'])->names('admin.clients');
+
