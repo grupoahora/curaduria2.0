@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use App\Models\Folder;
+use App\Models\Sale;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 
@@ -11,17 +12,17 @@ class ClientController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('can:admin.clients.index')->only('index');
-        $this->middleware('can:admin.clients.edit')->only('edit', 'update');
+        /* $this->middleware('can:admin.clients.index')->only('index');
+        $this->middleware('can:admin.clients.edit')->only('edit', 'update'); */
         
     }
 
     public function index() 
     {
-        return view('admin.clients.index');
+        return "Hello";
     }
 
-    public function edit(Client $client)
+    public function edit(Sale $sale)
     {
 
         

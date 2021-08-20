@@ -266,9 +266,9 @@ return [
         ],
         [
             'text' => 'Clientes',
-            'route'  => 'clientes.index',
+            'route'  => 'client.home',
             'icon'  => 'fas fa-users-cog fa-fw',
-            'can'  => 'cliente.home',
+            'can'  => 'client.home',
         ],
         [
             'text' => 'Categorías',
@@ -294,9 +294,9 @@ return [
         ],
         [
             'text' => 'Trámites Vendidos',
-            'route'  => 'admin.users.sales.index',
+            'route'  => 'client.sales.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
+            'can'  => 'client.home',
         ],
 
 
