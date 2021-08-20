@@ -16,6 +16,7 @@ class SaleController extends Controller
     public function index()
     {
         return view('admin.users.sales.index');
+        
     }
 
     /**

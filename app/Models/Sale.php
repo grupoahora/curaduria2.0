@@ -11,8 +11,8 @@ class Sale extends Model
 
     // relacion uno a uno inversa
 
-    public function Transacts() {
-        return $this->hasMany('App\Models\Transact');
+    public function Folders() {
+        return $this->hasMany('App\Models\Folder');
     }
     
 
