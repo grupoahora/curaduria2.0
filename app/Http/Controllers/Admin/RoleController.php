@@ -18,7 +18,7 @@ class RoleController extends Controller
     {
         $roles = Role::all();
         
-        return view('admin.users.roles.index', compact('roles'));
+        return view('admin.roles.index', compact('roles'));
     }
 
     /**
@@ -30,7 +30,7 @@ class RoleController extends Controller
     {
         $permissions = Permission::all();
         
-        return view('admin.users.roles.create', compact('permissions'));
+        return view('admin.roles.create', compact('permissions'));
     }
 
     /**
@@ -49,7 +49,7 @@ class RoleController extends Controller
 
         $role->permissions()->sync($request->permissions);
 
-        return redirect()->route('admin.users.roles.edit', $role)->with('info', 'El rol se Creo con Exito');
+        return redirect()->route('admin.roles.edit', $role)->with('info', 'El rol se Creo con Exito');
     }
 
     /**
@@ -60,7 +60,7 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        return view('admin.users.roles.show', compact('role'));
+        return view('admin.roles.show', compact('role'));
     }
 
     /**
@@ -73,7 +73,7 @@ class RoleController extends Controller
     {
         $permissions = Permission::all();
 
-        return view('admin.users.roles.edit', compact('role', 'permissions'));
+        return view('admin.roles.edit', compact('role', 'permissions'));
     }
 
     /**
@@ -92,7 +92,7 @@ class RoleController extends Controller
 
         $role->permissions()->sync($request->permissions);
 
-        return redirect()->route('admin.users.roles.edit', $role)->with('info', 'El rol se actualizo con Exito');
+        return redirect()->route('admin.roles.edit', $role)->with('info', 'El rol se actualizo con Exito');
     }
 
     /**
@@ -105,6 +105,6 @@ class RoleController extends Controller
     {
         $role->delete();
 
-        return redirect()->route('admin.users.roles.index', $role)->with('info', 'El rol se elimino con Exito');
+        return redirect()->route('admin.roles.index', $role)->with('info', 'El rol se elimino con Exito');
     }
 }
