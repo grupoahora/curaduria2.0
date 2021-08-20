@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Cliente;
+namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ClienteController extends Controller
+class SaleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ClienteController extends Controller
      */
     public function index()
     {
-        return view('clientes.index');
+        return view('client.sales.index');
     }
 
     /**
@@ -24,7 +24,7 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        return view('clientes.transacts.index');
+        //
     }
 
     /**
