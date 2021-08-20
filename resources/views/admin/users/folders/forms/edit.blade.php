@@ -54,7 +54,11 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
+<<<<<<< HEAD:resources/views/admin/users/folders/forms/edit.blade.php
             $('#TableForm').DataTable({
+=======
+            $('#TableFolder').DataTable({
+>>>>>>> 1362026c017fd3811ae4ca4db8dbf5ce33605e85:resources/views/admin/users/transacts/forms/edit.blade.php
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]

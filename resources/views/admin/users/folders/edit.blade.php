@@ -152,6 +152,7 @@
     <script>
         $(document).ready(function() {
             $('#TableFolder').DataTable({
+<<<<<<< HEAD:resources/views/admin/users/folders/edit.blade.php
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]
@@ -162,6 +163,8 @@
     <script>
         $(document).ready(function() {
             $('#TableForm').DataTable({
+=======
+>>>>>>> 1362026c017fd3811ae4ca4db8dbf5ce33605e85:resources/views/admin/users/transacts/edit.blade.php
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]

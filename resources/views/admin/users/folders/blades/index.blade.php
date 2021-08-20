@@ -21,7 +21,11 @@
 @endif
 
     <div class="card-body">
+<<<<<<< HEAD:resources/views/admin/users/folders/blades/index.blade.php
         @livewire('admin.user.folder.blades-index')
+=======
+        @livewire('admin.user.folders.blades-index')
+>>>>>>> 1362026c017fd3811ae4ca4db8dbf5ce33605e85:resources/views/admin/users/transacts/blades/index.blade.php
     </div>
 
 @stop

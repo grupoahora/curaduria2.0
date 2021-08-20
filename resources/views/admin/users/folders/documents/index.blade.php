@@ -4,7 +4,7 @@
 
 @section('content_header')
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.transacts.documents.create')}}">Nuevo Documento</a>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.folders.documents.create')}}">Nuevo Documento</a>
         <h1>Lista de Documentos</h1>
 
     </div>
@@ -21,7 +21,7 @@
 @endif
 
     <div class="card-body">
-        @livewire('admin.user.transact.blade.documents-index')
+        @livewire('admin.user.folder.blade.documents-index')
     </div>
 
 @stop

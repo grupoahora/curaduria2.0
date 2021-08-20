@@ -16,7 +16,7 @@
     <div class="card">
         <div class="card-body">
             
-            {!! Form::model($genericvar, ['route' => ['admin.users.transacts.genericvars.update', compact('genericvar')], 'method' => 'put']) !!}
+            {!! Form::model($genericvar, ['route' => ['admin.users.folders.genericvars.update', compact('genericvar')], 'method' => 'put']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -26,7 +26,7 @@
                         </div>
                         <div class="card-body">
                             
-                            @include('admin.users.transacts.genericvars.partials.form')
+                            @include('admin.users.folders.genericvars.partials.form')
                             {!! Form::submit('Editar Variable Genérica', ['class' => 'btn btn-primary']) !!}
                             {!! Form::close() !!}
                         </div>

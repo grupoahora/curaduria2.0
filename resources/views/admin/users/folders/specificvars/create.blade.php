@@ -15,7 +15,7 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route' => 'admin.users.transacts.specificvars.store']) !!}
+            {!! Form::open(['route' => 'admin.users.folders.specificvars.store']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -23,7 +23,7 @@
                             <h2 class="h5">Datos de la nueva Variable Específica</h2>
                         </div>
                         <div class="card-body">
-                             @include('admin.users.transacts.specificvars.partials.form')
+                             @include('admin.users.folders.specificvars.partials.form')
                         </div>
                     </div>
                 </div>
