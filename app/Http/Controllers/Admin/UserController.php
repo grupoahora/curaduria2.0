@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Folder;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
@@ -33,10 +34,10 @@ class UserController extends Controller
 
         Return view('admin.users.edit', compact('user', 'roles'));
     }
-    public function show(User $user)
+    public function show(User $user, Folder $folder)
     {
 
-
+        $folder = Folder::all();
         Return view('admin.users.show', $user);
     }
 

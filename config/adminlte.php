@@ -264,13 +264,13 @@ return [
             'icon'  => 'fas fa-users-cog fa-fw',
             'can'  => 'admin.home',
         ],
-/*         [
+        [
             'text' => 'Clientes',
-            'route'  => 'clientes.index',
+            'route'  => 'client.home',
             'icon'  => 'fas fa-users-cog fa-fw',
-            'can'  => 'admin.home',
+            'can'  => 'client.home',
         ],
- */        [
+        [
             'text' => 'Categorías',
             'route'  => 'admin.users.categorys.index',
             'icon'  => 'fas fa-users-cog fa-fw',
@@ -292,12 +292,12 @@ return [
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
-        /* [
-            'text' => 'Documentos',
-            'route'  => 'admin.users.folders.documents.index',
+        [
+            'text' => 'Trámites Vendidos',
+            'route'  => 'client.sales.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
-        ], */
+            'can'  => 'client.home',
+        ],
 
 
         [

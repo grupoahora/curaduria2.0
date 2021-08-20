@@ -20,7 +20,7 @@ class RoleSeeder extends Seeder
         
         Permission::create(['name' => 'admin.home',
                             'description' => 'ver panel de control administrativo'])->assignRole($role1);
-        Permission::create(['name' => 'cliente.home',
+        Permission::create(['name' => 'client.home',
                             'description' => 'Ver panel de control de cliente'])->SyncRoles($role1, $role2);
 
         Permission::create(['name' => 'admin.users.index',

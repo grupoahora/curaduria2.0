@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\SpecificVarController;
 use App\Http\Controllers\Admin\FolderController;
+use App\Http\Controllers\Admin\SaleController;
 use App\Models\GenericVar;
 use GuzzleHttp\Middleware;
 
@@ -21,7 +22,7 @@ Route::resource('categorys', CategoryController::class)->names('admin.users.cate
 Route::resource('roles', RoleController::class)->names('admin.roles');
 Route::resource('folders', FolderController::class)->names('admin.users.folders');
 Route::resource('forms', FormController::class)->names('admin.users.folders.forms');
-Route::resource('documents', DocumentController::class)->names('admin.users.folders.documents');
+
 /* Route::put('users/{user}', [UserController::class, 'updatefarms'])->name('admin.users.updatefarms');
 
 Route::get('users/{user}', [UserController::class, 'editdos'])->name('admin.users.editfarms');

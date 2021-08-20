@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Smart Crop 1.0')
+@section('title', 'Curaduría Urbana 2.0')
 
 @section('content_header')
     <h1>Asignar un Rol</h1>
@@ -25,7 +25,7 @@
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="ex3-tab-2" data-toggle="tab" href="#ex3-tabs-2" role="tab"
-                        aria-controls="ex3-tabs-2" aria-selected="false">Documentos del Usuario</a>
+                        aria-controls="ex3-tabs-2" aria-selected="false">Trámites del Usuario</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="ex3-tab-3" data-toggle="tab" href="#ex3-tabs-3" role="tab"
@@ -45,7 +45,7 @@
 
             <!-- Tabs content -->
             <div class="tab-content" id="ex2-content">
-                <div class="tab-pane fade" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
+                <div class="tab-pane fade active show" id="ex3-tabs-1" role="tabpanel" aria-labelledby="ex3-tab-1">
                     {!! Form::model($user, ['route' => ['admin.users.update', compact('user')], 'method' => 'put']) !!}
 
                     <div class="col-3  ">
@@ -68,38 +68,54 @@
 
 
                 </div>
-                <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
-                    <div class="col-2">
-                        <div class="card" style="width:18rem;">
+                <div class="tab-pane fade" id="ex3-tabs-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                    <div class="col-12">
+                        <div class="card">
                             <div class="card-header">
-                                <h2 class="h5">
-                                    Listado de Roles
-                                </h2>
+                                <a class="btn btn-secondary btn-sm float-right" 
+                                    href="{{route('admin.users.folders.create')}}">Nuevo Trámite</a>
+                                <h1>Lista de Trámites</h1>
                             </div>
-
                             <div class="card-body">
-                                {!! Form::model($user, ['route' => ['admin.users.update', $user], 'method' => 'put']) !!}
-                                @foreach ($roles as $role)
-                                    <div>
-                                        <label>
-                                            {!! Form::checkbox('roles[]', $role->id, null, ['class' => 'mr-1']) !!}
-                                            {{ $role->name }}
-                                        </label>
-                                    </div>
-                                @endforeach
+                                <table id="TableFolders" class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Categoría</th>
+                                            <th>ID Usuario</th>
+                                            <th>Fecha de Creación</th>
+                                            <th>Fecha de Actualización</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($user->folders as $folder)
+                                            <tr>
+                                                <td>{{$folder->id}}</td>
+                                                <td>{{$folder->namefolder}}</td>
+                                                <td>{{$folder->category_id}}</td>
+                                                <td>{{$folder->user->name}}</td>
+                                                <td>{{$folder->create_at}}</td>
+                                                <td>{{$folder->update_at}}</td>
+                                                <td width="10px">
+                                                    <a href="{{route('admin.users.folders.edit', $folder)}}" class="btn btn-primary btn-sm">Editar</a>
+                                                </td>
+                                                <td width="10px">
+                                                    <form action="{{route('admin.users.folders.destroy', $folder)}}" method="POST">
+                                                        @csrf
+                                                        @method('delete')
 
-
-
-                                {!! Form::submit('Asignar un Rol', ['class' => 'btn btn-primary mt-2']) !!}
-
-                                {!! Form::close() !!}
+                                                        <button type="submit" class="btn btn-danger btn-sm"">Eliminar</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-
-
-
-
-
                     </div>
                 </div>
             </div>
