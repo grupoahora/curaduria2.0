@@ -19,7 +19,7 @@ Route::get('',[HomeController::class, 'index'])->Middleware('can:admin.home')->n
 
 Route::resource('users', UserController::class)->only(['index', 'edit', 'update', 'show'])->names('admin.users');
 Route::resource('categorys', CategoryController::class)->names('admin.users.categorys');
-Route::resource('roles', RoleController::class)->names('admin.roles');
+Route::resource('roles', RoleController::class)->names('admin.users.roles');
 Route::resource('folders', FolderController::class)->names('admin.users.folders');
 Route::resource('forms', FormController::class)->names('admin.users.folders.forms');
 Route::resource('sales', SaleController::class)->names('admin.users.sales');

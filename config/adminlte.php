@@ -260,15 +260,15 @@ return [
         ],
         [
             'text' => 'Roles',
-            'route'  => 'admin.roles.index',
+            'route'  => 'admin.users.roles.index',
             'icon'  => 'fas fa-users-cog fa-fw',
             'can'  => 'admin.home',
         ],
         [
-            'text' => 'Clientes',
-            'route'  => 'client.home',
+            'text' => 'Cliente',
+            'route'  => 'clients.home',
             'icon'  => 'fas fa-users-cog fa-fw',
-            'can'  => 'client.home',
+            'can'  => 'clients.home',
         ],
         [
             'text' => 'Categorías',

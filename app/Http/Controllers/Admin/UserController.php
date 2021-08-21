@@ -38,7 +38,7 @@ class UserController extends Controller
     {
 
         $folder = Folder::all();
-        Return view('admin.users.show', $user);
+        Return view('admin.users.show', compact('user', 'folder'));
     }
 
     public function update(Request $request, User $user)

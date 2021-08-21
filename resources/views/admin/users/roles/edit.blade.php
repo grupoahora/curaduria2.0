@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Smart Crop 1.0')
+@section('title', 'Curaduría Urbana 2.0')
 
 @section('content_header')
     <h1>Editar Rol</h1>
@@ -21,7 +21,7 @@
 
             @include('admin.users.roles.partials.form')
                 {!! Form::submit('Editar Rol', ['class' => 'btn btn-primary']) !!}  
-            {!! Form::close() !!}
+                {!! Form::close() !!}
 
         </div>
     </div>

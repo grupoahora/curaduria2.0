@@ -92,7 +92,7 @@ class RoleController extends Controller
 
         $role->permissions()->sync($request->permissions);
 
-        return redirect()->route('admin.users.roles.edit', $role)->with('info', 'El rol se actualizo con Exito');
+        return redirect()->route('admin.users.roles.index', $role)->with('info', 'El rol se actualizó con Éxito');
     }
 
     /**
@@ -105,6 +105,6 @@ class RoleController extends Controller
     {
         $role->delete();
 
-        return redirect()->route('admin.users.roles.index', $role)->with('info', 'El rol se elimino con Exito');
+        return redirect()->route('admin.users.roles.index', $role)->with('info', 'El rol se eliminó con Éxito');
     }
 }
