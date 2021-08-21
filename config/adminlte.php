@@ -265,10 +265,10 @@ return [
             'can'  => 'admin.home',
         ],
         [
-            'text' => 'Cliente',
-            'route'  => 'clients.home',
+            'text' => 'Dashboard',
+            'route'  => 'client.home',
             'icon'  => 'fas fa-users-cog fa-fw',
-            'can'  => 'clients.home',
+            'can'  => 'client.home',
         ],
         [
             'text' => 'Categorías',
@@ -294,7 +294,7 @@ return [
         ],
         [
             'text' => 'Trámites Vendidos',
-            'route'  => 'clients.sales.index',
+            'route'  => 'client.sales.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'client.home',
         ],

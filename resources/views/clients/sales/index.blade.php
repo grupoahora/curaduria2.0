@@ -4,7 +4,7 @@
 
 @section('content_header')
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('clients.sales.create')}}">Solicitar Trámite</a>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('client.sales.create')}}">Solicitar Trámite</a>
         <h1>Listado de Trámites Adquiridos</h1>
 
     </div>

@@ -118,6 +118,30 @@
                         </div>
                     </div>
                 </div>
+                <div class="tab-pane fade" id="ex3-tabs-3" role="tabpanel" aria-labelledby="ex3-tab-3">
+                    <div class="col-2">
+                        <div class="card" style="width:18rem;">
+                            <div class="card-header">
+                                <h2 class="h5">
+                                    Listado de Roles
+                                </h2>
+                            </div>
+                            <div class="card-body">
+                                {!! Form::model($user, ['route' => ['admin.users.update', $user], 'method' => 'put']) !!}
+                                @foreach ($roles as $role)
+                                    <div>
+                                        <label>
+                                            {!! Form::checkbox('roles[]', $role->id, null, ['class' => 'mr-1']) !!}
+                                            {{ $role->name }}
+                                        </label>
+                                    </div>
+                                @endforeach
+                                {!! Form::submit('Asignar un Rol', ['class' => 'btn btn-primary mt-2']) !!}
+                                {!! Form::close() !!}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="tab-pane fade" id="ex3-tabs-4" role="tabpanel" aria-labelledby="ex3-tab-4">
                 <div wight="100vh"></div>
@@ -151,7 +175,7 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableCategory').DataTable({
+            $('#TableFolders').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]

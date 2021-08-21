@@ -20,10 +20,10 @@
                     <td>{{$sale->create_at}}</td>
                     <td>{{$sale->update_at}}</td>
                     <td width="10px">
-                        <a href="{{route('clients.sales.edit', $sale)}}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="{{route('client.sales.edit', $sale)}}" class="btn btn-primary btn-sm">Editar</a>
                     </td>
                     <td width="10px">
-                        <form action="{{route('clients.sales.destroy', $sale)}}" method="POST">
+                        <form action="{{route('client.sales.destroy', $sale)}}" method="POST">
                             @csrf
                             @method('delete')
 
