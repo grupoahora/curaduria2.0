@@ -16,7 +16,7 @@
     <div class="card">
         <div class="card-body">
             
-            {!! Form::model($sale, ['route' => ['admin.users.sales.update', compact('sale')], 'method' => 'put']) !!}
+            {!! Form::model($sale, ['route' => ['admin.clients.sales.update', compact('sale')], 'method' => 'put']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -26,7 +26,7 @@
                         </div>
                         <div class="card-body">
                             
-                            @include('admin.users.sales.partials.form')
+                            @include('admin.clients.sales.partials.form')
                             {!! Form::submit('Editar Documento', ['class' => 'btn btn-primary']) !!}
                             {!! Form::close() !!}
                         </div>

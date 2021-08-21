@@ -14,7 +14,7 @@ class SaleController extends Controller
      */
     public function index()
     {
-        return view('client.sales.index');
+        return view('clients.sales.index');
     }
 
     /**

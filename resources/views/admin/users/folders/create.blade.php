@@ -23,13 +23,9 @@
                             <h2 class="h5">Datos del Trámite</h2>
                         </div>
                         <div class="card-body">
-<<<<<<< HEAD:resources/views/admin/users/folders/create.blade.php
                             @include('admin.users.folders.partials.form')
                             {!! Form::submit('Crear Trámite', ['class' => 'btn btn-primary']) !!}
                             {!! Form::close() !!}
-=======
-                             @include('admin.users.folders.partials.form')
->>>>>>> 1362026c017fd3811ae4ca4db8dbf5ce33605e85:resources/views/admin/users/transacts/create.blade.php
                         </div>
                     </div>
                 </div>

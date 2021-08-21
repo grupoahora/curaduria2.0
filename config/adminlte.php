@@ -294,9 +294,15 @@ return [
         ],
         [
             'text' => 'Trámites Vendidos',
-            'route'  => 'client.sales.index',
+            'route'  => 'clients.sales.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'client.home',
+        ],
+        [
+            'text' => 'Trámites Vendidos',
+            'route'  => 'admin.users.sales.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            'can'  => 'admin.home',
         ],
 
 

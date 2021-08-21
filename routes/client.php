@@ -1,13 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\SaleController;
-use App\Http\Controllers\Client\ClientController;
+use App\Http\Controllers\Client\HomeController;
+use App\Http\Controllers\Client\SaleController as ClientSaleController;
 use Illuminate\Support\Facades\Route;
 
 
 
+Route::get('',[HomeController::class, 'index'])->Middleware('can:client.home')->name('client.home');
 
-Route::get('',[ClientController::class, 'index'])->Middleware('can:client.home')->name('client.home');
-
-Route::resource('sales', SaleController::class)->names('client.sales');
-
+Route::resource('sales', ClientSaleController::class)->names('clients.sales');

@@ -16,15 +16,9 @@
             @foreach ($folders as $folder)
                 <tr>
                     <td>{{$folder->id}}</td>
-<<<<<<< HEAD:resources/views/livewire/admin/user/folders-index.blade.php
                     <td>{{$folder->namefolder}}</td>
                     <td>{{$folder->category_id}}</td>
                     <td>{{$folder->user->name}}</td>
-=======
-                    <td>{{$folder->name_products}}</td>
-                    <td>{{$folder->category_id}}</td>
-                    <td>{{$folder->user_id}}</td>
->>>>>>> 1362026c017fd3811ae4ca4db8dbf5ce33605e85:resources/views/livewire/admin/user/transacts-index.blade.php
                     <td>{{$folder->create_at}}</td>
                     <td>{{$folder->update_at}}</td>
                     <td width="10px">

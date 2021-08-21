@@ -15,7 +15,7 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route' => 'admin.users.sales.store']) !!}
+            {!! Form::open(['route' => 'admin.clients.sales.store']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
@@ -23,7 +23,7 @@
                             <h2 class="h5">Datos del Trámite Vendido</h2>
                         </div>
                         <div class="card-body">
-                             @include('admin.users.sales.partials.form')
+                             @include('admin.clients.sales.partials.form')
                         </div>
                     </div>
                 </div>

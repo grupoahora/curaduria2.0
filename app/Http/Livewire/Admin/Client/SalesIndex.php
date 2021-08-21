@@ -10,6 +10,6 @@ class SalesIndex extends Component
     public function render()
     {
         $sales = Sale::all();
-        return view('livewire.admin.client.sales-index');
+        return view('livewire.admin.client.sales-index', compact('sales'));
     }
 }
