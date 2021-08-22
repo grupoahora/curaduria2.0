@@ -9,23 +9,15 @@
             </small>
         @enderror
         <br>
-        {!! Form::label('number', 'Número') !!}    
-        {!! Form::text('number', null, ['class' => 'form-control', 'placeholder' => 'Ingrese número telefónico']) !!}
+        {!! Form::label('folder_id', 'ID Trámite') !!}    
+        {!! Form::text('folder_id', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el ID del Trámite']) !!}
         
-        @error('number')
+        @error('folder_id')
             <small class="text-danger">
                 {{$message}}
             </small>
         @enderror
-        <br>
-        {!! Form::label('email', 'Correo Electrónico') !!}    
-        {!! Form::text('email', null , ['class' => 'form-control', 'placeholder' => 'Ingrese correo electrónico']) !!}
         
-        @error('email')
-            <small class="text-danger">
-                {{$message}}
-            </small>
-        @enderror
     </div>
 </div>
 

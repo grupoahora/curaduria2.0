@@ -18,12 +18,12 @@ class Folder extends Model
     }
 
     
-
+    //relacion uno a muchos inversa
     public function User(){
         return $this->belongsTo('App\Models\user');
         
     }
-    // relacion uno a muchos
+    // relacion uno a muchos inversa
 
     public function Category(){
         return $this->belongsTo('App\Models\category');

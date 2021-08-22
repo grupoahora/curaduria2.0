@@ -7,25 +7,7 @@
             <small class="text-danger">
                 {{$message}}
             </small>
-        @enderror
-        <br>
-        {!! Form::label('number', 'Número') !!}    
-        {!! Form::text('number', null, ['class' => 'form-control', 'placeholder' => 'Ingrese número telefónico']) !!}
-        
-        @error('number')
-            <small class="text-danger">
-                {{$message}}
-            </small>
-        @enderror
-        <br>
-        {!! Form::label('email', 'Correo Electrónico') !!}    
-        {!! Form::text('email', null , ['class' => 'form-control', 'placeholder' => 'Ingrese correo electrónico']) !!}
-        
-        @error('email')
-            <small class="text-danger">
-                {{$message}}
-            </small>
-        @enderror
+        @enderror        
     </div>
 </div>
 

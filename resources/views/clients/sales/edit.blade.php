@@ -27,7 +27,7 @@
                         <div class="card-body">
                             
                             @include('clients.sales.partials.form')
-                            {!! Form::submit('Editar Documento', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::submit('Editar Trámite', ['class' => 'btn btn-primary']) !!}
                             {!! Form::close() !!}
                         </div>
                     </div>

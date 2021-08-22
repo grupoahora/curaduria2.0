@@ -3,10 +3,9 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
-use App\Models\Sale;
 use Illuminate\Http\Request;
 
-class SaleController extends Controller
+class DocSaleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class SaleController extends Controller
      */
     public function index()
     {
-        return view('clients.sales.index');
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class SaleController extends Controller
      */
     public function create()
     {
-        return view('clients.sales.create');
+        //
     }
 
     /**
@@ -34,18 +33,9 @@ class SaleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Sale $sale)
+    public function store(Request $request)
     {
-        $request->validate([
-            'folder_id' => 'required',
-        ]);
-
-        $sale = Sale::create([
-            'folder_id' => $request['folder_id'],
-        ]);
-
-        return redirect()->route('clients.sales.index', $sale)->with('info', 'La venta del trámite es un éxito');
-
+        //
     }
 
     /**
@@ -65,9 +55,9 @@ class SaleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, Sale $sale)
+    public function edit($id)
     {
-        return view('admin.users.sales.edit', $sale);
+        //
     }
 
     /**
@@ -77,15 +67,9 @@ class SaleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Sale $sale)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'folder_id' => 'required',
-        ]);
-
-        $sale->update($request->where('user_id', auth()->user()->id)->paginate());
-        return redirect()->route('clients.sales.index', compact('sale'))->with('info', 'La venta se actualizó con éxito');
-
+        //
     }
 
     /**
@@ -94,10 +78,8 @@ class SaleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sale $sale)
+    public function destroy($id)
     {
-        $sale->delete();
-        return redirect()->route('clients.sales.index', $sale)->with('info', 'La venta se eliminó con éxito');
-
+        //
     }
 }

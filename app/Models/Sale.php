@@ -12,17 +12,23 @@ class Sale extends Model
     // relacion uno a uno inversa
 
     public function Folders() {
-        return $this->hasMany('App\Models\Folder');
+        return $this->belongsTo('App\Models\Folder');
     }
     
 
     public function Users() {
-        return $this->hasMany('App\Models\User');
+        return $this->belongsTo('App\Models\User');
     }
     public function Documents() {
         return $this->hasMany('App\Models\Document');
     }
     public function States() {
         return $this->hasMany('App\Models\State');
+    }
+
+    //relación uno a muchos
+    public function DocSales() 
+    {
+        return $this->belongsTo('App\Models\DocSale');
     }
 }
