@@ -22,14 +22,13 @@ class UserController extends Controller
         
     }
 
-    public function index() {
+    public function index() 
+    {
         return view('admin.users.index');
     }
 
     public function edit(User $user)
     {
-
-        
         $roles = Role::all();
 
         Return view('admin.users.edit', compact('user', 'roles'));
@@ -38,7 +37,7 @@ class UserController extends Controller
     {
 
         $folder = Folder::all();
-        Return view('admin.users.show', $user);
+        Return view('admin.users.show', compact('user', 'folder'));
     }
 
     public function update(Request $request, User $user)
@@ -47,6 +46,6 @@ class UserController extends Controller
        
         
 
-        return redirect()->route('admin.users.edit', $user)->with('info', 'Se asignó el rol correctamente');
+        return redirect()->route('admin.users.index', $user)->with('info', 'Se asignó el rol correctamente');
     }
 }

@@ -9,7 +9,7 @@ class SalesIndex extends Component
 {
     public function render()
     {
-        $sales = Sale::all();
-        return view('livewire.admin.client.sales-index');
+        $sales = Sale::where('user_id', auth()->user()->id)->paginate();
+        return view('livewire.admin.client.sales-index', compact('sales'));
     }
 }

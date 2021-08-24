@@ -23,13 +23,14 @@
                             <h2 class="h5">Datos del Usuario</h2>
                         </div>
                         <div class="card-body">
-                             @include('admin.users.partials.form')
+                            @include('admin.users.partials.form')
+                            {!! Form::submit('Crear Usuario', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>
             </div>
-                {!! Form::submit('Crear Usuario', ['class' => 'btn btn-primary']) !!}
-            {!! Form::close() !!}
+                
         </div>
     </div>
 

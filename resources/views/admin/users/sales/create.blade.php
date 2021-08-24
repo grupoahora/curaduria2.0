@@ -23,7 +23,9 @@
                             <h2 class="h5">Datos del Trámite Vendido</h2>
                         </div>
                         <div class="card-body">
-                             @include('admin.users.sales.partials.form')
+                            @include('admin.users.sales.partials.form')
+                            {!! Form::submit('Crear Trámite', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>

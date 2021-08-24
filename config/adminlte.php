@@ -260,12 +260,12 @@ return [
         ],
         [
             'text' => 'Roles',
-            'route'  => 'admin.roles.index',
+            'route'  => 'admin.users.roles.index',
             'icon'  => 'fas fa-users-cog fa-fw',
             'can'  => 'admin.home',
         ],
         [
-            'text' => 'Clientes',
+            'text' => 'Dashboard',
             'route'  => 'client.home',
             'icon'  => 'fas fa-users-cog fa-fw',
             'can'  => 'client.home',
@@ -297,6 +297,12 @@ return [
             'route'  => 'client.sales.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'client.home',
+        ],
+        [
+            'text' => 'Trámites Vendidos',
+            'route'  => 'admin.users.sales.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            'can'  => 'admin.home',
         ],
 
 

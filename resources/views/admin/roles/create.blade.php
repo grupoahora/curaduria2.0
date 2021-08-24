@@ -19,7 +19,7 @@
                 
                 @include('admin.roles.partials.form')
                 {!! Form::submit('Crear Rol', ['class' => 'btn btn-primary']) !!}   
-            {!! Form::close() !!} 
+                {!! Form::close() !!} 
         </div>
     </div>
 @stop

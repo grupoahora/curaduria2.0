@@ -15,15 +15,17 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route' => 'admin.users.sales.store']) !!}
+            {!! Form::open(['route' => 'client.sales.store']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="h5">Datos del Trámite Vendido</h2>
+                            <h2 class="h5">Datos del Trámite</h2>
                         </div>
                         <div class="card-body">
-                             @include('admin.users.sales.partials.form')
+                            @include('clients.sales.partials.form')
+                            {!! Form::submit('Crear Trámite', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>

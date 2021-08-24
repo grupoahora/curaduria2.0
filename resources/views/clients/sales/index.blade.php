@@ -4,8 +4,8 @@
 
 @section('content_header')
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.users.folders.create')}}">Nuevo Trámite</a>
-        <h1>Listado de Trámites Vendidos</h1>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('client.sales.create')}}">Solicitar Trámite</a>
+        <h1>Listado de Trámites Adquiridos</h1>
 
     </div>
 @stop
@@ -19,7 +19,7 @@
 @endif
 
         <div class="card-body">
-            @livewire('admin.user.sales-index')
+            @livewire('admin.client.sales-index')
         </div>
     
     
