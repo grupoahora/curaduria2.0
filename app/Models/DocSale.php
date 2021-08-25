@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DocSale extends Model
+class Docsale extends Model
 {
     use HasFactory;
 
     //relación uno a muchos inversa
 
     public function Sale() {
-        return $this->hasMany('App\Models\Sale');
+        return $this->belongsTo('App\Models\Sale');
     }
 }

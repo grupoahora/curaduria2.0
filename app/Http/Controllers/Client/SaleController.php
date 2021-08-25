@@ -37,14 +37,16 @@ class SaleController extends Controller
     public function store(Request $request, Sale $sale)
     {
         $request->validate([
+            'user_id' => 'required',
             'folder_id' => 'required',
         ]);
 
         $sale = Sale::create([
+            'user_id' => $request['user_id'],
             'folder_id' => $request['folder_id'],
         ]);
 
-        return redirect()->route('clients.sales.index', $sale)->with('info', 'La venta del trámite es un éxito');
+        return redirect()->route('client.sales.index', $sale)->with('info', 'La venta del trámite es un éxito');
 
     }
 
@@ -67,7 +69,8 @@ class SaleController extends Controller
      */
     public function edit(Request $request, Sale $sale)
     {
-        return view('admin.users.sales.edit', $sale);
+       
+        return view('clients.sales.edit', compact('sale'));
     }
 
     /**
@@ -80,11 +83,12 @@ class SaleController extends Controller
     public function update(Request $request, Sale $sale)
     {
         $request->validate([
+            'user_id' => 'required',
             'folder_id' => 'required',
         ]);
 
         $sale->update($request->where('user_id', auth()->user()->id)->paginate());
-        return redirect()->route('clients.sales.index', compact('sale'))->with('info', 'La venta se actualizó con éxito');
+        return redirect()->route('client.sales.index', compact('sale'))->with('info', 'La venta se actualizó con éxito');
 
     }
 
@@ -97,7 +101,7 @@ class SaleController extends Controller
     public function destroy(Sale $sale)
     {
         $sale->delete();
-        return redirect()->route('clients.sales.index', $sale)->with('info', 'La venta se eliminó con éxito');
+        return redirect()->route('client.sales.index', $sale)->with('info', 'La venta se eliminó con éxito');
 
     }
 }

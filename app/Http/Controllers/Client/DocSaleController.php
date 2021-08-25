@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
+use App\Models\DocSale;
 use Illuminate\Http\Request;
 
 class DocSaleController extends Controller
@@ -14,7 +15,7 @@ class DocSaleController extends Controller
      */
     public function index()
     {
-        //
+        return view('clients.sales.docsales.index');
     }
 
     /**
@@ -24,7 +25,7 @@ class DocSaleController extends Controller
      */
     public function create()
     {
-        //
+        return view('clients.sales.docsales.create');
     }
 
     /**
@@ -33,9 +34,23 @@ class DocSaleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, DocSale $docsale)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'url' => 'required',
+            'form_id' => 'required',
+            'sale_id' => 'required',
+        ]);
+
+        $docsale = DocSale::create([
+            'name' => $request['name'],
+            'url' => $request['url'],
+            'form_id' => $request['form_id'],
+            'sale_id' => $request['sale_id'],
+        ]);
+
+        return redirect()->route('clients.sales.docsales.index', $docsale)->with('info', '¡LOS DOCUMENTOS SE CARGARON CON ÉXITO!');
     }
 
     /**
@@ -55,9 +70,9 @@ class DocSaleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, DocSale $docsale)
     {
-        //
+        return view('clients.sales.docsales.edit', $docsale);
     }
 
     /**
@@ -67,9 +82,17 @@ class DocSaleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, DocSale $docsale)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'url' => 'required',
+            'form_id' => 'required',
+            'sale_id' => 'required',
+        ]);
+
+        $docsale->update($request->where('user_id', auth()->user()->id)->paginate());
+        return redirect()->route('clients.sales.docsales.index', compact('sale'))->with('info', '¡LOS DOCUMENTOS SE ACTUALIZARON CON ÉXITO!');
     }
 
     /**
@@ -78,8 +101,9 @@ class DocSaleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(DocSale $docsale)
     {
-        //
+        $docsale->delete();
+        return redirect()->route('clients.sales.docsales.index', $docsale)->with('info', '¡EL DOCUMENTO SE ELIMINÓ CON ÉXITO!');
     }
 }

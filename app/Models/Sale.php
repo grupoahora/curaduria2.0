@@ -11,7 +11,11 @@ class Sale extends Model
 
     // relacion uno a uno inversa
 
-    public function Folders() {
+    protected $fillable = [
+        'id','user_id', 'folder_id', 'namefolder', 'created_at', 'updated_at'
+    ];
+    
+    public function Folder() {
         return $this->belongsTo('App\Models\Folder');
     }
     
@@ -27,8 +31,8 @@ class Sale extends Model
     }
 
     //relación uno a muchos
-    public function DocSales() 
+    public function Docsales() 
     {
-        return $this->belongsTo('App\Models\DocSale');
+        return $this->hasMany('App\Models\Docsale');
     }
 }

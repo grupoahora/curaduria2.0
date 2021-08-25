@@ -16,24 +16,24 @@
     <div class="card">
         <div class="card-body">
             
-            {!! Form::model($sale, ['route' => ['client.sales.update', compact('sale')], 'method' => 'put']) !!}
+            {!! Form::model($docsale, ['route' => ['client.sales.docsales.update', compact('docsale')], 'method' => 'put']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-5  ">
                     <div class="card">
                         <div class="card-header">
                              
-                            <h2 class="h5">Trámite Vendido</h2>
+                            <h2 class="h5">Documentos Cargados</h2>
                         </div>
                         <div class="card-body">
                             
                             @include('clients.sales.partials.form')
-                            {!! Form::submit('Editar Trámite', ['class' => 'btn btn-primary']) !!}
-                            
+                            {!! Form::submit('Editar Documentación', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>
             </div>
-            {!! Form::close() !!}
+            
         </div>
     </div>
    
@@ -54,7 +54,7 @@
     <script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap5.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('#TableSales').DataTable({
+            $('#TableDocsales').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]

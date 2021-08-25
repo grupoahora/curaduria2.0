@@ -1,4 +1,4 @@
-{{-- @extends('adminlte::page')
+@extends('adminlte::page')
 
 @section('title', 'Smart Crop 1.0')
 
@@ -55,4 +55,4 @@
 
 @section('js')
     <script> console.log('Hi!'); </script>
-@stop --}}
+@stop
