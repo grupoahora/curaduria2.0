@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Creative - Start Bootstrap Theme</title>
+        <title>Curaduría Urbana 2 Cúcuta</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
@@ -18,9 +19,9 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
-    <body id="page-top">
+    <body id="">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark py-3" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
             <div class="container-fluid mx-5">
                 <a class="navbar-brand text-white" href="#page-top">
                     <img src="assets/img/Logo.png" height="52" alt="" loading="lazy"/>
@@ -28,50 +29,204 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item mx-4"><a class="nav-link px-2" href="#slide">Inicio</a></li>
+                        <li class="nav-item mx-4"><a class="nav-link px-2" href="#about">Consultas</a></li>
+                        <li class="nav-item mx-4"><a class="nav-link px-2" href="#portfolio">Productos</a></li>
+                        <li class="nav-item mx-4"><a class="nav-link px-2" href="#blog">Blog</a></li>
+                        <li class="nav-item mx-4 "><a class="nav-link px-2" href="{{route('proximamente')}}">Contactenos  </a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Carousel-->
-
-        <section class="page-section" id="slide">
-
-            <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel">
+        <section class="py-top-slide-cura h-50" id="slide">
+            <div id="carouselExampleControls" class="carousel h-50-cura slide " data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="assets/img/card01.png" class="d-block w-100" alt="...">
+                <div class="carousel-inner shadowcura">
+                    <div class="carousel-item active  " id="h-50-cura">
+                        {{-- <div class="row "> --}}
+
+                                <div class="container-fluid position-absolute  ">
+                                    <div class="card  bg-transparent border border-0">
+                                        <div class="card-header bg-transparent border border-0">
+
+                                            <h2 class="text-center text-white pt-5 pb-3 mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur dignissimos facilis quibusdam aliquam quidem praesentium sequi ut repellendus dolore? Aut repellat vero unde similique incidunt esse eaque itaque assumenda?</h2>
+                                        </div>
+                                        <div class="row mx-5 displaynonemobil">
+                                            <div class="col-3 mx-auto">
+                                                <div class="card-body border border-0 ">
+                                                    <div class="bg-color-slider-cura w-100 mx-auto">
+
+                                                        <p class=" text-white mx-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate, nihil ullam laborum sint illum commodi rerum sequi culpa excepturi quod, accusamus iure ex ab quibusdam. Dolorum ullam eaque culpa!</p>
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-3 mx-auto">
+                                                <div class="card-body border border-0 ">
+                                                    <div class="bg-color-slider-cura w-100 mx-auto">
+
+                                                        <p class=" text-white mx-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate, nihil ullam laborum sint illum commodi rerum sequi culpa excepturi quod, accusamus iure ex ab quibusdam. Dolorum ullam eaque culpa!</p>
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-3 mx-auto">
+                                                <div class="card-body border border-0 ">
+                                                    <div class="bg-color-slider-cura w-100 mx-auto">
+
+                                                        <p class=" text-white mx-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate, nihil ullam laborum sint illum commodi rerum sequi culpa excepturi quod, accusamus iure ex ab quibusdam. Dolorum ullam eaque culpa!</p>
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            
+                        {{-- </div> --}}
+                        {{-- <img src="assets/img/portfolio/fullsize/prueba.jpg" class="d-block w-100 "  alt="..."> --}}
                     </div>
-                    <div class="carousel-item">
-                        <img src="assets/img/card02.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item " id="h-50-cura">
+                        <div class="container-fluid position-absolute  ">
+                            <div class="container-fluid position-absolute  ">
+                                    <div class="card  bg-transparent border border-0">
+                                        <div class="card-header bg-transparent border border-0">
+
+                                            <h2 class="text-center text-white pt-5 pb-3 mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur dignissimos facilis quibusdam aliquam quidem praesentium sequi ut repellendus dolore? Aut repellat vero unde similique incidunt esse eaque itaque assumenda?</h2>
+                                        </div>
+                                        <div class="row mx-5 displaynonemobil">
+                                            <div class="col-3 mx-auto">
+                                                <div class="card-body border border-0 ">
+                                                    <div class="bg-color-slider-cura w-100 mx-auto">
+
+                                                        <p class=" text-white mx-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate, nihil ullam laborum sint illum commodi rerum sequi culpa excepturi quod, accusamus iure ex ab quibusdam. Dolorum ullam eaque culpa!</p>
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-3 mx-auto">
+                                                <div class="card-body border border-0 ">
+                                                    <div class="bg-color-slider-cura w-100 mx-auto">
+
+                                                        <p class=" text-white mx-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate, nihil ullam laborum sint illum commodi rerum sequi culpa excepturi quod, accusamus iure ex ab quibusdam. Dolorum ullam eaque culpa!</p>
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-3 mx-auto">
+                                                <div class="card-body border border-0 ">
+                                                    <div class="bg-color-slider-cura w-100 mx-auto">
+
+                                                        <p class=" text-white mx-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate, nihil ullam laborum sint illum commodi rerum sequi culpa excepturi quod, accusamus iure ex ab quibusdam. Dolorum ullam eaque culpa!</p>
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                        </div>
+                        {{-- <img src="assets/img/portfolio/fullsize/prueba.jpg" class="d-block w-100 "  alt="..."> --}}
                     </div>
-                    <div class="carousel-item">
-                        <img src="assets/img/card03.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item " id="h-50-cura">
+                        <div class="container-fluid position-absolute  ">
+                            <div class="container-fluid position-absolute  ">
+                                    <div class="card  bg-transparent border border-0">
+                                        <div class="card-header bg-transparent border border-0">
+
+                                            <h2 class="text-center text-white pt-5 pb-3 mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni consectetur dignissimos facilis quibusdam aliquam quidem praesentium sequi ut repellendus dolore? Aut repellat vero unde similique incidunt esse eaque itaque assumenda?</h2>
+                                        </div>
+                                        <div class="row mx-5 displaynonemobil">
+                                            <div class="col-3 mx-auto">
+                                                <div class="card-body border border-0 ">
+                                                    <div class="bg-color-slider-cura w-100 mx-auto">
+
+                                                        <p class=" text-white mx-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate, nihil ullam laborum sint illum commodi rerum sequi culpa excepturi quod, accusamus iure ex ab quibusdam. Dolorum ullam eaque culpa!</p>
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-3 mx-auto">
+                                                <div class="card-body border border-0 ">
+                                                    <div class="bg-color-slider-cura w-100 mx-auto">
+
+                                                        <p class=" text-white mx-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate, nihil ullam laborum sint illum commodi rerum sequi culpa excepturi quod, accusamus iure ex ab quibusdam. Dolorum ullam eaque culpa!</p>
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-3 mx-auto">
+                                                <div class="card-body border border-0 ">
+                                                    <div class="bg-color-slider-cura w-100 mx-auto">
+
+                                                        <p class=" text-white mx-5 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad cupiditate, nihil ullam laborum sint illum commodi rerum sequi culpa excepturi quod, accusamus iure ex ab quibusdam. Dolorum ullam eaque culpa!</p>
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                        </div>
+                       {{--  <img src="assets/img/portfolio/fullsize/prueba.jpg" class="d-block w-100 "  alt="..."> --}}
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </section>
+        {{-- <section class="page-section page-section-sm page-section-xxxl " id="slide">
+            
+        </section> --}}
         
         <!-- About-->
-        <section class="page-section2 bg-danger" id="about">
-            <div class="container   px-4 px-lg-5">
-                <article class="row  px-4 gx-4 gx-lg-5 justify-content-center">
+        <section class="page-section2 mt-6 mb-sm-0 mb-3 page-section2-sm" id="about">
+            <div class="container">
+                <div class="row pt-25">
+                    <div class="col-sm-5 col-12  p-0 m-0 pb-2 pb-sm-0 ">
+                        <div class="fw-bold text-white bg-redcura text-center py-2 rounded">
+                            CONSULTA TU TRÁMITE AQUÍ
+                        </div>
+                    </div>
+                    <div class="col-sm-7 col-12  p-0 m-0">
+                        <div class="fw-bold text-white ">
+                            <form class="row p-0 m-0">
+                                <div class="col-10  col-sm-10 px-2  m-0 h-auto text-middle">
+
+                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                                </div>
+                                <div class="col-1 px-0 mx-auto col-sm-2 mx-0 my-0 h-auto">
+                                    
+                                    <button class="btn btn-outline-success"  type="submit"><i class="fas fa-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {{-- <article class="row  px-4 gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
                         
                         <h2 class="text-white mt-5">Compre aqui su carpeta!</h2>
@@ -79,13 +234,35 @@
                         <p class="text-white-75 mb-4">Ahorre tiempo en molestios tramites precesniales, dando clik abajo podras comprar una nueva carpeta!</p>
                         <a class="btn btn-dark btn-xl " href="#services">Get Started!</a>
                     </div>
-                </article>
+                </article> --}}
             </div>
         </section>
         <!-- Services-->
-        <section class="page-section2" id="services">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">At Your Service</h2>
+        <section class="page-section3 page-section3-sm" id="{{-- services --}}">
+            <div class="container-fluid  position-relative ">
+                
+                <div class="row mx-3 pt-3 bg-white d-flex justify-content-center position-relative border border-top-3 border-dark">
+                    
+                    <div class="col-sm-2 position-absolute position-sticky-sm  top-34 end-410 m-auto mt-2"><h2 class="h2 fw-bold text-center">COMPRE AQUÍ SU CARPETA</h2></div>
+                    <div class="col-sm-6  me-sm-5 m mt-sm-5"><img class="imagemobil" src="assets/img/mano.png" height="250px" width="250px" /></div>
+                    <div class="col-sm-4 position-absolute  bottom-41 end-156 ms-sm-5 end-16-sm bottom-30-sm widthcura-sm ">
+                        <div class="card bg-transparent border-0 widthcura-sm">
+                            {{-- <div class="card-header bg-transparent border-0 w-50">
+                                <h2 class="h2 fw-bold">COMPRE AQUÍ SU CARPETA</h2>
+                            </div> --}}
+                            <div class="card-body bg-transparent border-0 widthcura-sm">
+                                <div class="fs-6 fs-7-sm"> Ahorre tiempo en molestos trámites presneciales , dale click al boton de abajo para comprar una nueva carpeta</div>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 widthcura-sm">
+                                    <a type="button" href="{{route('proximamente')}}" class="btn btn-warning rounded-pill border border-5 border-dark">COMPRAR CARPETA</a>
+                            </div>  
+                        </div>
+                        <div class="triangulo_top_right triangulo_top_right-sm position-absolute top-95n top-88n-sm end-21n-sm end-156n me-3"></div>
+                    </div>
+                    
+                </div>
+                <div class="triangulo_bottom_right triangulo_bottom_right-sm position-absolute bottom-0 end-0"></div>
+                {{-- <h2 class="text-center mt-0">At Your Service</h2>
                 <hr class="divider" />
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 text-center">
@@ -116,156 +293,161 @@
                             <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </section>
         <!-- Portfolio-->
-        <div id="portfolio">
-            <div class="container-fluid p-0">
+        <div class="mt-2" id="portfolio">
+            <div class="container-fluid px-2 px-sm-5 my-sm-0">
                 <div class="row g-0">
-                    <div class="col-lg-4 col-sm-6 ">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                    <h2 class="text-center h2 fs-2 fw-bold py-5 text-redcura">Productos</h2>
+                    <div class="col-lg-4 col-6 p-1 ">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/11.jpg" title="<div class=''>Rural  Obra Nueva  <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a></div>">
+                            <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/11.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Rural</div>
+                                <div class="project-name">Obra Nueva</div>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea, quo odio aperiam aliquid numquam illo.
+                                </p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                    <div class="col-lg-4 col-6 p-1 ">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Rural Reloteo <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
+                            <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Rural</div>
+                                <div class="project-name">Reloteo</div>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea, quo odio aperiam aliquid numquam illo.
+                                </p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
+                    <div class="col-lg-4 col-6 p-1 ">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Rural Demolición  <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
+                            <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Rural</div>
+                                <div class="project-name">Demolición</div>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea, quo odio aperiam aliquid numquam illo.
+                                </p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
+                    <div class="col-lg-4 col-6 p-1 ">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/22.jpg" title="Urbana Obra Nueva <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
+                            <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/22.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Urbana</div>
+                                <div class="project-name">Obra Nueva</div>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea, quo odio aperiam aliquid numquam illo.
+                                </p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
+                    <div class="col-lg-4 col-6 p-1 ">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Urbana Reloteo <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
+                            <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Urbana</div>
+                                <div class="project-name">Reloteo</div>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea, quo odio aperiam aliquid numquam illo.
+                                </p>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
+                    <div class="col-lg-4 col-6 p-1 ">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Urbana Demolición <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
+                            <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
                             <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Urbana</div>
+                                <div class="project-name">Demolición</div>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea, quo odio aperiam aliquid numquam illo.
+                                </p>
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Call to action-->
-        <section class="page-section2 bg-dark text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-            </div>
-        </section>
-        <!-- Contact-->
-        <section class="page-section2" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
+        
+        <section class="page-section1 mb-6" id="blog">
+            <div class="container-fluid px-4 px-lg-5">
+                <div class="row gx-lg-5">
+                    <h2 class="text-center h2 fs-2 fw-bold py-5 text-redcura">Blog Curaduría Urbana 2</h2>
+                    <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
+                        <div class="card bg-blackcuraopacity border-0 h-100 ">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+                                <h2 class="fs-4 fw-bold">Fresh new layout</h2>
+                                <p class="mb-0">With Bootstrap 5, we've created a fresh new layout for this template!</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                    <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
+                        <div class="card bg-blackcuraopacity border-0 h-100 ">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                                <h2 class="fs-4 fw-bold">Free to download</h2>
+                                <p class="mb-0">As always, Start Bootstrap has a powerful collectin of free templates.</p>
                             </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
+                    <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
+                        <div class="card bg-blackcuraopacity border-0 h-100 ">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
+                                <h2 class="fs-4 fw-bold">Jumbotron hero header</h2>
+                                <p class="mb-0">The heroic part of this template is the jumbotron hero header!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
+                        <div class="card bg-blackcuraopacity border-0 h-100 ">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
+                                <h2 class="fs-4 fw-bold">Feature boxes</h2>
+                                <p class="mb-0">We've created some custom feature boxes using Bootstrap icons!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
+                        <div class="card bg-blackcuraopacity border-0 h-100 ">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i class="bi bi-code"></i></div>
+                                <h2 class="fs-4 fw-bold">Simple clean code</h2>
+                                <p class="mb-0">We keep our dependencies up to date and squash bugs as they come!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
+                        <div class="card bg-blackcuraopacity border-0 h-100 ">
+                            <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                                <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                                <h2 class="fs-4 fw-bold">A name you trust</h2>
+                                <p class="mb-0">Start Bootstrap has been the leader in free Bootstrap templates since 2013!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Company Name</div></div>
-        </footer>
+        
+        <div class="footer"> 
+            <div class="py-2 bg-dark w-100">
+                <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Grupo Ahora S.A.S 2021</p></div>
+            </div>
+
+        </div>
+        
+         
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->

@@ -1,9 +1,7 @@
 <?php
-
 namespace Database\Seeders;
 
 use App\Models\Category;
-
 use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
@@ -15,11 +13,9 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::create([
-            'name' => 'rural'
-        ]);
-        Category::create([
-            'name' => 'urbana'
-        ]);
+        Category::factory(10)->create();
+
+        
+        /* factory(App\Category::class, 10)->create(); */
     }
 }

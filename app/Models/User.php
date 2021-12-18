@@ -2,34 +2,25 @@
 
 namespace App\Models;
 
+use App\Models\Profile as ModelsProfile;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Laravel\Fortify\TwoFactorAuthenticatable;
-use Laravel\Jetstream\HasProfilePhoto;
-use Laravel\Jetstream\HasTeams;
-use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
-
+use App\Models\Profile;
 
 class User extends Authenticatable
 {
-    use HasApiTokens;
-    use HasFactory;
-    use HasProfilePhoto;
-    use HasTeams;
     use Notifiable;
-    use TwoFactorAuthenticatable;
-    use HasRoles;
 
+    use HasRoles;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'id','name', 'email', 'number', 'password', 'user_id', 'farm_id', 'created_at', 'updated_at'
+        'name','surname', 'email', 'password' , 'last_name'
     ];
 
     /**
@@ -38,10 +29,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
-        'remember_token',
-        'two_factor_recovery_codes',
-        'two_factor_secret',
+        'password', 'remember_token',
     ];
 
     /**
@@ -52,26 +40,32 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    /**
-     * The accessors to append to the model's array form.
-     *
-     * @var array
-     */
-    protected $appends = [
-        'profile_photo_url',
-    ];
-
-    /* relaccion uno a muchos */
-
-    public function Folders() {
-        return $this->hasMany('App\Models\folder');
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
     }
-    public function Documents(){
-        return $this->hasMany('App\Models\document');
+    public function sales(){
+        return $this->hasMany(Sale::class);
     }
-    public function Sales(){
-        return $this->hasMany('App\Models\sale');
+    public function purchases(){
+        return $this->hasMany(Purchase::class);
     }
-    
+    /* public function shoppingcarts()
+    {
+        return $this->hasMany(ShoppingCart::class);
+    } */
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+    public function update_client($request)
+    {
+        
+        $this->update($request->all());
+        $this->profile()->update([
+            'dni'=>$request->dni,
+            'ruc'=>$request->ruc,
+        ]);
+    }
+
 }

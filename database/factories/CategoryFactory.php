@@ -1,9 +1,11 @@
 <?php
-
 namespace Database\Factories;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+/** @var \Illuminate\Database\Eloquent\Factory $factory */
+
 use App\Models\Category;
+use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
 class CategoryFactory extends Factory
 {
@@ -22,10 +24,26 @@ class CategoryFactory extends Factory
     public function definition()
     {
         return [
-            
-            'name' => $this->faker->name,
-            
-
+            'name' => $this->faker->unique()->word,
+            'slug' => $this->faker->unique()->slug,
+            'description' => $this->faker->sentence($nbWords = 6, $variableNbWords = true),
+            'icon' => $this->faker->randomElement([
+                'icon-fruits',
+                'icon-broccoli-1',
+                'icon-beef',
+                'icon-fast-food',
+                'icon-honey',
+                'icon-grape',
+                'icon-onions',
+                'icon-avocado',
+                'icon-contain',
+                'icon-fresh-juice',
+                'icon-newsletter',
+                'icon-organic',
+                'icon-beer',
+            ]),
         ];
     }
 }
+
+

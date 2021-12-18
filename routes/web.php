@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/proximamente', function () {
+    return view('web.proximamente');
+})->name('proximamente');
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
