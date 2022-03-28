@@ -4,7 +4,7 @@
 
     {{-- Select --}}
     <select id="{{ $id }}" name="{{ $name }}"
-        {{ $attributes->merge(['class' => $makeItemClass($errors->first($errorKey))]) }}>
+        {{ $attributes->merge(['class' => $makeItemClass()]) }}>
         {{ $slot }}
     </select>
 
@@ -17,6 +17,26 @@
 
     $(() => {
         $('#{{ $id }}').select2( @json($config) );
+
+        {{-- Add support to auto select old submitted values --}}
+
+        @if($errors->any())
+
+            let oldOptions = @json(collect($makeItemValue($errorKey)));
+
+            $('#{{ $id }} option').each(function()
+            {
+                let value = $(this).val() || $(this).text();
+
+                if (oldOptions.includes(value))
+                {
+                    $(this).prop('selected', true);
+                }
+            });
+
+            $('#{{ $id }}').trigger('change');
+
+        @endif
     })
 
 </script>

@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Curaduría Urbana </b> 2',
-    'logo_img' => 'vendor/adminlte/dist/img/logo.png',
-    'logo_img_class' => 'brand-image  elevation-4',
-    'logo_img_xl' => null,
-    'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Curaduría Urbana 2',
+    'logo' => '',
+    'logo_img' => null,
+    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo_img_xl' => 'assets/img/Logo.png',
+    'logo_img_xl_class' => 'brand-image',
+    'logo_img_alt' => 'AdminLTE',
 
     /*
     |--------------------------------------------------------------------------
@@ -127,9 +127,9 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
-    'classes_sidebar_nav' => 'navbar-black',
-    'classes_topnav' => 'navbar-black navbar-dark',
+    'classes_sidebar' => 'sidebar-dark-red elevation-4',
+    'classes_sidebar_nav' => '',
+    'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -145,12 +145,12 @@ return [
     |
     */
 
-    'sidebar_mini' => true,
+    'sidebar_mini' => 'lg',
     'sidebar_collapse' => false,
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-dark',
+    'sidebar_scrollbar_theme' => 'os-theme-light',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
@@ -236,97 +236,53 @@ return [
             'topnav_right' => true,
         ],
 
-        // Sidebar items:
-        /* [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ], */
+
         [
             'text' => 'Dashboard',
-            'route'  => 'admin.home',
+            'route'  => 'home',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
+            /* 'can'  => 'admin.home', */
         ],
         [
-            'text' => 'Usuarios',
-            'route'  => 'admin.users.index',
+            'text' => 'Procedimientos',
+            'route'  => 'proceedings.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
+            /* 'can'  => 'admin.home', */
         ],
         [
-            'text' => 'Roles',
-            'route'  => 'admin.users.roles.index',
-            'icon'  => 'fas fa-users-cog fa-fw',
-            'can'  => 'admin.home',
-        ],
-        [
-            'text' => 'Dashboard',
-            'route'  => 'client.home',
-            'icon'  => 'fas fa-users-cog fa-fw',
-            'can'  => 'client.home',
-        ],
-        [
-            'text' => 'Categorías',
-            'route'  => 'admin.users.categorys.index',
-            'icon'  => 'fas fa-users-cog fa-fw',
-            'can'  => 'admin.home',
-        ],
-
-
-
-        [
-            'text' => 'Trámites',
-            'route'  => 'admin.users.folders.index',
+            'text' => 'Formatos',
+            'route'  => 'formats.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
+            /* 'can'  => 'admin.home', */
+        ],
+        [
+            'text' => 'Post',
+            'route'  => 'posts.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            /* 'can'  => 'admin.home', */
         ],
         
-        [
-            'text' => 'Formularios',
-            'route'  => 'admin.users.folders.forms.index',
-            'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
-        ],
-        [
-            'text' => 'Trámites Vendidos',
-            'route'  => 'client.sales.index',
-            'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'client.home',
-        ],
-        [
-            'text' => 'Trámites Vendidos',
-            'route'  => 'admin.users.sales.index',
-            'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
-        ],
-
 
         [
-/*             'text' => 'Usuarios',
+            /*             'text' => 'Usuarios',
             'route'  => 'admin.users.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
- */        ],
+ */],
         [
-/*             'text' => 'Roles',
+            /*             'text' => 'Roles',
             'route'  => 'admin.roles.index',
             'icon'  => 'fas fa-users-cog fa-fw',
             'can'  => 'admin.roles.index',
- */        ],
+ */],
         [
-/*             'text' => 'Productos',
+            /*             'text' => 'Productos',
             'route'  => 'admin.users.farms.index',
             'icon'  => 'fas fa-users-cog fa-fw',
- */            /* 'can'  => 'admin.roles.index', */
-        ],
-        
+ */            /* 'can'  => 'admin.roles.index', */],
 
-        [
+
+        /* [
             'text'        => 'pages',
             'url'         => 'admin/pages',
             'icon'        => 'far fa-fw fa-file',
@@ -344,8 +300,8 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ],
-        
-                    
+
+
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',
@@ -399,7 +355,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ], */
     ],
 
     /*
@@ -511,6 +467,39 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | IFrame
+    |--------------------------------------------------------------------------
+    |
+    | Here we change the IFrame mode configuration. Note these changes will
+    | only apply to the view that extends and enable the IFrame mode.
+    |
+    | For detailed instructions you can look the iframe mode section here:
+    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/IFrame-Mode-Configuration
+    |
+    */
+
+    'iframe' => [
+        'default_tab' => [
+            'url' => null,
+            'title' => null,
+        ],
+        'buttons' => [
+            'close' => true,
+            'close_all' => true,
+            'close_all_other' => true,
+            'scroll_left' => true,
+            'scroll_right' => true,
+            'fullscreen' => true,
+        ],
+        'options' => [
+            'loading_screen' => 1000,
+            'auto_show_new_tab' => true,
+            'use_navbar_items' => true,
+        ],
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Livewire
     |--------------------------------------------------------------------------
     |
@@ -518,6 +507,7 @@ return [
     |
     | For detailed instructions you can look the livewire here:
     | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Other-Configuration
+    |
     */
 
     'livewire' => false,

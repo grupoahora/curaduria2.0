@@ -60,8 +60,8 @@ td.big {
  width: 117px;
 }
 
-td.small {
-}
+/* td.small {
+} */
 
 td.codeLine {
  font-family: "Source Code Pro", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;

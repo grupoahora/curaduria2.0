@@ -46,15 +46,26 @@
   border-radius: 0.5rem;
 }
 
+.minh-100 {
+    height: 100vh;
+}
 .bg-color-slider-cura{
-  background-color: #dc0d1d;
+  background-color: #fff;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
-  border-radius: 28px;
+  border-radius: 8px;
   
   -webkit-box-shadow: 6px 5px 24px #666666;
   -moz-box-shadow: 6px 5px 24px #666666;
   box-shadow: 0px 0px 54px #dc0d1d;
+}
+.h-cura-100{
+  height: fit-content;
+}
+@media (max-width: 576px) {
+  .h-cura-auto{
+    height: auto;
+  }
 }
 
 #h-50-cura {
@@ -80,7 +91,15 @@ height: 500px;
     background-color: rgba(82, 11, 12, 0.21);
 }
 .py-top-slide-cura{
-  padding-top: 80px;
+  padding-top: 78px;
+  /* height: 100vh; */
+}
+.bg-color-modal-cura{
+  background-color: rgba(255, 255, 255, 0.664)!important;
+}
+.bg-color-modal-cura-b{
+  border-top: none!important;
+  border-bottom: none!important;
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -3189,8 +3208,8 @@ textarea.form-control-lg {
 
 .btn-light {
   color: #000;
-  background-color: #a00909;
-  border-color: #0c0101;
+  background-color: #ffffff;
+  border-color: #f9fafb;
 }
 .btn-light:hover {
   color: #000;
@@ -6273,11 +6292,12 @@ textarea.form-control-lg {
 }
 
 .fixed-bottom {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
+   background-color: black;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   height: 40px;
+   color: white;
 }
 
 .sticky-top {
@@ -6774,6 +6794,9 @@ textarea.form-control-lg {
 
 .h-100 {
   height: 100% !important;
+}
+.h-100-cura{
+  height: 100vh;
 }
 
 .h-auto {
@@ -11035,15 +11058,29 @@ html {
 
 body {
   width: 100%;
+  /* position: absolute; */
   height: 100vh;
 }
 .footer {
     background-color: black;
     position: relative;
-    bottom: 0;
+    bottom: -24px;
     width: 100%;
-    height: 40px;
     color: white;
+}
+.footer2 {
+    background-color: black;
+    position: relative;
+    bottom: -136px;
+    width: 100%;
+    color: white;
+}
+.bg-black{
+  background-color: #000;
+}
+.margin-cura {
+      margin-right: 0.2rem;
+      margin-left: 1rem;
 }
 .page-section {
   padding-top: 14px;
@@ -11073,9 +11110,11 @@ body {
     height: 157px;
   }
   .page-section2-sm {
-      /* padding-top: 4rem;
-      height: 150px; */
-      padding-bottom: 6.3rem;
+      padding-top: 11rem;
+      padding-bottom: 7.3rem;
+  }
+  .fs-4-cura-sm {
+      font-size: 0.875rem;
   }
   .page-section3-sm {
 
@@ -11088,9 +11127,10 @@ body {
   }
 }
 .page-section2 {
-  padding-top: 4rem;
-  height: 120px;
+
+  height: 85px;
 }
+
 
 
 .text-white-75 {

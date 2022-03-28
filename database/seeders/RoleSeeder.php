@@ -23,6 +23,11 @@ class RoleSeeder extends Seeder
                                 'special'=>'all-access']); */
         //Users
         Permission::create([
+            'name'          => 'admin.home.index',
+            'description'   => 'index del sistema',
+        ])->assignRole($role1);
+
+        Permission::create([
             'name'          => 'admin.users.index',
             'description'   => 'Lista y navega todos los usuarios del sistema',
         ])->assignRole($role1);

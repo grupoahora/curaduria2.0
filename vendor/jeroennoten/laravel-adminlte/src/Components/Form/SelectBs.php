@@ -2,7 +2,7 @@
 
 namespace JeroenNoten\LaravelAdminLte\Components\Form;
 
-class SelectBs extends inputGroupComponent
+class SelectBs extends InputGroupComponent
 {
     /**
      * The bootstrap-select plugin configuration parameters. Array with
@@ -35,14 +35,13 @@ class SelectBs extends inputGroupComponent
     /**
      * Make the class attribute for the input group item.
      *
-     * @param string $invalid
      * @return string
      */
-    public function makeItemClass($invalid = null)
+    public function makeItemClass()
     {
         $classes = ['form-control'];
 
-        if (! empty($invalid) && ! isset($this->disableFeedback)) {
+        if ($this->isInvalid() && ! isset($this->disableFeedback)) {
             $classes[] = 'is-invalid';
         }
 

@@ -1,48 +1,233 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
 
-        <x-jet-validation-errors class="mb-4" />
 
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Curaduría Urbana 2 Cúcuta</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
+        <div class="container-fluid mx-5">
+            <a class="navbar-brand text-white" href="#page-top">
+                <img src="assets/img/Logo.png" height="52" alt="" loading="lazy" />
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item mx-4"><a class="nav-link px-2" href="/">Inicio</a></li>
+                    
+                    @guest
+                   {{--  <li class="nav-item mx-4"><a class="nav-link px-2" href="{{route('login')}}">Iniciar Sesión</a></li> --}}
+                    @else
+
+                    @endguest
+                    
+                </ul>
             </div>
-        @endif
+        </div>
+    </nav>
+    <!-- Carousel-->
+    
+    <div class="container h-100 d-grid">
+    <div class="row justify-content-center my-auto">
+        <div class="col-md-8">
+            <div class="card ">
+                <div class="card-header">{{ __('Login') }}</div>
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+                <div class="card-body">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
 
-            <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                        <div class="row mb-3">
+                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+                                </button>
+
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
+        </div>
+    </div>
+</div>
+    <!-- Footer-->
 
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
+    <div class="footer">
+        <p class="m-0 text-center text-white fs-4-cura-sm">
+            © Copyright 2021. Todos los derechos reservados. <br>
+            Sitio web diseñado y desarrollado por manos Cucuteñas. <br>
+            Hecho con ❤ Softwow!
+        </p>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-color-modal-cura">
+                <div class="modal-header bg-color-modal-cura-b">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="searchs">
+
+                        
+                    </div>
+
+                    <table id="TableInventories" class="table table-striped table-responsive">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Radicado</th>
+                                <th>Clase del Acta</th>
+                                <th>Descripción</th>
+                                <th>Ver</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr id="tdproceed">
+                                   
+                                    
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer bg-color-modal-cura-b">
+                    <button type="button" class="btn btn-secondary"
+                        data-bs-dismiss="modal">Cerrar</button>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
+    <!-- Bootstrap core JS-->.
+    {!! Html::script('js/jquery-3.6.0.min.js') !!}
+    {!! Html::script('js/jquery-ui.min.js') !!}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script>
+        var proceed = $('#search_products');
+        var proceeds = $('#tdproceed');
+        var searchproceed = $('#search_proceed');
+        searchproceed.click(function () {
+            $.ajax({
+                url: "{{route('get.proceed')}}",
+                method: 'GET',
+                data: {
+                    proceed: proceed.val(),
+                },
+                success: function (data) {
+                    proceeds.empty();
+                    proceeds.append(
+                        
+                        $.each(data, function (index, element) {
+                            proceeds.append('<td>'+element.id  +'</td>'+'<td>'+
+                                element.radicado +'</td>'+'<td>'+
+                                element.classproceeding +'</td>'+'<td>'+
+                                element.descriptionclassproceeding +'</td>'+'<td><button type="button" class="btn btn-success"><a href="'+
+                                element.url +'"><i class="fas fa-eye"></i></button></td>')
+                        })
+                    )}
+                
+            });
+        });
 
-                <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-jet-button>
-            </div>
-        </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
+    </script>
+
+   <script>
+        $('#search_products').autocomplete({
+            source: function (request, response) {
+                $.ajax({
+                    url: "{{route('proceed.json')}}",
+                    dataType: 'json',
+                    data: {
+                        term: request.term
+                    },
+                    success: function (data) {
+                        response(data)
+                    },
+                });
+            }
+        });
+
+    </script>
+    {!! Html::script('js/main.js') !!}
+    {!! Html::script('js/jquery-3.3.1.min.js') !!}
+</body>
+
+</html>

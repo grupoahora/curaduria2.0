@@ -4,7 +4,7 @@
 
     {{-- Textarea --}}
     <textarea id="{{ $id }}" name="{{ $name }}"
-        {{ $attributes->merge(['class' => $makeItemClass($errors->first($errorKey))]) }}
-    >{{ $slot }}</textarea>
+        {{ $attributes->merge(['class' => $makeItemClass()]) }}
+    >{{ $makeItemValue($errorKey, $slot) }}</textarea>
 
 @overwrite
