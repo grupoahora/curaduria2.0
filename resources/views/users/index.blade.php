@@ -14,76 +14,40 @@
     @endif
     <div class="card">
         <div class="card-body">
-            <ul class="nav nav-tabs nav-justified mb-3" id="myTab" role="tablist">
-                <li class="nav-item h-100" role="presentation">
-                    <button class="nav-link active py-3" id="user-tab" data-bs-toggle="tab" data-bs-target="#user" type="button"
-                        role="tab" aria-controls="user" aria-selected="true">
-                        Usuarios
-                    </button>
-                </li>
-                <li class="nav-item h-100">
-                    <button class="nav-link py-3" id="role-tab" data-bs-toggle="tab" data-bs-target="#role" type="button"
-                        role="tab" aria-controls="role" aria-selected="false">
-                        Roles
-                    </button>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab">
-                    <div class="card">
-                        <div class="card-header">
-                            <a class="btn btn-secondary btn-sm float-right" href="{{ route('users.create') }}">Nuevo
-                                Usuario</a>
-                        </div>
-                        <div class="card-body">
-                            @foreach ($roles as $role)
-                                <table id="TableUsers" class="table table-striped">
-                                    <thead>
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Nombre</th>
-                                            <th>Apellido</th>
-                                            <th>Correo Electrónico</th>
-                                            <th>created_at</th>
-                                            <th>updated_at</th>
-                                            <th></th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($role->users as $user)
-                                            <tr>
-                                                <td>{{ $user->id }}</td>
-                                                <td>
-                                                    <a href="{{ route('users.show', $user) }}">{{ $user->name }}</a>
-                                                </td>
-                                                <td>{{ $user->surname }}</td>
-                                                <td>{{ $user->email }}</td>
-                                                <td>{{ $user->created_at }}</td>
-                                                <td>{{ $user->updated_at }}</td>
-                                                <td width="10px">
-                                                    <a href="{{ route('users.edit', $user) }}"
-                                                        class="btn btn-primary btn-sm">Editar</a>
-                                                </td>
-                                                <td width="10px">
-                                                    <form action="{{ route('users.destroy', $user) }}" method="POST">
-                                                        @csrf
-                                                        @method('delete')
-                                                        <button type="submit"
-                                                            class="btn btn-danger btn-sm">Eliminar</button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
-                            @endforeach
-                        </div>
+            <div class="section-body colorsmart">
+                <ul class="nav nav-tabs my-0 py-0 bg-transparent  border border-0" id="myTab" role="tablist">
+                    <li class="nav-item h-100" role="presentation">
+                        <button class="nav-link active py-3" id="user-tab" data-bs-toggle="tab" data-bs-target="#user"
+                            type="button" role="tab" aria-controls="user" aria-selected="true">
+                            <h2 class="h4 m-0 p-0">
+                                Usuarios
+                            </h2>
+                        </button>
+                    </li>
+                    <li class="nav-item h-100">
+                        <button class="nav-link py-3" id="role-tab" data-bs-toggle="tab" data-bs-target="#role" type="button"
+                            role="tab" aria-controls="role" aria-selected="false">
+                            <h2 class="h4 m-0 p-0">
+                                Roles
+                            </h2>
+                        </button>
+                    </li>
+                    <li class="nav-item ml-auto h-100 mr-1 my-auto btnactive" id="btnuser" role="presentation">
+                        <a class="btn btn-secondary px-2 rounded-3" href="{{ route('users.create') }}">Nuevo Usuario</a>
+                    </li>
+                    <li class="nav-item ml-auto h-100 mr-1 my-auto d-none" id="btnrole" role="presentation">
+                        <a class="btn btn-secondary px-2 rounded-3" href="{{-- {{ route('users.create') }} --}}">Nuevo Rol</a>
+                    </li>
+                </ul>
+                <div class="tab-content bg-white pt-5" id="myTabContent">
+                    <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab">
+                        @include('users.partials.user')
+                        
+    
                     </div>
-
-                </div>
-                <div class="tab-pane fade" id="roless" role="tabpanel" aria-labelledby="roless-tab">
-                    12
+                    <div class="tab-pane fade" id="role" role="tabpanel" aria-labelledby="role-tab">
+                        @include('users.partials.role')
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,6 +81,18 @@
     <script>
         $(document).ready(function() {
             $('#TableUsers').DataTable({
+                "lengthMenu": [
+                    [5, 10, 15, -1],
+                    [5, 10, 15, "All"]
+                ]
+            });
+            $('#TableCashier').DataTable({
+                "lengthMenu": [
+                    [5, 10, 15, -1],
+                    [5, 10, 15, "All"]
+                ]
+            });
+            $('#TableCliente').DataTable({
                 "lengthMenu": [
                     [5, 10, 15, -1],
                     [5, 10, 15, "All"]
