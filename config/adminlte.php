@@ -244,6 +244,12 @@ return [
             /* 'can'  => 'admin.home', */
         ],
         [
+            'text' => 'Usuarios',
+            'route'  => 'users.index',
+            'icon'  => 'fas fa-tachometer-alt fa-fw',
+            /* 'can'  => 'admin.home', */
+        ],
+        [
             'text' => 'Procedimientos',
             'route'  => 'proceedings.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
