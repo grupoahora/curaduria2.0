@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::resource('proceedings', ProceedingController::class)->names('proceedings');
-Route::post('upload_archive_pr/{id}', [ProceedingController::class, 'upload_archive'])->name('upload.archive');
-Route::post('file_delete_archive_pr', [ProceedingController::class, 'file_delete_archive'])->name('file.delete.archive');
+Route::post('upload_archive_pr/{id}', [ProceedingController::class, 'upload_archive'])->name('upload.archive.pr');
+Route::post('file_delete_archive_pr', [ProceedingController::class, 'file_delete_archive'])->name('file.delete.archive.pr');
 
 Route::resource('formats', FormatController::class)->names('formats');
 Route::resource('posts', PostController::class)->names('posts');
