@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
@@ -19,7 +20,8 @@ class UserController extends Controller
         $users = User::all();
         $users_with_role = Role::with('users')->get();
         $roles = Role::all();
-        return view('users.index', compact('users', 'users_with_role', 'roles'));
+        $permissions = Permission::all()->groupBy('view');
+        return view('users.index', compact('users', 'users_with_role', 'roles', 'permissions'));
     }
 
     /**

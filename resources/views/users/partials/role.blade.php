@@ -21,7 +21,7 @@
                                         data-bs-toggle="modal" data-bs-target="#editRolModal">
                                         Editar
                                     </button>
-                                    {{-- <div class="modal fade" id="editRolModal" tabindex="-1" role="dialog"
+                                    <div class="modal fade" id="editRolModal" tabindex="-1" role="dialog"
                                         aria-labelledby="editRolModalModalLabel" aria-hidden="true"
                                         style="display: none;">
                                         <div class="modal-dialog" role="document">
@@ -34,9 +34,9 @@
                                                         data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    {!! Form::model($role, ['route' => ['admin.roles.update', $role], 'method' => 'put']) !!}
+                                                    {!! Form::model($role, ['route' => ['roles.update', $role], 'method' => 'put']) !!}
                                                     @include(
-                                                        'admin.roles.partials.form'
+                                                        'roles.partials.form'
                                                     )
                                                 </div>
                                                 <div class="modal-footer">
@@ -47,12 +47,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div> --}}
+                                    </div>
                                     {{-- <a href="{{ route('admin.roles.edit', $role) }}"
                                         class="btn btn-sm btn-primary">Editar</a> --}}
                                 </td>
                                 <td width="10px">
-                                    <form action="{{-- {{ route('roles.destroy', $role) }} --}}" method="POST">
+                                    <form action="{{ route('roles.destroy', $role) }}" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button type="submit" class="btn btn-sm btn-danger" width= "10px">
