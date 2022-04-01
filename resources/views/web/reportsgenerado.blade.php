@@ -8,6 +8,8 @@
     <meta name="author" content="" />
     <title>Curaduría Urbana 2 Cúcuta</title>
     <!-- Favicon-->
+        <link rel="stylesheet" href="{{ asset('vendor/adminlte/dist/css/adminlte.min.css') }}">
+
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="/css/style-navbar.css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/css/jqueryui-editable.css"
@@ -94,7 +96,7 @@
                                     aria-labelledby="user-tab">
                                     <div class="card">
                                         <div class="card-body">
-                                            <table id="TableProceedings" class="table table-striped table-responsive-md">
+                                            <table id="TableProceedings" class="table table-striped table-responsive-xl">
                                                 <thead>
                                                     <tr>
                                                         <th>Id</th>
