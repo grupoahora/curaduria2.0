@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
             'surname'=>'Cortes',
             'email'=>'cortesmirandaedavid19@gmail.com',
             'password'=> bcrypt('12345678')
-        ])->assignRole('Admin');;
+        ])->assignRole('Notario');;
         /* $role1_user->profile()->create([
             'first_name' => $role1_user->name,
         ]); */
@@ -35,15 +35,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => $role2_user->name,
         ]); */
         
-        $role3_user = User::create([
-            'name' => 'Andres',
-            'surname' => 'Grimaldos Client',
-            'email' => 'andrespatino2@grupoahora.co',
-            'password' => bcrypt('12345678')
-        ])->assignRole('Cliente');
-        /* $role3_user->profile()->create([
-            'first_name' => $role3_user->name,
-        ]); */
+        
         
     }
 }
