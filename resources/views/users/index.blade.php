@@ -33,10 +33,10 @@
                         </button>
                     </li>
                     <li class="nav-item ml-auto h-100 mr-1 my-auto btnactive" id="btnuser" role="presentation">
-                        <a class="btn btn-secondary px-2 rounded-3" href="{{ route('users.create') }}">Nuevo Usuario</a>
+                        <a class="btn btn-secondary px-2 rounded-3" href="{{ route('admin.users.create') }}">Nuevo Usuario</a>
                     </li>
                     <li class="nav-item ml-auto h-100 mr-1 my-auto d-none" id="btnrole" role="presentation">
-                        <a class="btn btn-secondary px-2 rounded-3" href="{{-- {{ route('users.create') }} --}}">Nuevo Rol</a>
+                        <a class="btn btn-secondary px-2 rounded-3" href="{{-- {{ route('admin.users.create') }} --}}">Nuevo Rol</a>
                     </li>
                 </ul>
                 <div class="tab-content bg-white pt-5" id="myTabContent">

@@ -239,19 +239,19 @@ return [
 
         [
             'text' => 'Dashboard',
-            'route'  => 'home',
+            'route'  => 'admin.home',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             /* 'can'  => 'admin.home', */
         ],
         [
             'text' => 'Usuarios',
-            'route'  => 'users.index',
+            'route'  => 'admin.users.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             /* 'can'  => 'admin.home', */
         ],
         [
             'text' => 'Procedimientos',
-            'route'  => 'proceedings.index',
+            'route'  => 'admin.proceedings.index',
             'classes' => 'position-relative',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             /* 'can'  => 'admin.home', */
@@ -259,13 +259,13 @@ return [
                 [
                     'text' => 'Procedimientos',
                     'classes' => 'position-relative ml-4 w-auto',
-                    'route'  => 'proceedings.index',
+                    'route'  => 'admin.proceedings.index',
 
                 ],
                 [
                     'text' => 'Reportes por Fecha',
                     'classes' => 'position-relative ml-4 w-auto',
-                    'route'  => 'reports.date',
+                    'route'  => 'admin.reports.date',
 
                 ],
 
@@ -273,14 +273,14 @@ return [
         ],
         [
             'text' => 'Formatos',
-            'route'  => 'formats.index',
+            'route'  => 'admin.formats.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             'can'  => 'admin.home',
         ],
         
         [
             'text'    => 'Publicaciones',
-            'route'   => 'posts.index',
+            'route'   => 'admin.posts.index',
             'classes' => 'position-relative',
 
             'icon'    => 'fas fa-fw fa-share',
@@ -288,13 +288,13 @@ return [
                 [
                     'text' => 'Publicaciones',
                     'classes' => 'position-relative ml-4 w-auto',
-                    'route'  => 'posts.index',
+                    'route'  => 'admin.posts.index',
                     
                 ],
                 [
                     'text' => 'Categorias',
                     'classes' => 'position-relative ml-4 w-auto',
-                    'route'  => 'categories.index',
+                    'route'  => 'admin.categories.index',
                     /* 'can' => 'categories.index' */
 
                 ],

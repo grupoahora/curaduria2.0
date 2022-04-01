@@ -44,7 +44,6 @@
         @endif
 
     </div>
-   
 @stop
 
 @section('adminlte_js')
