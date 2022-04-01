@@ -2,7 +2,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body border border-light">
-                <table class="table table-striped" id="TableRole">
+                <table class="table table-striped table-resposive-md" id="TableRole">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -17,7 +17,7 @@
                                 <td>{{ $role->id }}</td>
                                 <td>{{ $role->name }}</td>
                                 <td width="10px">
-                                    <button type="button" class="nav-link btn btn-primary px-2 rounded-3"
+                                    <button type="button" class="nav-link btn btn-sm btn-primary px-2 rounded-3"
                                         data-bs-toggle="modal" data-bs-target="#editRolModal">
                                         Editar
                                     </button>
@@ -40,7 +40,7 @@
                                                     )
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-light"
+                                                    <button type="button" class="btn  btn-smbtn-light"
                                                         data-bs-dismiss="modal">Cerrar</button>
                                                     {!! Form::submit('Editar Rol', ['class' => 'btn btn-primary']) !!}
                                                     {!! Form::close() !!}
@@ -55,7 +55,7 @@
                                     <form action="{{ route('admin.roles.destroy', $role) }}" method="POST">
                                         @csrf
                                         @method('delete')
-                                        <button type="submit" class="btn btn-sm btn-danger" width= "10px">
+                                        <button type="submit" class="btn  btn-danger" width= "10px">
                                             Eliminar
                                         </button>
                                     </form>

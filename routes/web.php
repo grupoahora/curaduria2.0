@@ -28,6 +28,8 @@ Route::get('proceed/json', [WebController::class, 'proceed'])->name('proceed.jso
 Route::get('proceed/resultado', [WebController::class, 'search_proceedings'])->name('search.proceedings');
 Route::get('get_proceed', [WebController::class, 'get_proceed'])->name('get.proceed');
 Route::post('reporte_generado_publico', [WebController::class, 'reporte_generado_publico'])->name('genere.reports.public');
+route::get('postdetail/{id}', [WebController::class, 'post_detail'])->name('post.detail');
+
 Route::get('/proximamente', function () {
     return view('web.contact');
 })->name('contact');

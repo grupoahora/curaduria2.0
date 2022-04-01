@@ -237,12 +237,7 @@ return [
         ],
 
 
-        [
-            'text' => 'Dashboard',
-            'route'  => 'admin.home',
-            'icon'  => 'fas fa-tachometer-alt fa-fw',
-            /* 'can'  => 'admin.home', */
-        ],
+     
         [
             'text' => 'Usuarios',
             'route'  => 'admin.users.index',
@@ -275,7 +270,7 @@ return [
             'text' => 'Formatos',
             'route'  => 'admin.formats.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            'can'  => 'admin.home',
+            'can'  => 'formats.index',
         ],
         
         [

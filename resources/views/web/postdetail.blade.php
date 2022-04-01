@@ -52,7 +52,7 @@
             </div>
         </div>
     </nav>
-    <div class="container mt-5 pt-5 h-cura-100 h-cura-auto" id="slide">
+    <div class="container mt-5 pt-5 h-100-cura h-cura-auto" id="slide">
         <div class="row">
             <div class="col-lg-10">
                 <!-- Post content-->

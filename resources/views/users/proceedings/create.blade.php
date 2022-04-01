@@ -14,7 +14,7 @@
 @endif
 <div class="card">
     <div class="card-body">
-        {!! Form::open(['route' => 'proceedings.store']) !!}
+        {!! Form::open(['route' => 'admin.proceedings.store']) !!}
         <div class="row justify-content-md-top">
             <div class="col-5  ">
                 <div class="card">
@@ -84,11 +84,30 @@
 @stop
 
 @section('css')
-<link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="/css/style-navbar.css">
+    <link rel="stylesheet" href="/select2/dist/css/select2.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/css/jqueryui-editable.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
 @stop
 
 @section('js')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js" integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/js/jqueryui-editable.min.js"></script>
+    <script src="/select2/dist/js/select2.min.js"></script>
+    <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/dataTables.buttons.min.js"></script>
+    <script src="/js/jszip.min.js"></script>
+    <script src="/js/pdfmake.min.js"></script>
+    <script src="/js/vfs_fonts.js"></script>
+    <script src="/js/buttons.html5.min.js"></script>
+    <script src="/js/buttons.print.min.js"></script>
+    <script src="/js/changebtnactive.js"></script>
 <script>
     console.log('menu');
 </script>

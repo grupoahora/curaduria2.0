@@ -56,7 +56,7 @@ class PostController extends Controller
             'category_id' => $request->category_id,
 
         ]);
-        return redirect()->route('posts.index', compact('posts'))->with('info', 'El Post se a creado con éxito');
+        return redirect()->route('admin.posts.index', compact('posts'))->with('info', 'El Post se a creado con éxito');
     }
 
     /**
@@ -94,7 +94,7 @@ class PostController extends Controller
     {
         $post->update($request->all());
         /* dd($proceedings); */
-        return redirect()->route('posts.index')->with('info', 'El Post se actualizó con éxito');
+        return redirect()->route('admin.posts.index')->with('info', 'El Post se actualizó con éxito');
     }
 
     /**
@@ -107,6 +107,6 @@ class PostController extends Controller
     {
         $post->delete();
 
-        return redirect()->route('posts.index')->with('info', 'El Post se eliminó con éxito');
+        return redirect()->route('admin.posts.index')->with('info', 'El Post se eliminó con éxito');
     }
 }

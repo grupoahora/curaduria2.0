@@ -77,7 +77,7 @@
 
                                 <li class="nav-item ml-auto h-100 mr-1 my-auto btnactive" id="btnuser"
                                     role="presentation">
-                                    {!! Form::open(['route' => 'genere.reports']) !!}
+                                    {!! Form::open(['route' => 'reports.date.public']) !!}
 
                                     {!! Form::label('fechaini', 'Fecha Inicial', ['class' => 'form-label']) !!}
                                     {!! Form::date('fechaini', null, ['class' => 'form-input']) !!}
@@ -94,7 +94,7 @@
                                     aria-labelledby="user-tab">
                                     <div class="card">
                                         <div class="card-body">
-                                            <table id="TableProceedings" class="table table-striped">
+                                            <table id="TableProceedings" class="table table-striped table-responsive-md">
                                                 <thead>
                                                     <tr>
                                                         <th>Id</th>
@@ -107,8 +107,6 @@
                                                         <th>Fecha de Expedición</th>
                                                         <th>Ver Procedimiento</th>
 
-                                                        <th></th>
-                                                        <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -137,16 +135,7 @@
                             @endforeach
 
                         </td>
-                        <td width="10px">
-                            <a href="{{ route('proceedings.edit', $proceeding) }}" class="btn btn-primary btn-sm">Editar</a>
-                        </td>
-                        <td width="10px">
-                            <form action="{{ route('proceedings.destroy', $proceeding) }}" method="POST">
-                                @csrf
-                                @method('delete')
-                                <button type="submit" class="btn btn-danger btn-sm"">Eliminar</button>
-                            </form>
-                        </td>
+                        
                     </tr>
      @endforeach
                                                 </tbody>
@@ -191,10 +180,27 @@
     <script src="/js/buttons.html5.min.js"></script>
     <script src="/js/buttons.print.min.js"></script>
     <script src="/js/changebtnactive.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#TableProceedings').DataTable({
+                responsive: true,
+                dom: 'Bfrtip',
+                
+                buttons: [
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    },
+                    'copy', 'csv', 'excel',  'print'
+                ]
+            });
+        });
+    </script>
     <!-- Core theme JS-->
     <script src="/js/scripts.js"></script>
-    {!! Html::script('/js/main.js') !!}
-    {!! Html::script('/js/jquery-3.3.1.min.js') !!}
+{{--     {!! Html::script('/js/main.js') !!}
+    {!! Html::script('/js/jquery-3.3.1.min.js') !!} --}}
     <script>
         $("p").parent("#content").css("word-wrap", "break-word");
     </script>

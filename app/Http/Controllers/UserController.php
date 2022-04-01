@@ -42,7 +42,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User::create([
+            'name' => $request['name'],
+            'surname' => $request['surname'],
+            'email' => $request['email'],
+            'password' => bcrypt('12345678'),
+        ])->assignRole($request->rols);
+      
+      return redirect()->route('admin.users.index')->with('info', 'Usuario creado con Exito');
     }
 
     /**
@@ -62,9 +69,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        $iduser = User::find($user->id);
+        $roles = Role::all();
+        return view('users.edit', compact('user', 'roles', 'iduser'));
     }
 
     /**
@@ -74,9 +83,20 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, User $user)
     {
-        //
+        $user->roles()->sync($request->get('rols'));
+
+        $user->update([
+            'name' => $request['name'],
+
+            'surname' => $request['surname'],
+            
+            'email' => $request['email'],
+        ]);
+       
+        /* dd($proceedings); */
+        return redirect()->route('admin.users.index')->with('info', 'El Usuario se actualizó con éxito');
     }
 
     /**
@@ -85,8 +105,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect()->route('admin.users.index')->with('info', 'El Usuario se eliminó con éxito');
     }
 }

@@ -36,8 +36,8 @@
                                 <th>Nombre</th>
                                 <th>Apellido</th>
                                 <th>Correo Electrónico</th>
-                                <th>created_at</th>
-                                <th>updated_at</th>
+                                <th>Fecha de Creación</th>
+                                <th>Fecha de Actualización</th>
                                 <th></th>
                                 <th></th>
                             </tr>

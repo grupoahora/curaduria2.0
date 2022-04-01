@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 
 class RoleController extends Controller
 {
@@ -35,9 +36,14 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $role = Role::create([
+            'name' => $request['name'],
+            'guard_name' => "web",
+            
+        ]);
 
+        return redirect()->route('admin.users.index')->with('info', 'Rol creado con Exito');
+    }
     /**
      * Display the specified resource.
      *
@@ -67,9 +73,17 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,Role $role)
     {
-        //
+        $role->permissions()->sync($request->get('permissions'));
+        $role->update([
+            'name' => $request['name'],
+
+            
+        ]);
+
+        /* dd($proceedings); */
+        return redirect()->route('admin.users.index')->with('info', 'El Rol se actualizó con éxito');
     }
 
     /**
@@ -78,8 +92,11 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Role $role)
     {
-        //
+
+        $role->delete();
+
+        return redirect()->route('admin.users.index')->with('info', 'El Usuario se eliminó con éxito');
     }
 }

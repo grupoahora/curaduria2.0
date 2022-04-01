@@ -14,7 +14,7 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::model($proceedings, ['route' => ['proceedings.update', $proceedings], 'method' => 'PUT']) !!}
+            {!! Form::model($proceedings, ['route' => ['admin.proceedings.update', $proceedings], 'method' => 'PUT']) !!}
             <div class="card">
                 <div class="card-header">
                     <h2 class="h5">Datos del Procedimiento</h2>
@@ -91,24 +91,40 @@
         </div>
     </div>
 @stop
-
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-    {!! Html::style('css/jquery-ui.min.css') !!}
+
+   <link rel="stylesheet" href="/css/style-navbar.css">
+    <link rel="stylesheet" href="/select2/dist/css/select2.min.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/css/jqueryui-editable.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css" rel="stylesheet"
         type="text/css" />
     {!! Html::style('fileinput/css/fileinput.min.css') !!}
 @stop
 
 @section('js')
-    {!! Html::script('js/jquery-ui.min.js') !!}
+   
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/js/jqueryui-editable.min.js"></script>
+    <script src="/select2/dist/js/select2.min.js"></script>
+    <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/dataTables.buttons.min.js"></script>
+    <script src="/js/jszip.min.js"></script>
+    <script src="/js/pdfmake.min.js"></script>
+    <script src="/js/vfs_fonts.js"></script>
+    <script src="/js/buttons.html5.min.js"></script>
+    <script src="/js/buttons.print.min.js"></script>
+    <script src="/js/changebtnactive.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     {!! Html::script('fileinput/js/fileinput.min.js') !!}
     {!! Html::script('fileinput/js/locales/es.js') !!}
     {!! Html::script('fileinput/themes/fas/theme.js') !!}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"
-        integrity="sha512-YcsIPGdhPK4P/uRW6/sruonlYj+Q7UHWeKfTAkBW+g83NKM+jMJFJ4iAPfSnVp7BKD4dKMHmVSvICUbE/V1sSw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script>
         $(document).ready(function() {
             var krajeeGetCount = function(id) {

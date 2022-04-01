@@ -33,7 +33,7 @@
                         </button>
                     </li> --}}
                     <li class="nav-item ml-auto h-100 mr-1 my-auto btnactive" id="btnuser" role="presentation">
-                        {!! Form::open(['route' => 'genere.reports']) !!}
+                        {!! Form::open(['route' => 'admin.genere.reports']) !!}
 
                         {!! Form::label('fechaini', 'Fecha Inicial' , ['class' => 'form-label']) !!}
                         {!! Form::date('fechaini', null, ['class' => 'form-input']) !!}

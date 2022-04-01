@@ -14,12 +14,12 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::model($post, ['route' => ['posts.update', $post], 'method' => 'PUT']) !!}
+            {!! Form::model($post, ['route' => ['admin.posts.update', $post], 'method' => 'PUT']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-12  ">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="h5">Datos del actas</h2>
+                            <h2 class="h5">Datos de la Publción</h2>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -38,12 +38,12 @@
                                 <div class="col-3">
                                     <div class="row">
 
-                                        {!! Form::label('Icono', 'Icono/Categoría') !!}
+                                        {!! Form::label('Icono', 'Categoría') !!}
                                     </div>
                                     <div class="row">
                                         <select name="category_id" id="select" class="select2-icon">
                                             <option value="" data-icon="" selected="selected">
-                                                --Selecciona un Icono/Categoría--
+                                                --Selecciona una Categoría--
                                             </option>
                                             @foreach ($categories as $category)
                                                 <option value="{{ $category->id }}" {{ collect(old('category_id', $post->category_id))->contains($category->id) ? 'selected' : ''}}
@@ -55,8 +55,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-6">
-
+                                <div class="col-4">
                                     {!! Form::label('extractone', 'Extracto N. 1') !!}
                                     {!! Form::textarea('extractone', null, ['class' => 'form-control', 'id' => 'extractone', 'rows' => '2', 'placeholder' => 'Ingrese el Extracto N. 1']) !!}
                                     @error('extractone')
@@ -64,10 +63,8 @@
                                             {{ $message }}
                                         </small>
                                     @enderror
-
                                 </div>
-                                <div class="col-6">
-
+                               <div class="col-4">
                                     {!! Form::label('extracttwo', 'Extracto N. 2') !!}
                                     {!! Form::textarea('extracttwo', null, ['class' => 'form-control', 'id' => 'extracttwo', 'rows' => '2', 'placeholder' => 'Ingrese el Extracto N. 2']) !!}
                                     @error('extracttwo')
@@ -75,6 +72,8 @@
                                             {{ $message }}
                                         </small>
                                     @enderror
+                                </div>
+                                <div class="col-4">
                                     {!! Form::label('extractthree', 'Extracto N. 3') !!}
                                     {!! Form::textarea('extractthree', null, ['class' => 'form-control', 'id' => 'extractthree', 'rows' => '2', 'placeholder' => 'Ingrese el Extracto N. 1']) !!}
                                     @error('extractthree')
@@ -82,8 +81,8 @@
                                             {{ $message }}
                                         </small>
                                     @enderror
-
                                 </div>
+                                
                                 <div class="col-12">
 
                                     {!! Form::label('content', 'Contenido') !!}
@@ -95,29 +94,17 @@
                                     @enderror
 
                                 </div>
+                             
                             </div>
 
-                            {{-- {!! Form::label('action', 'Acción') !!}    
-                                {!! Form::text('action', null , ['class' => 'form-control', 'placeholder' => '']) !!}
-                                @error('action')
-                                    <small class="text-danger">
-                                        {{$message}}
-                                    </small>
-                                @enderror --}}
-
-
-
-
+                        
+                            {!! Form::submit('Editar Publicación', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::close() !!}
                         </div>
-
-                        {!! Form::submit('Editar Post', ['class' => 'btn btn-primary']) !!}
-                        {!! Form::close() !!}
                     </div>
                 </div>
             </div>
         </div>
-
-    </div>
     </div>
 @stop
 
@@ -146,7 +133,7 @@
         CKEDITOR.replace('content', {
             languaje: 'es',
             width: '100%',
-            height: 500,
+            height: 300,
 
         });
 

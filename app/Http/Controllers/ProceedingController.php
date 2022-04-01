@@ -46,7 +46,7 @@ class ProceedingController extends Controller
             'descriptionclassproceeding' => $request->descriptionclassproceeding,
             'fechaexpedicion' => $request->fechaexpedicion,
         ]);
-        return redirect()->route('proceedings.edit', compact('proceedings'))->with('info', 'El Procedimiento se a creado con éxito');
+        return redirect()->route('admin.proceedings.edit', compact('proceedings'))->with('info', 'El Procedimiento se a creado con éxito');
     }
 
     /**
@@ -86,7 +86,7 @@ class ProceedingController extends Controller
             'descriptionclassproceeding' => $request->descriptionclassproceeding,
         ]);
         /* dd($proceedings); */
-        return redirect()->route('proceedings.index')->with('info', 'El procedimiento se actualizó con éxito');
+        return redirect()->route('admin.proceedings.index')->with('info', 'El procedimiento se actualizó con éxito');
     }
 
     /**
@@ -99,7 +99,7 @@ class ProceedingController extends Controller
     {
         $proceedings->delete();
 
-        return redirect()->route('proceedings.index')->with('info', 'El procedimiento se eliminó con éxito');
+        return redirect()->route('admin.proceedings.index')->with('info', 'El procedimiento se eliminó con éxito');
 
     }
     public function upload_archive(Request $request, $id)

@@ -33,7 +33,7 @@
                         </button>
                     </li>
                     <li class="nav-item ml-auto h-100 mr-1 my-auto btnactive" id="btnuser" role="presentation">
-                        <button type="button" class="nav-link btn btn-primary px-2 rounded-3" data-bs-toggle="modal" data-bs-target="#newUserModal">
+                        <button type="button" class="nav-link btn btn-secondary px-2 rounded-3" data-bs-toggle="modal" data-bs-target="#newUserModal">
                             Nuevo Usuario
                         </button>
                         <div class="modal fade" id="newUserModal" tabindex="-1" aria-labelledby="newUserModalModalLabel" aria-hidden="true">
@@ -47,7 +47,7 @@
                                             aria-label="Close">X</button>
                                     </div>
                                     <div class="modal-body">
-                                        {!! Form::open(['route' => 'admin.roles.store', 'method' => 'POST']) !!}
+                                        {!! Form::open(['route' => 'admin.users.store', 'method' => 'POST']) !!}
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="form-group">
@@ -88,8 +88,8 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                        {!! Form::submit('Crear Usuario', ['class' => 'btn btn-primary']) !!}
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        {!! Form::submit('Crear Usuario', ['class' => 'btn btn-secondary']) !!}
                                         {!! Form::close() !!}
                                     </div>
                                 </div>
@@ -98,7 +98,40 @@
                         {{-- <a class="btn btn-secondary px-2 rounded-3" href="{{ route('admin.roles.create') }}">Nuevo Usuario</a> --}}
                     </li>
                     <li class="nav-item ml-auto h-100 mr-1 my-auto d-none" id="btnrole" role="presentation">
-                        <a class="btn btn-secondary px-2 rounded-3" href="{{-- {{ route('admin.users.create') }} --}}">Nuevo Rol</a>
+                        <button type="button" class="nav-link btn btn-secondary px-2 rounded-3" data-bs-toggle="modal" data-bs-target="#newRolModal">
+                            Nuevo Usuario
+                        </button>
+                        <div class="modal fade" id="newRolModal" tabindex="-1" aria-labelledby="newRolModalModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="newRolModalModalLabel">
+                                            Nuevo Rol
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">X</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        {!! Form::open(['route' => 'admin.roles.store', 'method' => 'POST']) !!}
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    {!! Form::label('name', 'Nombre De Rol', ['class' => 'form-label']) !!}
+                                                    {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Nombre de Rol']) !!}
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        {!! Form::submit('Crear Rol', ['class' => 'btn btn-secondary']) !!}
+                                        {!! Form::close() !!}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
                 <div class="tab-content bg-white pt-5" id="myTabContent">
@@ -150,21 +183,39 @@
     <script>
         $(document).ready(function() {
             $('#TableUsers').DataTable({
-                "lengthMenu": [
-                    [5, 10, 15, -1],
-                    [5, 10, 15, "All"]
+                responsive: true,
+                dom: 'Bfrtip',
+                autoFill: true,
+                buttons: [
+                    'copy', 'csv', 'excel',{
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    }, 'print'
                 ]
             });
-            $('#TableCashier').DataTable({
-                "lengthMenu": [
-                    [5, 10, 15, -1],
-                    [5, 10, 15, "All"]
+            $('#TableNotario').DataTable({
+                responsive: true,
+                dom: 'Bfrtip',
+                autoFill: true,
+                buttons: [
+                    'copy', 'csv', 'excel',{
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    }, 'print'
                 ]
             });
-            $('#TableCliente').DataTable({
-                "lengthMenu": [
-                    [5, 10, 15, -1],
-                    [5, 10, 15, "All"]
+            $('#TableRole').DataTable({
+                responsive: true,
+                dom: 'Bfrtip',
+                autoFill: true,
+                buttons: [
+                    'copy', 'csv', 'excel',{
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    }, 'print'
                 ]
             });
         });

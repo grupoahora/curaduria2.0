@@ -33,7 +33,7 @@
                         </button>
                     </li> --}}
                     <li class="nav-item ml-auto h-100 mr-1 my-auto btnactive" id="btnuser" role="presentation">
-                        {!! Form::open(['route' => 'genere.reports']) !!}
+                        {!! Form::open(['route' => 'admin.genere.reports']) !!}
 
                         {!! Form::label('fechaini', 'Fecha Inicial', ['class' => 'form-label']) !!}
                         {!! Form::date('fechaini', null, ['class' => 'form-input']) !!}
@@ -92,10 +92,10 @@
 
                         </td>
                         <td width="10px">
-                            <a href="{{ route('proceedings.edit', $proceeding) }}" class="btn btn-primary btn-sm">Editar</a>
+                            <a href="{{ route('admin.proceedings.edit', $proceeding) }}" class="btn btn-primary btn-sm">Editar</a>
                         </td>
                         <td width="10px">
-                            <form action="{{ route('proceedings.destroy', $proceeding) }}" method="POST">
+                            <form action="{{ route('admin.proceedings.destroy', $proceeding) }}" method="POST">
                                 @csrf
                                 @method('delete')
                                 <button type="submit" class="btn btn-danger btn-sm"">Eliminar</button>
@@ -143,12 +143,17 @@
 
     <script>
         $(document).ready(function() {
-            $('#reports').DataTable({
+            $('#TableProceedings').DataTable({
 
                 dom: 'Bfrtip',
                 autoFill: true,
                 buttons: [
-                    'copy', 'csv', 'excel', 'pdf', 'print'
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    },
+                    'copy', 'csv', 'excel',  'print'
                 ],
                 lengthMenu: [
                     [5, 10, 15, -1],

@@ -37,8 +37,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        
-        return redirect()->route('users.categories.create', );
+
+        return view('users.categories.create');
 
     }
 

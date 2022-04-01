@@ -23,7 +23,7 @@ Route::resource('posts', PostController::class)->names('admin.posts');
 
 route::get('postdetail/{id}', [WebController::class, 'post_detail'])->name('admin.post.detail');
 route::get('archive_by_proceeding/{id}', [WebController::class, 'archive_by_proceeding'])->name('admin.archive.detail');
-Route::put('change_actions', [WebController::class, 'change_actions'])->name('admin.actions.change');
+Route::put('change_actions', [WebController::class, 'change_actions'])->name('actions.change');
 Route::post('upload_image/{id}', [FormatController::class, 'upload_image'])->name('admin.upload.image');
 Route::post('upload_archive/{id}', [FormatController::class, 'upload_archive'])->name('admin.upload.archive');
 Route::post('file_delete', [FormatController::class, 'file_delete'])->name('admin.file.delete');

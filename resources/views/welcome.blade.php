@@ -11,8 +11,7 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
@@ -40,9 +39,7 @@
                     {{-- <li class="nav-item mx-4"><a class="nav-link px-2" href="#portfolio">Productos</a></li> --}}
                     <li class="nav-item mx-4"><a class="nav-link px-2" href="#blog">Blog</a></li>
                     @guest
-                        {{-- <li class="nav-item mx-4"><a class="nav-link px-2" href="{{ route('login') }}">Iniciar
-                                Sesión</a>
-                        </li> --}}
+                     
                     @else
                     @endguest
                     <li class="nav-item mx-4 ">
@@ -281,34 +278,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="mb-4 bg-black">
-        <div class="container-fluid  position-relative ">
-            <div
-                class="row margin-cura pt-3 bg-white d-flex justify-content-center position-relative border border-top-3 border-dark">
-                <div class="col-sm-2 position-absolute position-sticky-sm  top-34 end-410 m-auto mt-2">
-                    <h2 class="h2 fw-bold text-center">COMPRE AQUÍ SU CARPETA</h2>
-                </div>
-                <div class="col-sm-6  me-sm-5 m mt-sm-5"><img class="imagemobil" src="assets/img/mano.png"
-                        height="250px" width="250px" /></div>
-                <div class="col-sm-4 position-absolute  bottom-41 end-156 ms-sm-5 end-16-sm bottom-30-sm widthcura-sm ">
-                    <div class="card bg-transparent border-0 widthcura-sm">
-                        <div class="card-body bg-transparent border-0 widthcura-sm">
-                            <div class="fs-6 fs-7-sm"> Ahorre tiempo en molestos trámites presneciales , dale click al
-                                boton de abajo para comprar una nueva carpeta</div>
-                        </div>
-                        <div class="card-footer bg-transparent border-0 widthcura-sm">
-                            <a type="button" href="{{route('proximamente')}}"
-                                class="btn btn-warning rounded-pill border border-5 border-dark">COMPRAR CARPETA</a>
-                        </div>
-                    </div>
-                    <div
-                        class="triangulo_top_right triangulo_top_right-sm position-absolute top-95n top-88n-sm end-21n-sm end-156n me-3">
-                    </div>
-                </div>
-            </div>
-            <div class="triangulo_bottom_right triangulo_bottom_right-sm position-absolute bottom-0 end-0"></div>
-        </div>
-    </div> --}}
+  
     <div class="mb-4" id="portfolio">
         <div class="container-fluid px-2 px-sm-5 my-sm-0">
             <div class="row g-0">
@@ -327,81 +297,7 @@
                         </a>
                     </div>
                 @endforeach
-                {{-- <div class="col-lg-4 col-6 p-1 ">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg"
-                        title="Rural Reloteo <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
-                        <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Rural</div>
-                            <div class="project-name">Reloteo</div>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam
-                                consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea,
-                                quo odio aperiam aliquid numquam illo.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-6 p-1 ">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg"
-                        title="Rural Demolición  <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
-                        <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Rural</div>
-                            <div class="project-name">Demolición</div>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam
-                                consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea,
-                                quo odio aperiam aliquid numquam illo.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-6 p-1 ">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/22.jpg"
-                        title="Urbana Obra Nueva <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
-                        <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/22.jpg" alt="..." />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Urbana</div>
-                            <div class="project-name">Obra Nueva</div>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam
-                                consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea,
-                                quo odio aperiam aliquid numquam illo.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-6 p-1 ">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg"
-                        title="Urbana Reloteo <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
-                        <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Urbana</div>
-                            <div class="project-name">Reloteo</div>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam
-                                consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea,
-                                quo odio aperiam aliquid numquam illo.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-6 p-1 ">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg"
-                        title="Urbana Demolición <a type='button'  href='{{route('proximamente')}}'class='btn btn-warning rounded-pill border border-5 border-dark'>COMPRAR CARPETA</a>">
-                        <img class="img-fluid radiuscura" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-                        <div class="portfolio-box-caption p-3">
-                            <div class="project-category text-white-50">Urbana</div>
-                            <div class="project-name">Demolición</div>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est error laboriosam
-                                consequatur hic quod qui. Expedita, tempore magnam quis error nemo aspernatur esse ea,
-                                quo odio aperiam aliquid numquam illo.
-                            </p>
-                        </div>
-                    </a>
-                </div> --}}
+             
             </div>
         </div>
     </div>
@@ -415,7 +311,7 @@
                             <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
                                 <a href="{{ route('post.detail', $post) }}">
                                     <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4">
-                                        <i class="{{ $post->icon }}"></i>
+                                        <i class="{{ $post->category->icon }}"></i>
                                     </div>
                                 </a>
                                 <a href="{{ route('post.detail', $post) }}">
@@ -428,57 +324,7 @@
                         </div>
                     </div>
                 @endforeach
-                {{-- <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
-                    <div class="card bg-blackcuraopacity border-0 h-100 ">
-                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i
-                                    class="bi bi-cloud-download"></i></div>
-                            <h2 class="fs-4 fw-bold">Free to download</h2>
-                            <p class="mb-0">As always, Start Bootstrap has a powerful collectin of free templates.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
-                    <div class="card bg-blackcuraopacity border-0 h-100 ">
-                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i
-                                    class="bi bi-card-heading"></i></div>
-                            <h2 class="fs-4 fw-bold">Jumbotron hero header</h2>
-                            <p class="mb-0">The heroic part of this template is the jumbotron hero header!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
-                    <div class="card bg-blackcuraopacity border-0 h-100 ">
-                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i
-                                    class="bi bi-bootstrap"></i></div>
-                            <h2 class="fs-4 fw-bold">Feature boxes</h2>
-                            <p class="mb-0">We've created some custom feature boxes using Bootstrap icons!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
-                    <div class="card bg-blackcuraopacity border-0 h-100 ">
-                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i
-                                    class="bi bi-code"></i></div>
-                            <h2 class="fs-4 fw-bold">Simple clean code</h2>
-                            <p class="mb-0">We keep our dependencies up to date and squash bugs as they come!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6 col-lg-6 col-xxl-4 mb-5 px-1">
-                    <div class="card bg-blackcuraopacity border-0 h-100 ">
-                        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                            <div class="feature bg-redcura bg-gradient text-white radiuscura mb-4 mt-n4"><i
-                                    class="bi bi-patch-check"></i></div>
-                            <h2 class="fs-4 fw-bold">A name you trust</h2>
-                            <p class="mb-0">Start Bootstrap has been the leader in free Bootstrap templates since 2013!
-                            </p>
-                        </div>
-                    </div>
-                </div> --}}
+           
             </div>
         </div>
     </div>
