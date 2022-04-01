@@ -79,7 +79,7 @@
 
                                 <li class="nav-item ml-auto h-100 mr-1 my-auto btnactive" id="btnuser"
                                     role="presentation">
-                                    {!! Form::open(['route' => 'genere.reports.public']) !!}
+                                    {!! Form::open(['route' => 'genere.reports.public','method' => 'GET']) !!}
 
                                     {!! Form::label('fechaini', 'Fecha Inicial', ['class' => 'form-label']) !!}
                                     {!! Form::date('fechaini', null, ['class' => 'form-input']) !!}
