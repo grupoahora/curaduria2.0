@@ -57,6 +57,16 @@
         </table>
     </div>
 @stop
+@section('footer')
+  
+        <p class="m-0 text-center text-white fs-4-cura-sm ">
+            © Copyright 2021. Todos los derechos reservados. <br>
+            Sitio web diseñado y desarrollado por manos Cucuteñas. <br>
+            Hecho con ❤ <a class="text-danger" href="https://www.softwow.co">Softwow!</a> 
+        </p>
+
+@endsection
+
 @section('css')
     <link rel="stylesheet" href="/css/style-navbar.css">
     <link rel="stylesheet" href="/select2/dist/css/select2.min.css">
