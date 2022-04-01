@@ -29,7 +29,7 @@
             @if ($loop->first)
                 <div class="tab-pane fade show active" id="{{ $role->name }}" role="tabpanel"
                     aria-labelledby="{{ $role->name }}-tab">
-                    <table id="TableUsers" class="table table-striped table-responsive">
+                    <table id="TableUsers" class="table table-striped ">
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -47,18 +47,18 @@
                                 <tr>
                                     <td>{{ $user->id }}</td>
                                     <td>
-                                        <a href="{{ route('users.show', $user) }}">{{ $user->name }}</a>
+                                        <a href="{{ route('admin.users.show', $user) }}">{{ $user->name }}</a>
                                     </td>
                                     <td>{{ $user->surname }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->created_at }}</td>
                                     <td>{{ $user->updated_at }}</td>
                                     <td width="10px">
-                                        <a href="{{ route('users.edit', $user) }}"
+                                        <a href="{{ route('admin.users.edit', $user) }}"
                                             class="btn btn-primary btn-sm">Editar</a>
                                     </td>
                                     <td width="10px">
-                                        <form action="{{ route('users.destroy', $user) }}" method="POST">
+                                        <form action="{{ route('admin.users.destroy', $user) }}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
@@ -72,7 +72,7 @@
             @else
                 <div class="tab-pane fade" id="{{ $role->name }}" role="tabpanel"
                     aria-labelledby="{{ $role->name }}-tab">
-                    <table id="Table{{ $role->name }}" class="table table-striped table-responsive">
+                    <table id="Table{{ $role->name }}" class="table table-striped">
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -90,18 +90,18 @@
                                 <tr>
                                     <td>{{ $user->id }}</td>
                                     <td>
-                                        <a href="{{ route('users.show', $user) }}">{{ $user->name }}</a>
+                                        <a href="{{ route('admin.users.show', $user) }}">{{ $user->name }}</a>
                                     </td>
                                     <td>{{ $user->surname }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->created_at }}</td>
                                     <td>{{ $user->updated_at }}</td>
                                     <td width="10px">
-                                        <a href="{{ route('users.edit', $user) }}"
+                                        <a href="{{ route('admin.users.edit', $user) }}"
                                             class="btn btn-primary btn-sm">Editar</a>
                                     </td>
                                     <td width="10px">
-                                        <form action="{{ route('users.destroy', $user) }}" method="POST">
+                                        <form action="{{ route('admin.users.destroy', $user) }}" method="POST">
                                             @csrf
                                             @method('delete')
                                             <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
