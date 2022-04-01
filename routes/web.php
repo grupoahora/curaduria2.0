@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FormatController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProceedingController;
@@ -19,9 +20,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
 Route::resource('users', UserController::class)->names('users');
 Route::resource('roles', RoleController::class)->names('roles');
 Route::resource('proceedings', ProceedingController::class)->names('proceedings');
+Route::resource('categories', CategoryController::class)->names('categories');
 Route::post('upload_archive_pr/{id}', [ProceedingController::class, 'upload_archive'])->name('upload.archive.pr');
 Route::post('file_delete_archive_pr', [ProceedingController::class, 'file_delete_archive'])->name('file.delete.archive.pr');
 
@@ -49,6 +53,5 @@ Route::get('/proximamente', function () {
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

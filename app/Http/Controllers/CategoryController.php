@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use GuzzleHttp\Psr7\Request;
 
 class CategoryController extends Controller
 {
@@ -13,9 +14,20 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:categories.index')->only('index');
+        $this->middleware('can:categories.create')->only('create');
+        $this->middleware('can:categories.store')->only('store');
+        $this->middleware('can:categories.edit')->only('edit', 'update');
+        $this->middleware('can:categories.show')->only('show');
+        $this->middleware('can:categories.destroy')->only('destroy');
+    }
     public function index()
     {
-        //
+        $categories = Category::get();
+        return view('users.categories.index', compact('categories'));
     }
 
     /**
@@ -25,7 +37,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.categories.create');
+
     }
 
     /**
@@ -58,7 +71,8 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('users.categories.edit', compact('category'));
+        
     }
 
     /**

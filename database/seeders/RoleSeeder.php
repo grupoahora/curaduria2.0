@@ -112,6 +112,11 @@ class RoleSeeder extends Seeder
             'view' => 'Categorias',
         ])->assignRole($role1);
         Permission::create([
+            'name' => 'categories.store',
+            'description' => 'Crear cualquier dato de una categoría del sistema.',
+            'view' => 'Categorias',
+        ])->assignRole($role1);
+        Permission::create([
             'name'=>'categories.destroy',
             'description'=>'Eliminar cualquier dato de una categoría del sistema.',
             'view' => 'Categorias',
@@ -127,6 +132,7 @@ class RoleSeeder extends Seeder
             'description' => 'Ver en detalle cada subcategoría del sistema.',
             'view' => 'Subcategorias',
         ])->assignRole($role1);
+        
         Permission::create([
             'name' => 'admin.subcategories.edit',
             'description' => 'Editar cualquier dato de un subcategoría del sistema.',

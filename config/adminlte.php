@@ -275,7 +275,7 @@ return [
             'text' => 'Formatos',
             'route'  => 'formats.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            /* 'can'  => 'admin.home', */
+            'can'  => 'admin.home',
         ],
         
         [
@@ -286,7 +286,7 @@ return [
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'Categorias',
+                    'text' => 'Publicaciones',
                     'classes' => 'position-relative ml-4 w-auto',
                     'route'  => 'posts.index',
                     
@@ -294,7 +294,8 @@ return [
                 [
                     'text' => 'Categorias',
                     'classes' => 'position-relative ml-4 w-auto',
-                    'route'  => 'posts.index',
+                    'route'  => 'categories.index',
+                    /* 'can' => 'categories.index' */
 
                 ],
                
