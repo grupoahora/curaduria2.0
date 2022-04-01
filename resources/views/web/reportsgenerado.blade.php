@@ -129,7 +129,7 @@
                             @endif
                             @foreach ($proceeding->archives as $file)
                                 @if ($loop->first)
-                                    <a href="{{ $file->url }}">Ver Procedimiento</a>
+                                    <a href="{{ $file->url }}" target="_blank">Ver Procedimiento</a>
                                 @endif
                                 
                             @endforeach
