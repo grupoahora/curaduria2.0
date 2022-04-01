@@ -14,7 +14,7 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::open(['route' => 'formats.store']) !!}
+            {!! Form::open(['route' => 'admin.formats.store']) !!}
             <div class="card">
                 <div class="card-header">
                     <h2 class="h5">Datos del actas</h2>
@@ -63,7 +63,7 @@
     <script>
         CKEDITOR.replace('description', {
             width: '100%',
-            height: 500,
+            height: 100,
 
         });
     </script>

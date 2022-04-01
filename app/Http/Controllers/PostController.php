@@ -10,6 +10,15 @@ use App\Models\Category;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:posts.index')->only('index');
+        $this->middleware('can:posts.create')->only('create', 'store');
+        $this->middleware('can:posts.edit')->only('edit', 'update');
+        $this->middleware('can:posts.show')->only('show');
+        $this->middleware('can:posts.destroy')->only('destroy');
+    }
     /**
      * Display a listing of the resource.
      *

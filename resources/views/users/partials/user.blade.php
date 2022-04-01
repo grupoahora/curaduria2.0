@@ -29,7 +29,7 @@
             @if ($loop->first)
                 <div class="tab-pane fade show active" id="{{ $role->name }}" role="tabpanel"
                     aria-labelledby="{{ $role->name }}-tab">
-                    <table id="TableUsers" class="table table-striped ">
+                    <table id="TableUsers" class="table table-striped table-responsive-md">
                         <thead>
                             <tr>
                                 <th>Id</th>
@@ -47,7 +47,7 @@
                                 <tr>
                                     <td>{{ $user->id }}</td>
                                     <td>
-                                        <a href="{{ route('admin.users.show', $user) }}">{{ $user->name }}</a>
+                                        {{ $user->name }}
                                     </td>
                                     <td>{{ $user->surname }}</td>
                                     <td>{{ $user->email }}</td>

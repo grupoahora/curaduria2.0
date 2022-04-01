@@ -242,14 +242,14 @@ return [
             'text' => 'Usuarios',
             'route'  => 'admin.users.index',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            /* 'can'  => 'admin.home', */
+            'can'  => 'users.index',
         ],
         [
             'text' => 'Procedimientos',
             'route'  => 'admin.proceedings.index',
             'classes' => 'position-relative',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
-            /* 'can'  => 'admin.home', */
+            'can'  => 'proceedings.index',
             'submenu' => [
                 [
                     'text' => 'Procedimientos',
@@ -261,6 +261,7 @@ return [
                     'text' => 'Reportes por Fecha',
                     'classes' => 'position-relative ml-4 w-auto',
                     'route'  => 'admin.reports.date',
+                    'can' => 'reports.date',
 
                 ],
 
@@ -277,6 +278,7 @@ return [
             'text'    => 'Publicaciones',
             'route'   => 'admin.posts.index',
             'classes' => 'position-relative',
+            'can'  => 'posts.index',
 
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
@@ -284,13 +286,16 @@ return [
                     'text' => 'Publicaciones',
                     'classes' => 'position-relative ml-4 w-auto',
                     'route'  => 'admin.posts.index',
+                    'can'  => 'posts.index',
+
                     
                 ],
                 [
                     'text' => 'Categorias',
                     'classes' => 'position-relative ml-4 w-auto',
                     'route'  => 'admin.categories.index',
-                    /* 'can' => 'categories.index' */
+                    'can'  => 'categories.index',
+
 
                 ],
                

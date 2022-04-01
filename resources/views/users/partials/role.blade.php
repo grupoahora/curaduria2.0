@@ -18,11 +18,11 @@
                                 <td>{{ $role->name }}</td>
                                 <td width="10px">
                                     <button type="button" class="nav-link btn btn-sm btn-primary px-2 rounded-3"
-                                        data-bs-toggle="modal" data-bs-target="#editRolModal">
+                                        data-bs-toggle="modal" data-bs-target="#editRolModal{{ $role->id }}">
                                         Editar
                                     </button>
-                                    <div class="modal fade" id="editRolModal" tabindex="-1" role="dialog"
-                                        aria-labelledby="editRolModalModalLabel" aria-hidden="true"
+                                    <div class="modal fade" id="editRolModal{{ $role->id }}" tabindex="-1" role="dialog"
+                                        aria-labelledby="editRolModal{{ $role->id }}ModalLabel" aria-hidden="true"
                                         style="display: none;">
                                         <div class="modal-dialog" role="document">
                                             <div class="modal-content">

@@ -9,9 +9,16 @@
     <title>Curaduría Urbana 2 Cúcuta</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="/css/style-navbar.css">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/css/jqueryui-editable.css"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/css/jquery-ui.min.css">
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
@@ -19,7 +26,7 @@
     <!-- SimpleLightbox plugin CSS-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -39,13 +46,12 @@
                     {{-- <li class="nav-item mx-4"><a class="nav-link px-2" href="#portfolio">Productos</a></li> --}}
                     <li class="nav-item mx-4"><a class="nav-link px-2" href="#blog">Blog</a></li>
                     @guest
-                     
                     @else
                     @endguest
                     <li class="nav-item mx-4 ">
-                        <a class="nav-link px-2"
-                            href="{{ route('contact') }}">Contáctenos
-                        </a></li>
+                        <a class="nav-link px-2" href="{{ route('contact') }}">Contáctenos
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -227,22 +233,22 @@
                     </a>
                 </div>
                 <div class="col-sm-1 col-6  p-0 m-0 px-2">
-                  
-                        <div class="fw-bold text-black {{-- bg-redcura --}} text-center py-2 rounded">
-                            Buscar Por:
-                        </div>
-                   
+
+                    <div class="fw-bold text-black {{-- bg-redcura --}} text-center py-2 rounded">
+                        Buscar Por:
+                    </div>
+
                 </div>
                 <div class="col-sm-3 col-6  p-0 m-0 px-2">
                     <div class="fw-bold text-white ">
-                   
-                            <select name="" id="tipoConsulta" class="form-control form-select">
-                                <option value="" selected disabled>--Seleccionar--</option>
-                                <option value="1" >Cedula de Ciudadanía</option>
-                                <option value="2" >Numero de Radicado</option>
-                                <option value="3" >Rango de Fechas</option>
-                            </select>
-                      
+
+                        <select name="" id="tipoConsulta" class="form-control form-select">
+                            <option value="" selected disabled>--Seleccionar--</option>
+                            <option value="1">Cedula de Ciudadanía</option>
+                            <option value="2">Numero de Radicado</option>
+                            <option value="3">Rango de Fechas</option>
+                        </select>
+
                     </div>
                 </div>
                 <div class="col-sm-3 col-12  p-0 m-0 px-2" id="colbtnquerynum">
@@ -250,13 +256,13 @@
                         <form action="{{ route('search.proceedings') }}" method="GET" class="row p-0 m-0">
                             <div class="col-10  col-sm-10 px-2  m-0 h-auto text-middle">
                                 <div class="d-block">
+                                    <input type="hidden" id="tipoConsultaInput" name="tipoConsultaInput">
                                     <input id="search_products" name="search_words" type="text" class="form-control"
                                         placeholder="Buscando...">
                                 </div>
                             </div>
                             <div class="col-1 px-0 mx-auto col-sm-2 mx-0 my-0 h-auto">
-                                <button type="button" id="search_proceed" class="btn btn-outline-success"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <button type="submit" id="search_proceed" class="btn btn-outline-success">
                                     <i class="fas fa-search"></i>
                                 </button>
                                 <!-- Modal -->
@@ -267,18 +273,19 @@
                 </div>
                 <div class="col-sm-3 col-12 d-none {{-- bg-redcura --}} p-0 m-0 px-2" id="colbtnqueryfecha">
                     <div class="fw-bold text-white ">
-                        <a  id="search_proceed" class="btn btn-outline-success bg-redcura"  href="{{route('reports.date.public')}}">
+                        <a id="search_proceed" class="btn btn-outline-success bg-redcura"
+                            href="{{ route('reports.date.public') }}">
                             <div class="fw-bold text-white  text-center py-0 my-0 rounded">
-                                Buscar Por Rango de Fechas       <i class="fas fa-search"></i>
+                                Buscar Por Rango de Fechas <i class="fas fa-search"></i>
                             </div>
                         </a>
                     </div>
                 </div>
-                    
+
             </div>
         </div>
     </div>
-  
+
     <div class="mb-4" id="portfolio">
         <div class="container-fluid px-2 px-sm-5 my-sm-0">
             <div class="row g-0">
@@ -297,7 +304,7 @@
                         </a>
                     </div>
                 @endforeach
-             
+
             </div>
         </div>
     </div>
@@ -318,13 +325,13 @@
                                     <h2 class="fs-4 fw-bold">{{ $post->title }}</h2>
                                 </a>
 
-                                {{-- {!! $post->extractone !!}--}}
+                                {{-- {!! $post->extractone !!} --}}
 
                             </div>
                         </div>
                     </div>
                 @endforeach
-           
+
             </div>
         </div>
     </div>
@@ -335,7 +342,7 @@
         <p class="m-0 text-center text-white fs-4-cura-sm ">
             © Copyright 2021. Todos los derechos reservados. <br>
             Sitio web diseñado y desarrollado por manos Cucuteñas. <br>
-            Hecho con ❤ <a class="text-danger" href="https://www.softwow.co">Softwow!</a> 
+            Hecho con ❤ <a class="text-danger" href="https://www.softwow.co">Softwow!</a>
         </p>
 
     </div>
@@ -352,7 +359,7 @@
 
                     </div>
 
-                    <table id="TableInventories" class="table table-responsive">
+                    <table id="TableProceedings" class="table  table-responsive">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -381,13 +388,29 @@
 
 
     <!-- Bootstrap core JS-->.
-    {!! Html::script('js/jquery-3.6.0.min.js') !!}
-    {!! Html::script('js/jquery-ui.min.js') !!}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+     <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/js/jqueryui-editable.min.js"></script>
+
+    <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/dataTables.buttons.min.js"></script>
+    <script src="/js/jszip.min.js"></script>
+    <script src="/js/pdfmake.min.js"></script>
+    <script src="/js/vfs_fonts.js"></script>
+    <script src="/js/buttons.html5.min.js"></script>
+    <script src="/js/buttons.print.min.js"></script>
+    <script src="/js/changebtnactive.js"></script>
+    <script>
+        
+    </script>
+    <!-- Core theme JS-->
+    <script src="/js/scripts.js"></script>
     <!-- SimpleLightbox plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+
     <script>
         const tipoConsultaFecha = $('#tipoConsulta');
 
@@ -413,19 +436,39 @@
                                 element.cc + '</td>' + '<td>' +
                                 element.classproceeding + '</td>' + '<td>' +
                                 element.descriptionclassproceeding + '</td>' +
-                                '<td><button type="button" class="btn btn-success"><a href="../../archive_by_proceeding/'+ element.id +'"><i class="fas fa-eye"></i></button></td>')
+                                '<td><button type="button" class="btn btn-success"><a href="../../archive_by_proceeding/' +
+                                element.id + '"><i class="fas fa-eye"></i></button></td>')
                         })
                     )
                 }
 
             });
+            
+            
         });
+        $('#TableProceedings').DataTable({
+                responsive: true,
+                dom: 'Bfrtip',
+                
+                buttons: [
+                    {
+                        extend: 'pdfHtml5',
+                        orientation: 'landscape',
+                        pageSize: 'LEGAL'
+                    },
+                    'copy', 'csv', 'excel',  'print'
+                ]
+            });
+       
     </script>
 
     <script>
         var inputQueryFecha = $('#colbtnqueryfecha');
         var inputQueryNum = $('#colbtnquerynum');
-        tipoConsultaFecha.change(function(){
+        var tipoConsultaInput = $('#tipoConsultaInput');
+        tipoConsultaFecha.change(function() {
+            tipoConsultaInput.val(tipoConsultaFecha.val());
+            console.log(tipoConsultaInput);
             if (tipoConsultaFecha.val() == 3) {
                 inputQueryFecha.removeClass('d-none');
                 inputQueryNum.addClass('d-none');
@@ -455,8 +498,7 @@
             }
         });
     </script>
-    {!! Html::script('js/main.js') !!}
-    {!! Html::script('js/jquery-3.3.1.min.js') !!}
+   
 </body>
 
 </html>

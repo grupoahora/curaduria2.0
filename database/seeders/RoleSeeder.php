@@ -28,31 +28,31 @@ class RoleSeeder extends Seeder
         ])->assignRole($role1);
 
         Permission::create([
-            'name'          => 'admin.users.index',
+            'name'          => 'users.index',
             'description'   => 'Lista y navega todos los usuarios del sistema',
             'view' => 'Usuarios',
         ])->assignRole($role1);
 
         Permission::create([
-            'name'          => 'admin.users.create',
+            'name'          => 'users.create',
             'description'   => 'Podría crear nuevos usuarios en el sistema',
             'view' => 'Usuarios',
         ])->assignRole($role1);
 
         Permission::create([
-            'name'          => 'admin.users.show',
+            'name'          => 'users.show',
             'description'   => 'Ve en detalle cada usuario del sistema',
             'view' => 'Usuarios',            
         ])->assignRole($role1);
         
         Permission::create([
-            'name'          => 'admin.users.edit',
+            'name'          => 'users.edit',
             'description'   => 'Podría editar cualquier dato de un usuario del sistema',
             'view' => 'Usuarios',
         ])->assignRole($role1);
         
         Permission::create([
-            'name'          => 'admin.users.destroy',
+            'name'          => 'users.destroy',
             'description'   => 'Podría eliminar cualquier usuario del sistema',
             'view' => 'Usuarios',      
         ])->assignRole($role1);
@@ -127,31 +127,31 @@ class RoleSeeder extends Seeder
 
         //Roles
         Permission::create([
-            'name'          => 'admin.roles.index',
+            'name'          => 'roles.index',
             'description'   => 'Lista y navega todos los roles del sistema',
             'view' => 'Usuarios',
         ])->assignRole($role1);
 
         Permission::create([
-            'name'          => 'admin.roles.show',
+            'name'          => 'roles.show',
             'description'   => 'Ve en detalle cada rol del sistema',
             'view' => 'Usuarios',            
         ])->assignRole($role1);
         
         Permission::create([
-            'name'          => 'admin.roles.create',
+            'name'          => 'roles.create',
             'description'   => 'Podría crear nuevos roles en el sistema',
             'view' => 'Usuarios',
         ])->assignRole($role1);
         
         Permission::create([
-            'name'          => 'admin.roles.edit',
+            'name'          => 'roles.edit',
             'description'   => 'Podría editar cualquier dato de un rol del sistema',
             'view' => 'Usuarios',
         ])->assignRole($role1);
         
         Permission::create([
-            'name'          => 'admin.roles.destroy',
+            'name'          => 'roles.destroy',
             'description'   => 'Podría eliminar cualquier rol del sistema',
             'view' => 'Usuarios',      
         ])->assignRole($role1);
@@ -221,37 +221,43 @@ class RoleSeeder extends Seeder
             'name'          => 'file.delete',
             'description'   => 'Podría eliminar archivos de un formato',
             'view' => 'Formatos',
-        ])->assignRole($role1, $role2);
+        ])->assignRole($role1);
 
         Permission::create([
             'name'          => 'file.delete.archive',
             'description'   => 'Podría eliminar el formato con sus archivos',
             'view' => 'Formatos',
-        ])->assignRole($role1, $role2);
+        ])->assignRole($role1);
 
         Permission::create([
             'name'          => 'upload.archive',
             'description'   => 'Podría subir archivos de un formato',
             'view' => 'Formatos',
-        ])->assignRole($role1, $role2);
+        ])->assignRole($role1);
 
         Permission::create([
             'name'          => 'upload.archive.pr',
             'description'   => 'Podría subir archivos de un procedimiento',
             'view' => 'Formatos',
-        ])->assignRole($role1, $role2);
+        ])->assignRole($role1);
 
         Permission::create([
             'name'          => 'upload.image',
             'description'   => 'Podría eliminar el formato con sus archivos',
             'view' => 'Formatos',
-        ])->assignRole($role1, $role2);
+        ])->assignRole($role1);
 
         Permission::create([
             'name'          => 'file.delete.archive.pr',
             'description'   => 'Podría eliminar el formato con sus archivos de un procedimiento',
             'view' => 'Formatos',
-        ])->assignRole($role1, $role2);
+        ])->assignRole($role1);
+        Permission::create([
+            'name'          => 'reports.date',
+            'description'   => 'Reportes por fecha',
+            'view' => 'Procedimientos',
+        ])->assignRole($role1);
+        
         
 
     }

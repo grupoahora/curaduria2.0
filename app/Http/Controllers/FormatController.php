@@ -11,6 +11,16 @@ use Illuminate\Http\Request;
 
 class FormatController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:formats.index')->only('index');
+        $this->middleware('can:formats.create')->only('create','store');
+        $this->middleware('can:formats.edit')->only('edit', 'update');
+        $this->middleware('can:formats.show')->only('show');
+        $this->middleware('can:formats.destroy')->only('destroy');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -45,7 +55,7 @@ class FormatController extends Controller
             'description' => $request->description,
 
         ]);
-        return redirect()->route('formats.edit', $format)->with('info', 'El acta se a creado con éxito');
+        return redirect()->route('admin.formats.edit', $format)->with('info', 'El acta se a creado con éxito');
     }
 
     /**
@@ -86,7 +96,7 @@ class FormatController extends Controller
 
         ]);
         /* dd($proceedings); */
-        return redirect()->route('formats.index')->with('info', 'El acta se actualizó con éxito');
+        return redirect()->route('admin.formats.index')->with('info', 'El acta se actualizó con éxito');
     }
 
     /**
@@ -99,7 +109,7 @@ class FormatController extends Controller
     {
         $format->delete();
 
-        return redirect()->route('formats.index')->with('info', 'El acta se eliminó con éxito');
+        return redirect()->route('admin.formats.index')->with('info', 'El acta se eliminó con éxito');
     }
     public function upload_image(Request $request, $id)
     {

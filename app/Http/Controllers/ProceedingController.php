@@ -10,6 +10,15 @@ use App\Models\Archive;
 
 class ProceedingController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:proceedings.index')->only('index');
+        $this->middleware('can:proceedings.create')->only('create', 'store');
+        $this->middleware('can:proceedings.edit')->only('edit', 'update');
+        $this->middleware('can:proceedings.show')->only('show');
+        $this->middleware('can:proceedings.destroy')->only('destroy');
+    }
     /**
      * Display a listing of the resource.
      *

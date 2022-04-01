@@ -20,13 +20,13 @@
     </div>
     <div class="card-body">
         <div class="section-body colorsmart">
-            <ul class="nav nav-tabs my-0 py-0 bg-transparent  border border-0" id="myTab" role="tablist">
+            <ul class="nav nav-tabs my-0 py-0 bg-transparent  border border-0" id="my{{$role->name}}Tab" role="tablist">
                 @foreach ($permissions as $key => $permission)
                     @if ($loop->first)
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active py-3" id="{{ str_replace(' ', '_', $key) }}-tab"
-                                data-bs-toggle="tab" data-bs-target="#{{ str_replace(' ', '_', $key) }}" type="button"
-                                role="tab" aria-controls="{{ str_replace(' ', '_', $key) }}" aria-selected="true">
+                            <button class="nav-link active py-3" id="{{ str_replace(' ', '_', $key) }}{{$role->name}}-tab"
+                                data-bs-toggle="tab" data-bs-target="#{{ str_replace(' ', '_', $key) }}{{$role->name}}" type="button"
+                                role="tab" aria-controls="{{ str_replace(' ', '_', $key) }}{{$role->name}}" aria-selected="true">
                                 <h2 class="h4 m-0 p-0">
                                     {{ $key }}
                                 </h2>
@@ -34,9 +34,9 @@
                         </li>
                     @else
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link py-3" id="{{ str_replace(' ', '_', $key) }}-tab"
-                                data-bs-toggle="tab" data-bs-target="#{{ str_replace(' ', '_', $key) }}" type="button"
-                                role="tab" aria-controls="{{ str_replace(' ', '_', $key) }}" aria-selected="false">
+                            <button class="nav-link py-3" id="{{ str_replace(' ', '_', $key) }}{{$role->name}}-tab"
+                                data-bs-toggle="tab" data-bs-target="#{{ str_replace(' ', '_', $key) }}{{$role->name}}" type="button"
+                                role="tab" aria-controls="{{ str_replace(' ', '_', $key) }}{{$role->name}}" aria-selected="false">
                                 <h2 class="h4 m-0 p-0">
                                     {{ $key }}
                                 </h2>
@@ -45,19 +45,19 @@
                     @endif
                 @endforeach
                 <li class="nav-item ml-auto h-100 mr-1 my-auto " role="presentation">
-                    <a class="btn btn-secondary px-2 rounded-3" id="checkedAll" {{-- href="{{route('admin.users.{{$key}}s.create')}}" --}}>seleccionar
+                    <a class="btn btn-secondary px-2 rounded-3" id="checkedAll{{$role->name}}" {{-- href="{{route('admin.users.{{$key}}s.create')}}" --}}>seleccionar
                         todos por tab</a>
                 </li>
                 <li class="nav-item ml-auto h-100 mr-1 my-auto " role="presentation">
-                    <a class="btn btn-secondary px-2 rounded-3" id="checkedAllAdmin" {{-- href="{{route('admin.users.{{$key}}s.create')}}" --}}>seleccionar
+                    <a class="btn btn-secondary px-2 rounded-3" id="checkedAllAdmin{{$role->name}}" {{-- href="{{route('admin.users.{{$key}}s.create')}}" --}}>seleccionar
                         todos solo admin</a>
                 </li>
             </ul>
-            <div class="tab-content bg-white pt-5" id="myTabContent">
+            <div class="tab-content bg-white pt-5" id="my{{$role->name}}TabContent">
                 @foreach ($permissions as $key => $permission)
                     @if ($loop->first)
-                        <div class="tab-pane fade show active" id="{{ str_replace(' ', '_', $key) }}" role="tabpanel"
-                            aria-labelledby="{{ str_replace(' ', '_', $key) }}-tab">
+                        <div class="tab-pane fade show active" id="{{ str_replace(' ', '_', $key) }}{{$role->name}}" role="tabpanel"
+                            aria-labelledby="{{ str_replace(' ', '_', $key) }}{{$role->name}}-tab">
                             {{-- <button type="button" id="checkedAll">Seleccionar Todos</button> --}}
 
 
@@ -66,7 +66,7 @@
                                 @foreach ($permissions[$key] as $item)
                                     <div class="col-4">
 
-                                        {!! Form::checkbox('permissions[]', $item->id, null, ['class' => 'mr-1 {{ $key }}']) !!}
+                                        {!! Form::checkbox('permissions[]', $item->id, null, ['class' => 'mr-1']) !!}
                                         {{ $item->description }}
 
                                     </div>
@@ -75,15 +75,15 @@
 
                         </div>
                     @else
-                        <div class="tab-pane fade" id="{{ str_replace(' ', '_', $key) }}" role="tabpanel"
-                            aria-labelledby="{{ str_replace(' ', '_', $key) }}-tab">
+                        <div class="tab-pane fade" id="{{ str_replace(' ', '_', $key) }}{{$role->name}}" role="tabpanel"
+                            aria-labelledby="{{ str_replace(' ', '_', $key) }}{{$role->name}}-tab">
                             {{-- <button type="button" id="checkedAll">Seleccionar Todos</button> --}}
                             <div class="row">
 
                                 @foreach ($permissions[$key] as $item)
                                     <div class="col-4">
 
-                                        {!! Form::checkbox('permissions[]', $item->id, null, ['class' => 'mr-1 {{ $key }}']) !!}
+                                        {!! Form::checkbox('permissions[]', $item->id, null, ['class' => 'mr-1']) !!}
                                         {{ $item->description }}
 
                                     </div>
@@ -92,25 +92,26 @@
 
                         </div>
                     @endif
+                    
                 @endforeach
                 @push('js')
                     <script>
                         $(document).ready(function() {
-                            $("#checkedAll").click(function() {
+                            $("#checkedAll{{$role->name}}").click(function() {
                                 var as = $(".active").children('div.row').children('.col-4').children('input');
                                 as.attr('checked', 'checked');
-
-                                /* console.log(as); */
-
+                                
+                                console.log(as);
+                                
                             });
                         });
                         $(document).ready(function() {
-                            $("#checkedAllAdmin").click(function() {
+                            $("#checkedAllAdmin{{$role->name}}").click(function() {
                                 var as = $("input:checkbox");
                                 as.attr('checked', 'checked');
-
+                                
                                 console.log(as);
-
+                                
                             });
                         });
                     </script>

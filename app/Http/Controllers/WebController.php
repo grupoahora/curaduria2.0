@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\DB;
 
 class WebController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('can:reports.date')->only('reporte_generado', 'reports_date');
+      
+    }
     public function reporte_generado_publico(Request $request)
     {
         $proceedings = Proceeding::whereDate('fechaexpedicion', '>=', $request->fechaini)->whereDate('fechaexpedicion', '<=', $request->fechafin)->get();
@@ -190,30 +196,52 @@ class WebController extends Controller
     }
     public function search_proceedings(Request $request)
     {
-        
+        /* dd($request); */
+        $tipoConsulta = $request->get('tipoConsultaInput');
+        switch ($tipoConsulta) {
+            case 1:
+                $proceedings = Proceeding::where(
+                    'cc',
+                    $request->search_words
+                )->get();
+                return view('web.reportsgenerado', compact('proceedings'));
+                break;
+
+            case 2:
+                $proceedings = Proceeding::where(
+                    'radicado',
+                    $request->search_words
+                )->get();
+                return view('web.reportsgenerado', compact('proceedings'));
+                break;
+
+            default:
+                # code...
+                break;
+        }
         
     }
 
     public function get_proceed(Request $request)
     {
         
-        if ($request->ajax()) {
-            $tipoConsulta = $request->get('consulta');
+        dd($request);
+            $tipoConsulta = $request->get('tipoConsulta');
             switch ($tipoConsulta) {
                 case 1:
                     $proceedings = Proceeding::where(
                         'cc',
-                        $request->proceed
+                        $request->search_words
                     )->get();
-                    return response()->json($proceedings);
+                    return view('web.reportsgenerado', compact('proceedings'));
                     break;
 
                 case 2:
                     $proceedings = Proceeding::where(
                         'radicado',
-                        $request->proceed
+                        $request->search_words
                     )->get();
-                    return response()->json($proceedings);
+                    return view('web.reportsgenerado', compact('proceedings'));
                     break;
 
                 default:
@@ -221,7 +249,7 @@ class WebController extends Controller
                     break;
             }
             
-        }
+       
     }
     public function post_detail($id)
     {

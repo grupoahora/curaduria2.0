@@ -50,7 +50,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        /* dd($request); */
+       /*  dd($request); */
         $category = Category::create([
             'name' => $request->name,
             'icon' => $request->icon,
