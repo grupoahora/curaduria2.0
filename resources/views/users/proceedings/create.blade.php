@@ -85,7 +85,7 @@
 @section('footer')
   
         <p class="m-0 text-center text-white fs-4-cura-sm ">
-            © Copyright 2021. Todos los derechos reservados. <br>
+            © Copyright 2022. Todos los derechos reservados. <br>
             Sitio web diseñado y desarrollado por manos Cucuteñas. <br>
             Hecho con ❤ <a class="text-danger" href="https://www.softwow.co">Softwow!</a> 
         </p>

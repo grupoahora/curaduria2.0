@@ -35,7 +35,7 @@
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                    <li class="nav-item mx-4"><a class="nav-link px-2" href="#slide">Inicio</a></li>
+                    <li class="nav-item mx-4"><a class="nav-link px-2" href="/#slide">Inicio</a></li>
                     <li class="nav-item mx-4"><a class="nav-link px-2" href="/#about">Consultas</a></li>
                     {{-- <li class="nav-item mx-4"><a class="nav-link px-2" href="/#portfolio">Productos</a></li> --}}
                     <li class="nav-item mx-4"><a class="nav-link px-2" href="/#blog">Blog</a></li>
@@ -126,7 +126,7 @@
 
     <div class="footer2">
         <p class="m-0 text-center text-white fs-4-cura-sm ">
-            © Copyright 2021. Todos los derechos reservados. <br>
+            © Copyright 2022. Todos los derechos reservados. <br>
             Sitio web diseñado y desarrollado por manos Cucuteñas. <br>
             Hecho con ❤ <a class="text-danger" href="https://www.softwow.co">Softwow!</a> 
         </p>
