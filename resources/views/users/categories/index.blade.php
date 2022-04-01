@@ -14,7 +14,7 @@
 
 @endif
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('categories.create')}}">Nuevo category</a>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.categories.create')}}">Nuevo category</a>
         <h1>Lista de categories</h1>
 
     </div>
@@ -42,10 +42,10 @@
                     <td>{{$category->created_at}}</td>
                     <td>{{$category->updated_at}}</td>
                     <td width="10px">
-                        <a href="{{route('categories.edit', $category)}}" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="{{route('admin.categories.edit', $category)}}" class="btn btn-primary btn-sm">Editar</a>
                     </td>
                     <td width="10px">
-                        <form action="{{route('categories.destroy', $category)}}" method="category">
+                        <form action="{{route('admin.categories.destroy', $category)}}" method="POST">
                             @csrf
                             @method('delete')
                             <button type="submit" class="btn btn-danger btn-sm"">Eliminar</button>

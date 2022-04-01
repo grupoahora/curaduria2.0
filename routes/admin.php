@@ -20,9 +20,7 @@ Route::post('file_delete_archive_pr', [ProceedingController::class, 'file_delete
 
 Route::resource('formats', FormatController::class)->names('admin.formats');
 Route::resource('posts', PostController::class)->names('admin.posts');
-Route::get('proceed/json', [WebController::class, 'proceed'])->name('admin.proceed.json');
-Route::get('proceed/resultado', [WebController::class, 'search_proceedings'])->name('admin.search.proceedings');
-Route::get('get_proceed', [WebController::class, 'get_proceed'])->name('admin.get.proceed');
+
 route::get('postdetail/{id}', [WebController::class, 'post_detail'])->name('admin.post.detail');
 route::get('archive_by_proceeding/{id}', [WebController::class, 'archive_by_proceeding'])->name('admin.archive.detail');
 Route::put('change_actions', [WebController::class, 'change_actions'])->name('admin.actions.change');

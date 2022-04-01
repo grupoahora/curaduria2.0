@@ -180,52 +180,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-    <script>
-        var proceed = $('#search_products');
-        var proceeds = $('#tdproceed');
-        var searchproceed = $('#search_proceed');
-        searchproceed.click(function () {
-            $.ajax({
-                url: "{{route('get.proceed')}}",
-                method: 'GET',
-                data: {
-                    proceed: proceed.val(),
-                },
-                success: function (data) {
-                    proceeds.empty();
-                    proceeds.append(
-                        
-                        $.each(data, function (index, element) {
-                            proceeds.append('<td>'+element.id  +'</td>'+'<td>'+
-                                element.radicado +'</td>'+'<td>'+
-                                element.classproceeding +'</td>'+'<td>'+
-                                element.descriptionclassproceeding +'</td>'+'<td><button type="button" class="btn btn-success"><a href="'+
-                                element.url +'"><i class="fas fa-eye"></i></button></td>')
-                        })
-                    )}
-                
-            });
-        });
-
-    </script>
-
-   <script>
-        $('#search_products').autocomplete({
-            source: function (request, response) {
-                $.ajax({
-                    url: "{{route('proceed.json')}}",
-                    dataType: 'json',
-                    data: {
-                        term: request.term
-                    },
-                    success: function (data) {
-                        response(data)
-                    },
-                });
-            }
-        });
-
-    </script>
+    
     {!! Html::script('js/main.js') !!}
     {!! Html::script('js/jquery-3.3.1.min.js') !!}
 </body>

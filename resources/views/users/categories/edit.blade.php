@@ -14,7 +14,7 @@
     @endif
     <div class="card">
         <div class="card-body">
-            {!! Form::model($post, ['route' => ['posts.update', $post], 'method' => 'PUT']) !!}
+            {!! Form::model($category, ['route' => ['admin.categories.update', $category], 'method' => 'PUT']) !!}
             <div class="row justify-content-md-top">
                 <div class="col-12  ">
                     <div class="card">
@@ -26,8 +26,8 @@
                                 <div class="col-2">
 
                                     {!! Form::label('name', 'Nombre de Categoria') !!}
-                                    {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el Nombre de Categoria']) !!}
-                                    @error('title')
+                                    {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Ingrese el Nombre de Categoria']) !!}
+                                    @error('name')
                                         <small class="text-danger">
                                             {{ $message }}
                                         </small>
@@ -43,7 +43,7 @@
                                     </div>
                                     <div class="row">
 
-                                        <select name="category_id" id="select" class="select2-icon">
+                                        <select name="icon" id="select" class="select2-icon">
                                             <option value="" data-icon="" selected="selected">
                                                 --Selecciona un Icono--
                                             </option>
@@ -82,7 +82,7 @@
                                 
                             </div>
                             <br>
-                            {!! Form::submit('Crear Post', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::submit('Editar Categoria', ['class' => 'btn btn-primary']) !!}
                             {!! Form::close() !!}
 
                             {{-- {!! Form::label('action', 'Acción') !!}    

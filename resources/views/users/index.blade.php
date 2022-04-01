@@ -47,7 +47,7 @@
                                             aria-label="Close">X</button>
                                     </div>
                                     <div class="modal-body">
-                                        {!! Form::open(['route' => 'users.store', 'method' => 'POST']) !!}
+                                        {!! Form::open(['route' => 'admin.roles.store', 'method' => 'POST']) !!}
                                         <div class="row">
                                             <div class="col-6">
                                                 <div class="form-group">
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                        {{-- <a class="btn btn-secondary px-2 rounded-3" href="{{ route('users.create') }}">Nuevo Usuario</a> --}}
+                        {{-- <a class="btn btn-secondary px-2 rounded-3" href="{{ route('admin.roles.create') }}">Nuevo Usuario</a> --}}
                     </li>
                     <li class="nav-item ml-auto h-100 mr-1 my-auto d-none" id="btnrole" role="presentation">
                         <a class="btn btn-secondary px-2 rounded-3" href="{{-- {{ route('admin.users.create') }} --}}">Nuevo Rol</a>
