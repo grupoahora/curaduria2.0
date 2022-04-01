@@ -33,7 +33,69 @@
                         </button>
                     </li>
                     <li class="nav-item ml-auto h-100 mr-1 my-auto btnactive" id="btnuser" role="presentation">
-                        <a class="btn btn-secondary px-2 rounded-3" href="{{ route('users.create') }}">Nuevo Usuario</a>
+                        <button type="button" class="nav-link btn btn-primary px-2 rounded-3" data-bs-toggle="modal" data-bs-target="#newUserModal">
+                            Nuevo Usuario
+                        </button>
+                        <div class="modal fade" id="newUserModal" tabindex="-1" aria-labelledby="newUserModalModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="newUserModalModalLabel">
+                                            Nuevo Usuario
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close">X</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        {!! Form::open(['route' => 'users.store', 'method' => 'POST']) !!}
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    {!! Form::label('name', 'Nombre Del Usuario', ['class' => 'form-label']) !!}
+                                                    {!! Form::text('name', null, ['class' => 'form-control', 'placeholder' => 'Nombre del Usuario']) !!}
+                                                </div>
+                                                <div class="form-group">
+                                                    {!! Form::label('surname', 'Apellido Del Usuario', ['class' => 'form-label']) !!}
+                                                    {!! Form::text('surname', null, ['class' => 'form-control', 'placeholder' => 'Apellido del Usuario']) !!}
+                                                </div>
+                                                <div class="form-group">
+                                                    {!! Form::label('email', 'Correo Electrónico', ['class' => 'form-label']) !!}
+                                                    {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Correo Electrónico']) !!}
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <h5 class="card-title">
+                                                                LISTA DE ROLES
+                                                            </h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <select name="rols[]" id="roles" class="select" style="width: 100%" multiple>
+                                                                <option value="" disabled>ELIGE UN ROL PARA EL USUARIO</option>
+                                                                @foreach ($roles as $role)
+                                                                    <option value="{{$role->id}}">
+                                                                        {{$role->name}}
+                                                                    
+                                                                    </option>
+                                                                @endforeach
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                        {!! Form::submit('Crear Usuario', ['class' => 'btn btn-primary']) !!}
+                                        {!! Form::close() !!}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- <a class="btn btn-secondary px-2 rounded-3" href="{{ route('users.create') }}">Nuevo Usuario</a> --}}
                     </li>
                     <li class="nav-item ml-auto h-100 mr-1 my-auto d-none" id="btnrole" role="presentation">
                         <a class="btn btn-secondary px-2 rounded-3" href="{{-- {{ route('users.create') }} --}}">Nuevo Rol</a>
@@ -55,6 +117,7 @@
 @stop
 @section('css')
     <link rel="stylesheet" href="/css/style-navbar.css">
+    <link rel="stylesheet" href="/select2/dist/css/select2.min.css">
     <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/css/jqueryui-editable.css"
         rel="stylesheet" />
     <link rel="stylesheet" href="/css/jquery-ui.min.css">
@@ -67,7 +130,7 @@
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/jquery-ui.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/js/jqueryui-editable.min.js"></script>
-
+    <script src="/select2/dist/js/select2.min.js"></script>
     <script src="/bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="/js/jquery.dataTables.min.js"></script>
     <script src="/js/dataTables.buttons.min.js"></script>
@@ -77,7 +140,13 @@
     <script src="/js/buttons.html5.min.js"></script>
     <script src="/js/buttons.print.min.js"></script>
     <script src="/js/changebtnactive.js"></script>
-
+    <script>
+        $(document).ready(function() {
+            $('.select').select2({
+                theme: "classic",
+            });
+        });
+    </script>
     <script>
         $(document).ready(function() {
             $('#TableUsers').DataTable({
