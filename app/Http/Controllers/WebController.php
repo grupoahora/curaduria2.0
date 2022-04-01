@@ -12,7 +12,7 @@ class WebController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+      
         $this->middleware('can:reports.date')->only('reporte_generado', 'reports_date');
       
     }
