@@ -3,25 +3,25 @@
 @section('title', 'Curaduría Urbana 2')
 
 @section('content_header')
-<h1>Curaduria Urbana</h1>
+    <h1>Curaduria Urbana</h1>
 @stop
 
 @section('content')
-@if (session('info'))
-<div class="alert alert-success">
-    {{session('info')}}
-</div>
-@endif
-<div class="card">
-    <div class="card-body">
-        {!! Form::open(['route' => 'posts.store']) !!}
-        <div class="row justify-content-md-top">
-            <div class="col-12  ">
-                <div class="card">
-                    <div class="card-header">
-                        <h2 class="h5">Datos del actas</h2>
-                    </div>
-                    <div class="card-body">
+    @if (session('info'))
+        <div class="alert alert-success">
+            {{ session('info') }}
+        </div>
+    @endif
+    <div class="card">
+        <div class="card-body">
+            {!! Form::open(['route' => 'posts.store']) !!}
+            <div class="row justify-content-md-top">
+                <div class="col-12  ">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="h5">Datos del actas</h2>
+                        </div>
+                        <div class="card-body">
                             <div class="row">
                                 <div class="col-9">
 
@@ -41,22 +41,18 @@
                                         {!! Form::label('Icono', 'Icono/Categoría') !!}
                                     </div>
                                     <div class="row">
-                                        <select name="icon" id="select" class="select2-icon">
+                                        
+                                        <select name="category_id" id="select" class="select2-icon">
                                             <option value="" data-icon="" selected="selected">
                                                 --Selecciona un Icono/Categoría--
                                             </option>
-                                            <option value="fas fa-info-circle" data-icon="fa-info-circle">
-                                                Información General
-                                            </option>
-                                            <option value="fas fa-exclamation-circle" data-icon="fas fa-exclamation-circle">
-                                                Importante
-                                            </option>
-                                            <option value="fas fa-users-cog" data-icon="fas fa-users-cog">
-                                                Corporativo
-                                            </option>
-                                            <option value="fas fa-newspaper" data-icon="fas fa-newspaper">
-                                                Noticia
-                                            </option>
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}"
+                                                    data-icon="{{ $category->icon }}">
+                                                    {{ $category->name }}
+                                                </option>
+                                            @endforeach
+                                            
                                         </select>
                                     </div>
                                 </div>
@@ -122,11 +118,11 @@
         </div>
 
     </div>
-</div>
+    </div>
 @stop
 
 @section('css')
-  <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="/css/admin_custom.css">
     <link rel="stylesheet" href="/select2/dist/css/select2.min.css">
 @stop
 
@@ -174,7 +170,7 @@
 
         });
     </script>
-<script>
-    console.log('menu');
-</script>
+    <script>
+        console.log('menu');
+    </script>
 @stop

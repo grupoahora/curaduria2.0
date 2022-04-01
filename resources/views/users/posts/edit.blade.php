@@ -41,22 +41,17 @@
                                         {!! Form::label('Icono', 'Icono/Categoría') !!}
                                     </div>
                                     <div class="row">
-                                        <select name="icon" id="select" class="select2-icon">
+                                        <select name="category_id" id="select" class="select2-icon">
                                             <option value="" data-icon="" selected="selected">
                                                 --Selecciona un Icono/Categoría--
                                             </option>
-                                            <option value="fas fa-info-circle" data-icon="fa-info-circle">
-                                                Información General
-                                            </option>
-                                            <option value="fas fa-exclamation-circle" data-icon="fas fa-exclamation-circle">
-                                                Importante
-                                            </option>
-                                            <option value="fas fa-users-cog" data-icon="fas fa-users-cog">
-                                                Corporativo
-                                            </option>
-                                            <option value="fas fa-newspaper" data-icon="fas fa-newspaper">
-                                                Noticia
-                                            </option>
+                                            @foreach ($categories as $category)
+                                                <option value="{{ $category->id }}" {{ collect(old('category_id', $post->category_id))->contains($category->id) ? 'selected' : ''}}
+                                                    data-icon="{{ $category->icon }}">
+                                                    {{ $category->name }}
+                                                </option>
+                                            @endforeach
+                                            
                                         </select>
                                     </div>
                                 </div>

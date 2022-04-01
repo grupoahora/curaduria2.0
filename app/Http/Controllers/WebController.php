@@ -190,17 +190,37 @@ class WebController extends Controller
     }
     public function search_proceedings(Request $request)
     {
-        $proceedings  = Proceeding::where('radicado', $request->search_words)->orWhere('cc', $request->search_words)->paginate(12);
-        return view('search', compact('proceedings'));
+        
+        
     }
 
     public function get_proceed(Request $request)
     {
+        
         if ($request->ajax()) {
-            $proceedings = Proceeding::where('cc',
-                $request->proceed
-            )->get();
-            return response()->json($proceedings);
+            $tipoConsulta = $request->get('consulta');
+            switch ($tipoConsulta) {
+                case 1:
+                    $proceedings = Proceeding::where(
+                        'cc',
+                        $request->proceed
+                    )->get();
+                    return response()->json($proceedings);
+                    break;
+
+                case 2:
+                    $proceedings = Proceeding::where(
+                        'radicado',
+                        $request->proceed
+                    )->get();
+                    return response()->json($proceedings);
+                    break;
+
+                default:
+                    # code...
+                    break;
+            }
+            
         }
     }
     public function post_detail($id)

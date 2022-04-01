@@ -506,7 +506,7 @@
 
                     </div>
 
-                    <table id="TableInventories" class="table table-striped table-responsive">
+                    <table id="TableInventories" class="table table-responsive">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -543,6 +543,8 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <script>
+        const tipoConsultaFecha = $('#tipoConsulta');
+
         var proceed = $('#search_products');
         var proceeds = $('#tdproceed');
         var searchproceed = $('#search_proceed');
@@ -552,6 +554,7 @@
                 method: 'GET',
                 data: {
                     proceed: proceed.val(),
+                    consulta: tipoConsultaFecha.val(),
                 },
                 success: function(data) {
                     proceeds.empty();
@@ -574,7 +577,6 @@
     </script>
 
     <script>
-        var tipoConsultaFecha = $('#tipoConsulta');
         var inputQueryFecha = $('#colbtnqueryfecha');
         var inputQueryNum = $('#colbtnquerynum');
         tipoConsultaFecha.change(function(){
