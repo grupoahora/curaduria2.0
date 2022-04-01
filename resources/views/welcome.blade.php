@@ -222,14 +222,33 @@
     <div class=" mt-4 pt-4" id="about">
         <div class="container">
             <div class="row">
-                <div class="col-sm-5 col-12  p-0 m-0 pb-2 pb-sm-0 ">
-                    <a href="#about">
+                <div class="col-sm-5 col-12  p-0 m-0 pb-2 pb-sm-0 px-2 ">
+                    <a href="">
                         <div class="fw-bold text-white bg-redcura text-center py-2 rounded">
                             CONSULTA TU TRÁMITE AQUÍ
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-7 col-12  p-0 m-0">
+                <div class="col-sm-1 col-6  p-0 m-0 px-2">
+                  
+                        <div class="fw-bold text-black {{-- bg-redcura --}} text-center py-2 rounded">
+                            Buscar Por:
+                        </div>
+                   
+                </div>
+                <div class="col-sm-3 col-6  p-0 m-0 px-2">
+                    <div class="fw-bold text-white ">
+                   
+                            <select name="" id="tipoConsulta" class="form-control form-select">
+                                <option value="" selected disabled>--Seleccionar--</option>
+                                <option value="1" >Cedula de Ciudadanía</option>
+                                <option value="2" >Numero de Radicado</option>
+                                <option value="3" >Rango de Fechas</option>
+                            </select>
+                      
+                    </div>
+                </div>
+                <div class="col-sm-3 col-12  p-0 m-0 px-2" id="colbtnquerynum">
                     <div class="fw-bold text-white ">
                         <form action="{{ route('search.proceedings') }}" method="GET" class="row p-0 m-0">
                             <div class="col-10  col-sm-10 px-2  m-0 h-auto text-middle">
@@ -249,6 +268,16 @@
                         </form>
                     </div>
                 </div>
+                <div class="col-sm-3 col-12 d-none {{-- bg-redcura --}} p-0 m-0 px-2" id="colbtnqueryfecha">
+                    <div class="fw-bold text-white ">
+                        <a  id="search_proceed" class="btn btn-outline-success bg-redcura"  href="{{route('reports.date.public')}}">
+                            <div class="fw-bold text-white  text-center py-0 my-0 rounded">
+                                Buscar Por Rango de Fechas       <i class="fas fa-search"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                    
             </div>
         </div>
     </div>
@@ -482,6 +511,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Radicado</th>
+                                <th>Cedula de Ciudadanía</th>
                                 <th>Clase del Acta</th>
                                 <th>Descripción</th>
                                 <th>Ver</th>
@@ -531,6 +561,7 @@
                             console.log(element);
                             proceeds.append('<td>' + element.id + '</td>' + '<td>' +
                                 element.radicado + '</td>' + '<td>' +
+                                element.cc + '</td>' + '<td>' +
                                 element.classproceeding + '</td>' + '<td>' +
                                 element.descriptionclassproceeding + '</td>' +
                                 '<td><button type="button" class="btn btn-success"><a href="../../archive_by_proceeding/'+ element.id +'"><i class="fas fa-eye"></i></button></td>')
@@ -543,15 +574,33 @@
     </script>
 
     <script>
+        var tipoConsultaFecha = $('#tipoConsulta');
+        var inputQueryFecha = $('#colbtnqueryfecha');
+        var inputQueryNum = $('#colbtnquerynum');
+        tipoConsultaFecha.change(function(){
+            if (tipoConsultaFecha.val() == 3) {
+                inputQueryFecha.removeClass('d-none');
+                inputQueryNum.addClass('d-none');
+                console.log(tipoConsultaFecha.val());
+            }
+            if (tipoConsultaFecha.val() == 2 || tipoConsultaFecha.val() == 1) {
+                inputQueryFecha.addClass('d-none');
+                inputQueryNum.removeClass('d-none');
+                console.log(tipoConsultaFecha.val());
+            }
+        });
         $('#search_products').autocomplete({
             source: function(request, response) {
+                var tipoConsulta = $('#tipoConsulta');
                 $.ajax({
                     url: "{{ route('proceed.json') }}",
                     dataType: 'json',
                     data: {
+                        consulta: tipoConsulta.val(),
                         term: request.term
                     },
                     success: function(data) {
+                        console.log(data);
                         response(data)
                     },
                 });

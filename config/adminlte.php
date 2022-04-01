@@ -252,8 +252,24 @@ return [
         [
             'text' => 'Procedimientos',
             'route'  => 'proceedings.index',
+            'classes' => 'position-relative',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
             /* 'can'  => 'admin.home', */
+            'submenu' => [
+                [
+                    'text' => 'Procedimientos',
+                    'classes' => 'position-relative ml-4 w-auto',
+                    'route'  => 'proceedings.index',
+
+                ],
+                [
+                    'text' => 'Reportes por Fecha',
+                    'classes' => 'position-relative ml-4 w-auto',
+                    'route'  => 'reports.date',
+
+                ],
+
+            ],
         ],
         [
             'text' => 'Formatos',

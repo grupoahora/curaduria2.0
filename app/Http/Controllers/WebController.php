@@ -6,9 +6,30 @@ use App\Models\Archive;
 use App\Models\Post;
 use App\Models\Proceeding;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class WebController extends Controller
 {
+    public function reporte_generado_publico(Request $request)
+    {
+        $proceedings = Proceeding::whereDate('fechaexpedicion', '>=', $request->fechaini)->whereDate('fechaexpedicion', '<=', $request->fechafin)->get();
+        /*  dd($proceedings); */
+        return view('web.reportsgenerado', compact('proceedings'));
+    }
+    public function reports_date_public()
+    {
+        return view('web.reports');
+    }
+    public function reporte_generado(Request $request)
+    {
+        $proceedings = Proceeding::whereDate('fechaexpedicion','>=', $request->fechaini)->whereDate('fechaexpedicion','<=', $request->fechafin)->get();
+       /*  dd($proceedings); */
+        return view('users.reports.generado', compact('proceedings'));
+    }
+    public function reports_date ()
+    {
+        return view('users.reports.date');
+    }
     public function archive_by_proceeding($id)
     {
         $proceeding = Proceeding::find($id);
@@ -129,31 +150,54 @@ class WebController extends Controller
     }
     public function proceed(Request $request)
     {
-
+        
         $term = $request->get('term');
-        /* return $term; */
+        $tipoConsulta = $request->get('consulta');
+        switch ($tipoConsulta) {
+            case 1:
+                $querys = Proceeding::where(
+                    'cc',
+                    'LIKE',
+                    '%' . $term . '%'
+                )->get();
+                /* dd($querys); */
+                $data = [];
+                foreach ($querys as $query) {
+                    $data[] = [
+                        'label' => $query->cc
+                    ];
+                }
+                return $data;
+                break;
 
-        $querys = Proceeding::where('radicado', 'LIKE', '%' . $term . '%')->get();
-        /* dd($querys); */
-        $data = [];
-        foreach ($querys as $query) {
-            $data[] = [
-                'label' => $query->radicado
-            ];
+            case 2:
+                $querys = Proceeding::where('radicado', 'LIKE', '%' . $term . '%')->get();
+                /* dd($querys); */
+                $data = [];
+                foreach ($querys as $query) {
+                    $data[] = [
+                        'label' => $query->radicado
+                    ];
+                }
+                return $data;
+                break;
+           
+            default:
+                # code...
+                break;
         }
-        return $data;
+       
     }
     public function search_proceedings(Request $request)
     {
-        $proceedings  = Proceeding::where('radicado', $request->search_words)->paginate(12);
+        $proceedings  = Proceeding::where('radicado', $request->search_words)->orWhere('cc', $request->search_words)->paginate(12);
         return view('search', compact('proceedings'));
     }
 
     public function get_proceed(Request $request)
     {
         if ($request->ajax()) {
-            $proceedings = Proceeding::where(
-                'radicado',
+            $proceedings = Proceeding::where('cc',
                 $request->proceed
             )->get();
             return response()->json($proceedings);

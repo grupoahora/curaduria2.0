@@ -36,6 +36,14 @@
                                 @enderror
                                 
                                 <br>
+                                {!! Form::label('cc', 'Cedula de Ciudadanía') !!}
+                                {!! Form::text('cc', null, ['class' => 'form-control', 'placeholder' => 'Nº de Cedula de Ciudadanía']) !!}
+                                @error('cc')
+                                    <small class="text-danger">
+                                        {{ $message }}
+                                    </small>
+                                @enderror
+                                <br>
                                 {!! Form::label('classproceeding', 'Clase de Procedimiento') !!}    
                                 {!! Form::text('classproceeding', null , ['class' => 'form-control', 'placeholder' => 'Ingrese la clase de procedimiento']) !!}
                                 @error('classproceeding')
@@ -45,7 +53,7 @@
                                 @enderror
                                 
                                 <br>
-                                {!! Form::label('descriptionclassproceeding', 'Descripciónd de la Clase de Procedimiento') !!}    
+                                {!! Form::label('descriptionclassproceeding', 'Descripción de la Clase de Procedimiento') !!}    
                                 {!! Form::text('descriptionclassproceeding', null , ['class' => 'form-control', 'placeholder' => 'Ingrese la descripción']) !!}
                                 @error('descriptionclassproceeding')
                                     <small class="text-danger">
@@ -54,9 +62,13 @@
                                 @enderror
                                 
                                 <br>
-
-                            
-                                
+                                {!! Form::label('fechaexpedicion', 'Fecha de Expedición del Procedimiento') !!}
+                                {!! Form::date('fechaexpedicion', null, ['class' => 'form-control', 'placeholder' => 'Ingrese la fecha de expedicion']) !!}
+                                 @error('fechaexpedicion')
+                                    <small class="text-danger">
+                                        {{$message}}
+                                    </small>
+                                @enderror
 
                             </div>
                         </div>

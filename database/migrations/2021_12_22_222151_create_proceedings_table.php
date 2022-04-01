@@ -16,8 +16,10 @@ class CreateProceedingsTable extends Migration
         Schema::create('proceedings', function (Blueprint $table) {
             $table->id();
             $table->string('radicado');
+            $table->string('cc');
             $table->string('classproceeding');
             $table->string('descriptionclassproceeding');
+            $table->string('fechaexpedicion');
             
             $table->timestamps();
         });

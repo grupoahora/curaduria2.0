@@ -41,8 +41,10 @@ class ProceedingController extends Controller
     {
         $proceedings = Proceeding::create([
             'radicado' => $request->radicado,
+            'cc' => $request->cc,
             'classproceeding' => $request->classproceeding,
             'descriptionclassproceeding' => $request->descriptionclassproceeding,
+            'fechaexpedicion' => $request->fechaexpedicion,
         ]);
         return redirect()->route('proceedings.edit', compact('proceedings'))->with('info', 'El Procedimiento se a creado con éxito');
     }

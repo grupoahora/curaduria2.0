@@ -51,7 +51,7 @@
             </div>
         </div>
     </nav>
-    <div class="container mt-5 pt-5 h-cura-100  justify-content-center align-items-center" id="slide">
+    <div class="container mt-5 pt-5 h-100-cura  justify-content-center align-items-center" id="slide">
  <div class="row">
      <div class="col-12 col-sm-4 mx-auto mt-5">
          <div class="card ">

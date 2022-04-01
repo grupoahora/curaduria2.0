@@ -37,9 +37,14 @@ Route::post('upload_image/{id}', [FormatController::class, 'upload_image'])->nam
 Route::post('upload_archive/{id}', [FormatController::class, 'upload_archive'])->name('upload.archive');
 Route::post('file_delete', [FormatController::class, 'file_delete'])->name('file.delete');
 Route::post('file_delete_archive', [FormatController::class, 'file_delete_archive'])->name('file.delete.archive');
+route::get('reportes_por_fecha', [WebController::class, 'reports_date'])->name('reports.date');
+route::get('reportes_por_fecha_public', [WebController::class, 'reports_date_public'])->name('reports.date.public');
+Route::post('reporte_generado',[WebController::class, 'reporte_generado'])->name('genere.reports');
+Route::post('reporte_generado_publico', [WebController::class, 'reporte_generado_publico'])->name('genere.reports.public');
 Route::get('/proximamente', function () {
     return view('web.contact');
 })->name('contact');
+
 
 Route::get('/', function () {
     return view('welcome');
