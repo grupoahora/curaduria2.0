@@ -3,7 +3,12 @@
 @section('title', 'Curaduría Urbana 2')
 
 @section('content_header')
-    <h1>Curaduria Urbana</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">Procedimientos y Reportes</li>
+            <li class="breadcrumb-item active" aria-current="page">Procedimientos</li>
+        </ol>
+    </nav>
 @stop
 
 @section('content')

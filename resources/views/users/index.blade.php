@@ -3,7 +3,12 @@
 @section('title', 'Curaduría Urbana 2')
 
 @section('content_header')
-    <h1>Curaduría Urbana</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">Usuarios y Roles</li>
+            <li class="breadcrumb-item active" aria-current="page">Usuarios</li>
+        </ol>
+    </nav>
 @stop
 
 @section('content')
@@ -99,7 +104,7 @@
                     </li>
                     <li class="nav-item ml-auto h-100 mr-1 my-auto d-none" id="btnrole" role="presentation">
                         <button type="button" class="nav-link btn btn-secondary px-2 rounded-3" data-bs-toggle="modal" data-bs-target="#newRolModal">
-                            Nuevo Usuario
+                            Nuevo Rol
                         </button>
                         <div class="modal fade" id="newRolModal" tabindex="-1" aria-labelledby="newRolModalModalLabel" aria-hidden="true">
                             <div class="modal-dialog">

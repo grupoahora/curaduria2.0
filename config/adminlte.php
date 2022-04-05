@@ -245,7 +245,7 @@ return [
             'can'  => 'users.index',
         ],
         [
-            'text' => 'Procedimientos',
+            'text' => 'Procedimientos y Reportes',
             'route'  => 'admin.proceedings.index',
             'classes' => 'position-relative',
             'icon'  => 'fas fa-tachometer-alt fa-fw',
@@ -275,7 +275,7 @@ return [
         ],
         
         [
-            'text'    => 'Publicaciones',
+            'text'    => 'Publicaciones y Categorías',
             'route'   => 'admin.posts.index',
             'classes' => 'position-relative',
             'can'  => 'posts.index',

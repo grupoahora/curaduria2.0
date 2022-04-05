@@ -3,7 +3,12 @@
 @section('title', 'Curaduría Urbana 2')
 
 @section('content_header')
-    <h1>Curaduria Urbana</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">Publicaciones y Categorías</li>
+            <li class="breadcrumb-item active" aria-current="page">Categorías</li>
+        </ol>
+    </nav>
 @stop
 
 @section('content')
@@ -14,8 +19,8 @@
 
 @endif
     <div class="card-header">
-        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.categories.create')}}">Nuevo categoria</a>
-        <h1>Lista de categories</h1>
+        <a class="btn btn-secondary btn-sm float-right" href="{{route('admin.categories.create')}}">Nueva categoría</a>
+        <h1>Lista de categorías</h1>
 
     </div>
     <div class="card-body">
@@ -48,7 +53,7 @@
                         <form action="{{route('admin.categories.destroy', $category)}}" method="POST">
                             @csrf
                             @method('delete')
-                            <button type="submit" class="btn btn-danger btn-sm"">Eliminar</button>
+                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                         </form>
                     </td>
                 </tr>

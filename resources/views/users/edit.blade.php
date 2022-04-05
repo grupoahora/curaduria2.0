@@ -3,7 +3,13 @@
 @section('title', 'Curaduría Urbana 2')
 
 @section('content_header')
-    <h1>Curaduria Urbana</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">Usuarios y Roles</li>
+            <li class="breadcrumb-item"><a href="{{route('admin.users.index')}}">Usuarios</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Editar Usuario "{{$user->name}}"</li>
+        </ol>
+    </nav>
 @stop
 
 @section('content')
@@ -64,7 +70,7 @@
                                 </div>
                             </div>
                             <br>
-                            {!! Form::submit('Editar Categoria', ['class' => 'btn btn-primary']) !!}
+                            {!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
                             {!! Form::close() !!}
 
                             {{-- {!! Form::label('action', 'Acción') !!}    

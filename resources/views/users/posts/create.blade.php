@@ -3,7 +3,13 @@
 @section('title', 'Curaduría Urbana 2')
 
 @section('content_header')
-    <h1>Curaduria Urbana</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item" aria-current="page">Publicaciones y Categorías</li>
+            <li class="breadcrumb-item"><a href="{{route('admin.posts.index')}}">Publicaciones</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Crear Publicación</li>
+        </ol>
+    </nav>
 @stop
 
 @section('content')
@@ -19,7 +25,7 @@
                 <div class="col-12  ">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="h5">Datos de la Publción</h2>
+                            <h2 class="h5">Datos de la Publicación</h2>
                         </div>
                         <div class="card-body">
                             <div class="row">
