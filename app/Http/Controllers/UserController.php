@@ -57,8 +57,8 @@ class UserController extends Controller
             'email' => $request['email'],
             'password' => bcrypt('12345678'),
         ])->assignRole($request->rols);
-      
-      return redirect()->route('admin.users.index')->with('info', 'Usuario creado con Exito');
+
+        return redirect()->route('admin.users.index')->with('info', 'Usuario creado con Exito');
     }
 
     /**
@@ -94,18 +94,23 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        $user->roles()->sync($request->get('rols'));
+        if ($request->get('rols')) {
+            $user->roles()->sync($request->get('rols'));
+        }
+        if ($request->get('roles')) {
+            $user->roles()->sync($request->get('roles'));
+        }
 
         $user->update([
             'name' => $request['name'],
 
             'surname' => $request['surname'],
-            
+
             'email' => $request['email'],
         ]);
-       
+
         /* dd($proceedings); */
-        return redirect()->route('admin.users.index')->with('info', 'El Usuario se actualizó con éxito');
+        return redirect()->route('admin.users.index')->with('info', 'El Usuario se actualiz贸 con 茅xito');
     }
 
     /**
@@ -118,6 +123,6 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return redirect()->route('admin.users.index')->with('info', 'El Usuario se eliminó con éxito');
+        return redirect()->route('admin.users.index')->with('info', 'El Usuario se elimin贸 con 茅xito');
     }
 }
